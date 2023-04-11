@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on blog</title>
+    <link>/nagoya-example/tags/markdown/</link>
+    <description>Recent content in Markdown on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 11 Apr 2023 22:06:28 +0900</lastBuildDate><atom:link href="/nagoya-example/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown の例</title>
+      <link>/nagoya-example/markdown/</link>
+      <pubDate>Tue, 11 Apr 2023 22:06:28 +0900</pubDate>
+      
+      <guid>/nagoya-example/markdown/</guid>
+      <description>見出し1 見出し2 見出し3 これは、段落の文章です。太字や斜体なども使えます。
+リスト1 リスト2 リスト3 番号付きリスト1 番号付きリスト2 番号付きリスト3 リンクのテキスト
+引用文です。
+インラインコード は バッククォート で囲みます。
+複数行の コードを 書く場合は バッククォート3つで 囲みます。 水平線を表す場合は、3つ以上のアスタリスク（*）やハイフン（-）を使います。</description>
+    </item>
+    
+  </channel>
+</rss>
