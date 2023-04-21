@@ -1,0 +1,18 @@
+title = "Nagoya: Hugo theme demo"
+author = "curegit"
+paginate = 5
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+enableInlineShortcodes = true
+theme = "nagoya"
+enableGitInfo = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+  year = "years"
+
+[frontmatter]
+  date = ["date", "publishDate", ":git", ":fileModTime"]
+  lastmod = ["lastmod", ":git", ":fileModTime"]
