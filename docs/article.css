@@ -1,0 +1,34 @@
+main h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+main p {
+
+}
+
+article.single p {
+
+margin: 12px 0;
+
+}
+
+article.single img {
+
+  margin: 16px 8px;
+}
+
+article.single .time {
+
+  font-size: 12px;
+  display: flex;
+  justify-content: end;
+  line-height: 1.1;
+  gap: 20px;
+  }
+
+  article.single time {
+    display: inline;
+  }
+
+

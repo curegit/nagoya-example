@@ -1,0 +1,11 @@
+html, body {
+  background-color: rgb(44, 151, 88);
+}
+
+#top {
+  border-bottom-color: rgb(44, 151, 88);
+}
+
+#frame {
+  background-color: rgb(205, 204, 238);
+}
