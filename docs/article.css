@@ -7,10 +7,20 @@ main p {
 
 }
 
+pre {
+  border-radius: 6px;
+  overflow-x: auto;
+  padding: 6px 10px;
+}
+
 article.single p {
 
 margin: 12px 0;
 
+}
+
+article.single a {
+  text-decoration: underline;
 }
 
 article.single img {
@@ -18,9 +28,13 @@ article.single img {
   margin: 16px 8px;
 }
 
+article.single pre {
+  margin: 16px 0;
+}
+
 article.single .time {
 
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   justify-content: end;
   line-height: 1.1;
@@ -32,3 +46,15 @@ article.single .time {
   }
 
 
+
+  .footnote-ref {
+    font-size: 95%;
+   }
+   .footnote-ref::before {
+     display: inline;
+     content: "[";
+   }
+   .footnote-ref::after {
+     display: inline;
+     content: "]";
+   }

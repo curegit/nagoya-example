@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://curegit.github.io/nagoya-example/sitemap.xml
