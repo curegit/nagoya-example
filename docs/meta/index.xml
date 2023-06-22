@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on 名古屋サンプルブログ</title>
+    <link>https://curegit.github.io/nagoya-example/meta/</link>
+    <description>Recent content in Meta on 名古屋サンプルブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Nagoya ©curegit</copyright>
+    <lastBuildDate>Thu, 22 Jun 2023 10:29:36 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>表の例</title>
+      <link>https://curegit.github.io/nagoya-example/meta/tables/</link>
+      <pubDate>Thu, 22 Jun 2023 10:29:36 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/meta/tables/</guid>
+      <description>架空の吉野家 メニュー名 値段 カロリー 牛丼 500円 550kcal 牛皿 550円 600kcal 豚丼 480円 500kcal カツ丼 580円 650kcal 牛とろ玉丼 650円 700kcal 牛五目玉丼 680円 750kcal 牛焼肉丼</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,20 +3,27 @@ main h1 {
   font-weight: bold;
 }
 
-main p {
-
+.single h2 {
+  margin-top: 28px;
+  padding-bottom: 4px;
+  padding-left: 2px;
+  border-bottom: 1px solid #d1d8df;
 }
 
-pre {
+.single h2:first-child {
+  margin-top: 12px;
+}
+
+.single p {
+  text-indent: 6px;
+  padding-left: 4px;
+  margin: 12px 0;
+}
+
+.single pre {
   border-radius: 6px;
   overflow-x: auto;
   padding: 6px 10px;
-}
-
-article.single p {
-
-margin: 12px 0;
-
 }
 
 article.single a {
@@ -25,7 +32,7 @@ article.single a {
 
 article.single img {
 
-  margin: 16px 8px;
+  margin: 16px 0;
 }
 
 article.single pre {
@@ -39,6 +46,7 @@ article.single .time {
   justify-content: end;
   line-height: 1.1;
   gap: 20px;
+  color: #4d4d4d;
   }
 
   article.single time {

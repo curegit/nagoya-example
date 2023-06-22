@@ -1,2 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on 名古屋サンプルブログ</title><link>https://curegit.github.io/nagoya-example/posts/programming/csharp/</link><description>Recent content in C# on 名古屋サンプルブログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Nagoya ©curegit</copyright><lastBuildDate>Fri, 05 May 2023 22:17:46 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/posts/programming/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Fix</title><link>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</link><pubDate>Fri, 05 May 2023 16:41:33 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</guid><description/></item><item><title>Unit</title><link>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</link><pubDate>Fri, 05 May 2023 16:31:59 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</guid><description>&lt;p>今回は、C#言語で記述されたコード「Unit構造体」について解説します。&lt;/p>
-&lt;p>Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on 名古屋サンプルブログ</title>
+    <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/</link>
+    <description>Recent content in C# on 名古屋サンプルブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Nagoya ©curegit</copyright>
+    <lastBuildDate>Fri, 05 May 2023 22:17:46 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/posts/programming/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</link>
+      <pubDate>Fri, 05 May 2023 16:41:33 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C# で Unit 型を実装する</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</link>
+      <pubDate>Fri, 05 May 2023 16:31:59 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</guid>
+      <description>&lt;p&gt;今回は、C#言語で記述されたコード「Unit構造体」について解説します。&lt;/p&gt;
+&lt;p&gt;Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

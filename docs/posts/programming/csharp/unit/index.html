@@ -1,81 +1,658 @@
-<!doctype html><html lang=ja><head><meta charset=utf-8><meta name=viewport content="width=device-width"><title>Unit</title><meta name=description content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
-Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。"><meta name=keywords content="a,b,c"><meta name=author content="curegit"><meta name=generator content="Hugo 0.111.3"><link rel=canonical href=https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/><link rel=stylesheet href=/nagoya-example/font.css><link rel=stylesheet href=/nagoya-example/basic.css><link rel=stylesheet href=/nagoya-example/main.css><link rel=stylesheet href=/nagoya-example/color.css><link rel=stylesheet href=/nagoya-example/header.css><link rel=stylesheet href=/nagoya-example/article.css><link rel=stylesheet href=/nagoya-example/custom.css><link rel=icon href=/nagoya-example/icon.png><meta property="og:type" content="article"><meta property="og:site_name" content="名古屋サンプルブログ"><meta property="og:title" content="Unit"><meta name=og:description content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
-Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。"><meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/"><meta name=twitter:card content="summary"><meta name=twitter:title content="Unit"><meta name=twitter:description content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
-Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。"><meta name=twitter:site content="@curegit"></head><body><div id=container><header id=top style=background-image:url(/nagoya-example/header.jpg)><div id=header-grid><div id=site-title><a href=/nagoya-example/>名古屋サンプルブログ</a></div><p id=description>Hugo の日本語テーマ「名古屋」のサンプルサイトです</p></div></header><div id=middle><div id=content class=column><nav id=breadcrumb class=pane><ol class=breadcrumb><li><a href=/nagoya-example/>ホーム</a></li><li><a href=/nagoya-example/posts/>投稿記事</a></li><li><a href=/nagoya-example/posts/programming/>プログラミング</a></li><li><a href=/nagoya-example/posts/programming/csharp/>C#</a></li></ol></nav><main class=pane><article class=single><header><h1>Unit</h1><div class=time><div>作成: <time datetime=2023-05-05>2023/05/05</time></div><div>更新: <time datetime=2023-05-29>2023/05/29</time></div></div></header><div class=body><p>今回は、C#言語で記述されたコード「Unit構造体」について解説します。</p><p>Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span><span style=color:#66d9ef>using</span> System;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Diagnostics.CodeAnalysis;
-</span></span><span style=display:flex><span><span style=color:#a6e22e>
-</span></span></span><span style=display:flex><span><span style=color:#a6e22e>[Serializable]</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Unit</span> : IEquatable&lt;Unit&gt;, IComparable, IComparable&lt;Unit&gt;
-</span></span><span style=display:flex><span>{
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>bool</span> Equals([NotNullWhen(<span style=color:#66d9ef>true</span>)] <span style=color:#66d9ef>object?</span> obj)
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> obj <span style=color:#66d9ef>is</span> Unit;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>bool</span> Equals(Unit other)
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> IComparable.CompareTo(<span style=color:#66d9ef>object?</span> other)
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (other <span style=color:#66d9ef>is</span> <span style=color:#66d9ef>null</span>)
-</span></span><span style=display:flex><span>        {
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>;
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (other <span style=color:#66d9ef>is</span> not Unit)
-</span></span><span style=display:flex><span>        {
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ArgumentException(<span style=color:#66d9ef>null</span>, nameof(other));
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>
-</span></span><span style=display:flex><span>        {
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> CompareTo(Unit other)
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>int</span> GetHashCode()
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>string</span> ToString()
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;()&#34;</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>operator</span> ==(Unit left, Unit right)
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>operator</span> !=(Unit left, Unit right)
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>[Serializable]属性を使用して、Serializable属性を付与しています。これは、この構造体をシリアル化できるように設定するために使われます。</p><p>Unit構造体自体は、IEquatableインターフェース、IComparableインターフェース、およびIComparableインターフェースを実装しています。それぞれのインターフェースが実装するメソッドについて説明します。</p><p>・IEquatableインターフェースを実装するために利用するEquals()メソッド</p><p>Equals()メソッドは、指定されたオブジェクトが、Unit構造体のインスタンスであるかどうかを確認するために使用されます。もし、指定されたオブジェクトがUnit構造体のインスタンスである場合は、trueを返します。</p><p>・IComparableインターフェースを実装するために利用するCompareTo()メソッド</p><p>CompareTo()メソッドは、この構造体のオブジェクトと、別のオブジェクトを比較します。指定されたオブジェクトがUnit構造体のインスタンスである場合は0を返し、そうでない場合はArgumentExceptionをスローします。</p><p>・IComparableインターフェースを実装するために利用するCompareTo()メソッド</p><p>CompareTo()メソッドは、指定されたオブジェクト（ここではUnit構造体）と、この構造体のオブジェクトを比較します。Unit構造体は単一値（シングルトン）であるため、比較に値が必要ないため、常に0を返します。</p><p>また、Equals()メソッドとCompareTo()メソッドで、nullチェックを行っているのもポイントです。指定されたオブジェクトがnullである場合は、CompareTo()メソッドは1、Equals()メソッドはfalseを返します。</p><p>最後に、ToString()メソッド、GetHashCode()メソッド、およびoperator演算子をオーバーロードしていることも確認してください。</p><p>以上が、C#言語で記述されたコード「Unit構造体」についての解説です。</p></div><footer>Taxno<nav>Nexy, Prev</nav></footer></article></main><aside class=pane><p>メインカラム上下に広告などのカスタムウィジェットを配置できます。</p><img src=/nagoya-example/ad.png></aside><nav class=pane><a href=/nagoya-example/posts/programming/csharp/fix/>Fix</a></nav><nav class=pane><h3>See Also</h3><ul><li><a href=/nagoya-example/posts/anime/mmppp/chara/>Chara</a></li><li><a href=/nagoya-example/posts/english/work-from-home/>5 Tips for Staying Productive While Working from Home</a></li><li><a href=/nagoya-example/posts/english/nationalism/>Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li><li><a href=/nagoya-example/posts/english/living-in-japan/>Living in Japan: A Unique Experience</a></li><li><a href=/nagoya-example/posts/english/sushi-types/>Types of Sushi</a></li></ul></nav></div><aside id=sidebar class=column><div class=pane><p>サイドバー上下に自己紹介などのカスタムウィジェットを配置できます。</p></div><nav class=pane><h2>Sections</h2><ul><li><a href=/nagoya-example/pages/bio/>自己紹介</a></li><li><a href=/nagoya-example/pages/contact/>連絡先</a></li><li><a href=/nagoya-example/pages/>固定ページ
-(2)</a></li><li><a href=/nagoya-example/posts/>投稿記事
-(14)</a><ul><li><a href=/nagoya-example/posts/nagoya/>名古屋</a></li><li><a href=/nagoya-example/posts/english/>English
-(5)</a></li><li><a href=/nagoya-example/posts/programming/>プログラミング
-(3)</a><ul><li><a href=/nagoya-example/posts/programming/python/>Python
-(1)</a></li><li><a href=/nagoya-example/posts/programming/csharp/>C#
-(2)</a></li></ul></li><li><a href=/nagoya-example/posts/anime/>アニメ
-(4)</a><ul><li><a href=/nagoya-example/posts/anime/jcdk/>邪神ちゃんドロップキック
-(3)</a><ul><li><a href=/nagoya-example/posts/anime/jcdk/characters/>キャラクター
-(2)</a></li></ul></li><li><a href=/nagoya-example/posts/anime/mmppp/>ぴちぴちピッチ
-(1)</a></li></ul></li><li><a href=/nagoya-example/posts/meta/>メタ
-(1)</a></li></ul></li></ul><ul><li><a href=/nagoya-example/posts/nagoya/>名古屋</a></li><li><a href=/nagoya-example/posts/english/>English
-(5)</a></li><li><a href=/nagoya-example/posts/programming/>プログラミング
-(3)</a><ul><li><a href=/nagoya-example/posts/programming/python/>Python
-(1)</a></li><li><a href=/nagoya-example/posts/programming/csharp/>C#
-(2)</a></li></ul></li><li><a href=/nagoya-example/posts/anime/>アニメ
-(4)</a><ul><li><a href=/nagoya-example/posts/anime/jcdk/>邪神ちゃんドロップキック
-(3)</a><ul><li><a href=/nagoya-example/posts/anime/jcdk/characters/>キャラクター
-(2)</a></li></ul></li><li><a href=/nagoya-example/posts/anime/mmppp/>ぴちぴちピッチ
-(1)</a></li></ul></li><li><a href=/nagoya-example/posts/meta/>メタ
-(1)</a></li></ul><h2>Taxonomies</h2>TaxonomyList(3)<section><ul></ul></section></nav><section class=pane><ul id=all-taxonomies><li><a href=https://curegit.github.io/nagoya-example/archives/>archives</a><ul></ul></li><li><a href=https://curegit.github.io/nagoya-example/categories/>categories</a><ul><li>none</li><ul><li hugo-nav=/nagoya-example/posts/programming/python/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/>Python</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/>C#</a></li><li hugo-nav=/nagoya-example/posts/miscellaneous/a/><a href=https://curegit.github.io/nagoya-example/posts/miscellaneous/a/>A</a></li><li hugo-nav=/nagoya-example/posts/programming/python/prime/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/prime/>Prime</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/fix/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/>Fix</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/unit/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/>Unit</a></li><li hugo-nav=/nagoya-example/posts/anime/mmppp/chara/><a href=https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/>Chara</a></li></ul><li>テスト</li><ul><li hugo-nav=/nagoya-example/posts/meta/markdown/><a href=https://curegit.github.io/nagoya-example/posts/meta/markdown/>Markdown の例</a></li></ul></ul></li><li><a href=https://curegit.github.io/nagoya-example/tags/>tags</a><ul><li>a</li><ul><li hugo-nav=/nagoya-example/posts/english/work-from-home/><a href=https://curegit.github.io/nagoya-example/posts/english/work-from-home/>5 Tips for Staying Productive While Working from Home</a></li><li hugo-nav=/nagoya-example/posts/programming/python/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/>Python</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/>C#</a></li><li hugo-nav=/nagoya-example/posts/miscellaneous/a/><a href=https://curegit.github.io/nagoya-example/posts/miscellaneous/a/>A</a></li><li hugo-nav=/nagoya-example/posts/programming/python/prime/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/prime/>Prime</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/fix/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/>Fix</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/unit/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/>Unit</a></li><li hugo-nav=/nagoya-example/posts/anime/mmppp/chara/><a href=https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/>Chara</a></li></ul><li>b</li><ul><li hugo-nav=/nagoya-example/posts/programming/python/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/>Python</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/>C#</a></li><li hugo-nav=/nagoya-example/posts/miscellaneous/a/><a href=https://curegit.github.io/nagoya-example/posts/miscellaneous/a/>A</a></li><li hugo-nav=/nagoya-example/posts/programming/python/prime/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/prime/>Prime</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/fix/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/>Fix</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/unit/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/>Unit</a></li><li hugo-nav=/nagoya-example/posts/anime/mmppp/chara/><a href=https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/>Chara</a></li></ul><li>c</li><ul><li hugo-nav=/nagoya-example/posts/programming/python/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/>Python</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/>C#</a></li><li hugo-nav=/nagoya-example/posts/miscellaneous/a/><a href=https://curegit.github.io/nagoya-example/posts/miscellaneous/a/>A</a></li><li hugo-nav=/nagoya-example/posts/programming/python/prime/><a href=https://curegit.github.io/nagoya-example/posts/programming/python/prime/>Prime</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/fix/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/>Fix</a></li><li hugo-nav=/nagoya-example/posts/programming/csharp/unit/><a href=https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/>Unit</a></li><li hugo-nav=/nagoya-example/posts/anime/mmppp/chara/><a href=https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/>Chara</a></li></ul><li>hhhh</li><ul><li hugo-nav=/nagoya-example/posts/english/work-from-home/><a href=https://curegit.github.io/nagoya-example/posts/english/work-from-home/>5 Tips for Staying Productive While Working from Home</a></li></ul><li>markdown</li><ul><li hugo-nav=/nagoya-example/posts/meta/markdown/><a href=https://curegit.github.io/nagoya-example/posts/meta/markdown/>Markdown の例</a></li></ul><li>邪神ちゃん</li><ul><li hugo-nav=/nagoya-example/posts/anime/jcdk/characters/jashin-chan/><a href=https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/jashin-chan/>邪神ちゃんの性格</a></li></ul><li>邪神ちゃんドロップキック</li><ul><li hugo-nav=/nagoya-example/posts/anime/jcdk/characters/jashin-chan/><a href=https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/jashin-chan/>邪神ちゃんの性格</a></li></ul></ul></li></ul></section></aside></div><footer id=bottom><p>Nagoya ©curegit</p></footer></div></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+  <title>C# で Unit 型を実装する</title>
+
+
+  <meta name="description" content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
+Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+
+
+  <meta name="keywords" content="a, b, c">
+
+
+  <meta name="author" content="curegit">
+
+<meta name="generator" content="Hugo 0.111.3">
+<link rel="canonical" href="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">
+<link rel="stylesheet" href="/nagoya-example/font.css">
+<link rel="stylesheet" href="/nagoya-example/basic.css">
+<link rel="stylesheet" href="/nagoya-example/main.css">
+<link rel="stylesheet" href="/nagoya-example/color.css">
+<link rel="stylesheet" href="/nagoya-example/header.css">
+<link rel="stylesheet" href="/nagoya-example/article.css">
+<link rel="stylesheet" href="/nagoya-example/custom.css">
+
+    <link rel="icon" href="/nagoya-example/icon.png">
+
+    
+  <meta property="og:type" content="article">
+
+<meta property="og:site_name" content="名古屋サンプルブログ">
+
+  <meta property="og:title" content="C# で Unit 型を実装する">
+
+
+  <meta name="og:description" content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
+Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+
+<meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C# で Unit 型を実装する"/>
+<meta name="twitter:description" content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
+Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。"/>
+<meta name="twitter:site" content="@curegit"/>
+
+
+  </head>
+  <body>
+    <div id="container">
+      <header id="top" style="background-image: url('/nagoya-example/header.jpg')">
+  <div id="header-grid">
+    
+      <div id="site-title">
+        <a href="/nagoya-example/">名古屋サンプルブログ</a>
+      </div>
+    
+    
+      <p id="description">Hugo の日本語テーマ「名古屋」のサンプルサイトです</p>
+    
+  </div>
+</header>
+
+      <div id="middle">
+        <div id="content" class="column">
+          
+          
+            <nav id="breadcrumb" class="pane">
+              
+
+<ol class="breadcrumb">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+    <li><a href="/nagoya-example/">ホーム</a></li>
+  
+
+  
+  
+    <li><a href="/nagoya-example/posts/">投稿記事</a></li>
+  
+
+  
+  
+    <li><a href="/nagoya-example/posts/programming/">プログラミング</a></li>
+  
+
+  
+  
+    <li><a href="/nagoya-example/posts/programming/csharp/">C#</a></li>
+  
+
+  
+  
+</ol>
+
+            </nav>
+          
+          
+          <main class="pane">
+            
+  
+
+<article class="single">
+  <header>
+    <h1>C# で Unit 型を実装する</h1>
+    <div class="time">
+    
+    <div>作成: <time datetime="2023-05-05">2023/05/05</time></div>
+    <div>更新: <time datetime="2023-06-21">2023/06/21</time></div>
+    
+  </div>
+
+  </header>
+  <div class="body"><p>今回は、C#言語で記述されたコード「Unit構造体」について解説します。</p>
+<p>Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Diagnostics.CodeAnalysis;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">[Serializable]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Unit</span> : IEquatable&lt;Unit&gt;, IComparable, IComparable&lt;Unit&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">bool</span> Equals([NotNullWhen(<span style="color:#66d9ef">true</span>)] <span style="color:#66d9ef">object?</span> obj)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> obj <span style="color:#66d9ef">is</span> Unit;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">bool</span> Equals(Unit other)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> IComparable.CompareTo(<span style="color:#66d9ef">object?</span> other)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (other <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (other <span style="color:#66d9ef">is</span> not Unit)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentException(<span style="color:#66d9ef">null</span>, nameof(other));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> CompareTo(Unit other)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> GetHashCode()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">string</span> ToString()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;()&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> ==(Unit left, Unit right)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> !=(Unit left, Unit right)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>[Serializable]属性を使用して、Serializable属性を付与しています。これは、この構造体をシリアル化できるように設定するために使われます。</p>
+<p>Unit構造体自体は、IEquatable<T>インターフェース、IComparableインターフェース、およびIComparable<T>インターフェースを実装しています。それぞれのインターフェースが実装するメソッドについて説明します。</p>
+<p>・IEquatable<T>インターフェースを実装するために利用するEquals()メソッド</p>
+<p>Equals()メソッドは、指定されたオブジェクトが、Unit構造体のインスタンスであるかどうかを確認するために使用されます。もし、指定されたオブジェクトがUnit構造体のインスタンスである場合は、trueを返します。</p>
+<p>・IComparableインターフェースを実装するために利用するCompareTo()メソッド</p>
+<p>CompareTo()メソッドは、この構造体のオブジェクトと、別のオブジェクトを比較します。指定されたオブジェクトがUnit構造体のインスタンスである場合は0を返し、そうでない場合はArgumentExceptionをスローします。</p>
+<p>・IComparable<T>インターフェースを実装するために利用するCompareTo()メソッド</p>
+<p>CompareTo()メソッドは、指定されたオブジェクト（ここではUnit構造体）と、この構造体のオブジェクトを比較します。Unit構造体は単一値（シングルトン）であるため、比較に値が必要ないため、常に0を返します。</p>
+<p>また、Equals()メソッドとCompareTo()メソッドで、nullチェックを行っているのもポイントです。指定されたオブジェクトがnullである場合は、CompareTo()メソッドは1、Equals()メソッドはfalseを返します。</p>
+<p>最後に、ToString()メソッド、GetHashCode()メソッド、およびoperator演算子をオーバーロードしていることも確認してください。</p>
+<p>以上が、C#言語で記述されたコード「Unit構造体」についての解説です。</p></div>
+  <footer>
+    Taxno
+    <nav>
+      Nexy, Prev
+    </nav>
+  </footer>
+</article>
+
+
+          </main>
+          
+          
+  
+  
+  
+    <nav class="pane">
+      
+        <a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a>
+      
+      
+        <a href="/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+      
+    </nav>
+  
+
+
+          
+          <nav class="pane">
+            
+          
+          <h3>See Also</h3>
+          <ul>
+           
+           <li><a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a></li>
+           
+           <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
+           
+           <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
+           
+           <li><a href="/nagoya-example/posts/meta/diagram/">GOAT</a></li>
+           
+           <li><a href="/nagoya-example/posts/english/living-in-japan/">Living in Japan: A Unique Experience</a></li>
+           
+          </ul>
+          
+
+          </nav>
+          
+
+          <aside class="pane">
+  <p>メインカラム上下に広告などのカスタムウィジェットを配置できます。</p>
+  <img src="/nagoya-example/ad.png">
+</aside>
+
+        </div>
+        <aside id="sidebar" class="column">
+  <div class="pane">
+  <p>サイドバー上下に自己紹介などのカスタムウィジェットを配置できます。</p>
+</div>
+
+  <nav class="pane">
+
+
+  
+
+
+  
+
+
+  
+    <ul class="folders">
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/pages/">
+            固定ページ (2) 
+          </a>
+          
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/meta/">
+            Meta (1) 
+          </a>
+          
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/">
+            投稿記事 (15) 
+          </a>
+          
+  
+    <ul class="folders">
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/nagoya/">
+            名古屋
+          </a>
+          
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/english/">
+            English (5) 
+          </a>
+          
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/programming/">
+            プログラミング (3) 
+          </a>
+          
+  
+    <ul class="folders">
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/programming/python/">
+            Python (1) 
+          </a>
+          
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/programming/csharp/">
+            C# (2) 
+          </a>
+          
+  
+
+        </li>
+      
+    </ul>
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/anime/">
+            アニメ (4) 
+          </a>
+          
+  
+    <ul class="folders">
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/anime/jcdk/">
+            邪神ちゃんドロップキック (3) 
+          </a>
+          
+  
+    <ul class="folders">
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/anime/jcdk/characters/">
+            キャラクター (2) 
+          </a>
+          
+  
+
+        </li>
+      
+    </ul>
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/anime/mmppp/">
+            ぴちぴちピッチ (1) 
+          </a>
+          
+  
+
+        </li>
+      
+    </ul>
+  
+
+        </li>
+      
+        
+        <li class="folder">
+          <a href="/nagoya-example/posts/meta/">
+            メタ (2) 
+          </a>
+          
+  
+
+        </li>
+      
+    </ul>
+  
+
+        </li>
+      
+    </ul>
+  
+
+
+
+
+  <section>
+    
+    
+  
+    
+  
+    
+  
+
+  <ul>
+    
+  </ul>
+  </section>
+</nav>
+
+<section class="pane">
+  <ul id="all-taxonomies">
+      
+          
+              <li><a href="https://curegit.github.io/nagoya-example/archives/">archives</a>
+                  <ul>
+                      
+                  </ul>
+              </li>
+          
+      
+          
+              <li><a href="https://curegit.github.io/nagoya-example/categories/">categories</a>
+                  <ul>
+                      
+                          <li>none</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/">Python</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/">C#</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/miscellaneous/a/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/miscellaneous/a/">A</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/prime/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/prime/">Prime</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/fix/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/unit/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/anime/mmppp/chara/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/">Chara</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>テスト</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/meta/markdown/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/meta/markdown/">Markdown の例</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                  </ul>
+              </li>
+          
+      
+          
+              <li><a href="https://curegit.github.io/nagoya-example/tags/">tags</a>
+                  <ul>
+                      
+                          <li>a</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/english/work-from-home/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/">Python</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/">C#</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/miscellaneous/a/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/miscellaneous/a/">A</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/prime/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/prime/">Prime</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/fix/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/unit/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/anime/mmppp/chara/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/">Chara</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>b</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/">Python</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/">C#</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/miscellaneous/a/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/miscellaneous/a/">A</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/prime/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/prime/">Prime</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/fix/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/unit/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/anime/mmppp/chara/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/">Chara</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>c</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/">Python</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/">C#</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/miscellaneous/a/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/miscellaneous/a/">A</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/python/prime/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/python/prime/">Prime</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/fix/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/programming/csharp/unit/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+                                  </li>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/anime/mmppp/chara/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/">Chara</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>hhhh</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/english/work-from-home/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>markdown</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/meta/markdown/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/meta/markdown/">Markdown の例</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>邪神ちゃん</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                          <li>邪神ちゃんドロップキック</li>
+                          <ul>
+                              
+                                  <li hugo-nav="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a>
+                                  </li>
+                              
+                          </ul>
+                      
+                  </ul>
+              </li>
+          
+      
+  </ul>
+</section>
+
+  
+</aside>
+
+      </div>
+      <footer id="bottom">
+  
+  <p>Nagoya ©curegit</p>
+  
+</footer>
+
+    </div>
+  </body>
+</html>

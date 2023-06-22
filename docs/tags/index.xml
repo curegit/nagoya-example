@@ -1,1 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>タグ on 名古屋サンプルブログ</title><link>https://curegit.github.io/nagoya-example/tags/</link><description>Recent content in タグ on 名古屋サンプルブログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>Nagoya ©curegit</copyright><lastBuildDate>Mon, 08 May 2023 16:26:09 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>a</title><link>https://curegit.github.io/nagoya-example/tags/a/</link><pubDate>Sat, 17 Jun 2023 16:39:28 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/a/</guid><description/></item><item><title>hhhh</title><link>https://curegit.github.io/nagoya-example/tags/hhhh/</link><pubDate>Sat, 17 Jun 2023 16:39:28 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/hhhh/</guid><description/></item><item><title>邪神ちゃん</title><link>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93/</link><pubDate>Tue, 13 Jun 2023 00:32:14 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93/</guid><description/></item><item><title>邪神ちゃんドロップキック</title><link>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%82%AD%E3%83%83%E3%82%AF/</link><pubDate>Tue, 13 Jun 2023 00:32:14 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%82%AD%E3%83%83%E3%82%AF/</guid><description/></item><item><title>邪神ちゃんドロップキック</title><link>https://curegit.github.io/nagoya-example/tags/jashin-chan/</link><pubDate>Mon, 08 May 2023 15:34:03 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/jashin-chan/</guid><description/></item><item><title>b</title><link>https://curegit.github.io/nagoya-example/tags/b/</link><pubDate>Fri, 05 May 2023 22:17:54 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/b/</guid><description/></item><item><title>c</title><link>https://curegit.github.io/nagoya-example/tags/c/</link><pubDate>Fri, 05 May 2023 22:17:54 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/c/</guid><description/></item><item><title>Markdown</title><link>https://curegit.github.io/nagoya-example/tags/markdown/</link><pubDate>Thu, 05 May 2022 21:41:33 +0900</pubDate><guid>https://curegit.github.io/nagoya-example/tags/markdown/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>タグ on 名古屋サンプルブログ</title>
+    <link>https://curegit.github.io/nagoya-example/tags/</link>
+    <description>Recent content in タグ on 名古屋サンプルブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Nagoya ©curegit</copyright>
+    <lastBuildDate>Mon, 08 May 2023 16:26:09 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>邪神ちゃん</title>
+      <link>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93/</link>
+      <pubDate>Wed, 21 Jun 2023 23:04:49 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>邪神ちゃんドロップキック</title>
+      <link>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%82%AD%E3%83%83%E3%82%AF/</link>
+      <pubDate>Wed, 21 Jun 2023 23:04:49 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%82%AD%E3%83%83%E3%82%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>a</title>
+      <link>https://curegit.github.io/nagoya-example/tags/a/</link>
+      <pubDate>Sat, 17 Jun 2023 16:39:28 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hhhh</title>
+      <link>https://curegit.github.io/nagoya-example/tags/hhhh/</link>
+      <pubDate>Sat, 17 Jun 2023 16:39:28 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/hhhh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>邪神ちゃんドロップキック</title>
+      <link>https://curegit.github.io/nagoya-example/tags/jashin-chan/</link>
+      <pubDate>Mon, 08 May 2023 15:34:03 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/jashin-chan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>b</title>
+      <link>https://curegit.github.io/nagoya-example/tags/b/</link>
+      <pubDate>Fri, 05 May 2023 22:17:54 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c</title>
+      <link>https://curegit.github.io/nagoya-example/tags/c/</link>
+      <pubDate>Fri, 05 May 2023 22:17:54 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://curegit.github.io/nagoya-example/tags/markdown/</link>
+      <pubDate>Thu, 05 May 2022 21:41:33 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
