@@ -1,7 +1,7 @@
 .PHONY: build server
 
 build:
-	hugo -d docs -b https://curegit.github.io/nagoya-example/
+	hugo -d docs --cleanDestinationDir -b https://curegit.github.io/nagoya-example/
 
 server:
-	hugo server --buildDrafts
+	hugo server --buildDrafts --disableFastRender
