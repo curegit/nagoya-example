@@ -3,27 +3,55 @@ main h1 {
   font-weight: bold;
 }
 
+.single h1.title {
+  font-size: 27px;
+}
+
+.toc {
+  margin: 10px 6px;
+}
+
+.single {
+  display: flex;
+  flex-flow: column;
+  row-gap: 10px;
+}
+
 .single h2 {
   margin-top: 28px;
+  margin-bottom: 12px;
   padding-bottom: 4px;
   padding-left: 2px;
   border-bottom: 1px solid #d1d8df;
+  font-size: 24px;
+}
+
+.single h3 {
+margin-top: 10px;
+
+    padding-left: 4px;
+}
+
+.single h4, .single h5, .single h6 {
+    margin-top: 4px;
+    padding-left: 4px;
 }
 
 .single h2:first-child {
-  margin-top: 12px;
+  margin-top: 4px;
 }
 
 .single p {
   text-indent: 6px;
   padding-left: 4px;
+  padding-right: 4px;
   margin: 12px 0;
 }
 
 .single pre {
   border-radius: 6px;
   overflow-x: auto;
-  padding: 6px 10px;
+  padding: 8px 12px;
 }
 
 article.single a {
@@ -35,8 +63,30 @@ article.single img {
   margin: 16px 0;
 }
 
+article.single ul, article.single ol { padding-left: 32px;
+
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding-right: 4px;
+}
+
+.single ul ul, .single ul ol, .single ol ul, .single ol ol {
+  padding-left: 18px;
+  padding-right: 0;
+    margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+article.single li { padding: 1px;}
+
 article.single pre {
   margin: 16px 0;
+}
+
+.single dl {
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 article.single .time {
@@ -57,6 +107,8 @@ article.single .time {
 
   .footnote-ref {
     font-size: 95%;
+    padding-left: 1px;
+    padding-right: 1px;
    }
    .footnote-ref::before {
      display: inline;

@@ -108,16 +108,16 @@
 
 <article class="single">
   <header>
-    <h1>Markdown の例</h1>
+    <h1 class="title">Markdown の例</h1>
     <div class="time">
-    
-    <div>作成: <time datetime="2022-05-05">2022/05/05</time></div>
-    <div>更新: <time datetime="2023-06-21">2023/06/21</time></div>
-    
-  </div>
-
+      
+        <div>作成: <time datetime="2022-05-05">2022/05/05</time></div>
+        <div>更新: <time datetime="2023-06-25">2023/06/25</time></div>
+      
+    </div>
   </header>
-  <div class="body"><p>Hugo で使用できる Markdown の例を示します。</p>
+  <div class="body">
+    <p>Hugo で使用できる Markdown の例を示します。</p>
 <h1 id="見出し1">見出し1</h1>
 <p>最上位の見出し要素はタイトルで使われるので、このレベルの見出しを本文で使うことはないです。</p>
 <h2 id="見出し2">見出し2</h2>
@@ -138,18 +138,69 @@
 <li>番号付きリスト2</li>
 <li>番号付きリスト3</li>
 </ol>
+<ul>
+<li>foo
+<ul>
+<li>bar
+<ul>
+<li>baz</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>a
+<blockquote>
+<p>b</p>
+</blockquote>
+</li>
+<li>c</li>
+</ul>
 <h2 id="リンク">リンク</h2>
 <p>これは、段落の文章です。
 脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>です。</p>
 <p><a href="https://curegit.jp/">リンクのテキスト</a></p>
+<p>Autolinks という仕様も存在します。</p>
+<p><a href="https://curegit.jp/">https://curegit.jp/</a></p>
 <p>これは、段落の文章です。
 画像を挿入します。</p>
-<p><img src="image.png" alt="画像の代替テキスト"></p>
+<p>
+  <img src="image.png" alt="画像の代替テキスト" title="aaa">
+
+</p>
 <h2 id="その他">その他</h2>
 <blockquote>
 <p>引用文です。</p>
 </blockquote>
+<p>ブロック引用はネストすることができます。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>foo
+bar
+baz</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>aa</p>
+<blockquote>
+<blockquote>
+<p>bbb</p>
+<blockquote>
+<ol>
+<li>222</li>
+<li>aaaa</li>
+</ol>
+</blockquote>
+<p>aaa</p>
+</blockquote>
+</blockquote>
 <p>水平線を表す場合は、3つ以上のアスタリスク（*）やハイフン（-）を使います。</p>
+<dl>
+<dt>用語</dt>
+<dd>用語の説明</dd>
+</dl>
 <hr>
 <p><code>インラインコード</code> は <code>バッククォート</code> で囲みます。</p>
 <pre tabindex="0"><code>複数行の
@@ -157,7 +208,12 @@
 書く場合は
 バッククォート3つで
 囲みます。
-</code></pre><p>これは、段落の文章です。</p>
+</code></pre><p>院殿</p>
+<pre><code>a simple
+  indented code block
+</code></pre>
+<p>これは、段落の文章です。</p>
+<hr>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -165,12 +221,10 @@
 <p>脚注の内容です&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</div></div>
+</div>
+  </div>
   <footer>
-    Taxno
-    <nav>
-      Nexy, Prev
-    </nav>
+    フッター
   </footer>
 </article>
 
@@ -179,40 +233,49 @@
           
           
   
+    
+    
+    
+      <nav class="prev-next">
+        
+          <a class="next" href="/nagoya-example/posts/meta/diagrams/">
+            <div>« 次の記事: ダイアグラムの表示</div>
+          </a>
+        
+        
+      </nav>
+    
   
-  
-    <nav class="pane">
-      
-      
-        <a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a>
-      
-    </nav>
-  
-
 
           
-          <nav class="pane">
             
-          
-          <h3>See Also</h3>
-          <ul>
-           
-           <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
-           
-           <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
-           
-           <li><a href="/nagoya-example/posts/meta/diagram/">GOAT</a></li>
-           
-           <li><a href="/nagoya-example/posts/english/living-in-japan/">Living in Japan: A Unique Experience</a></li>
-           
-           <li><a href="/nagoya-example/posts/english/sushi-types/">Types of Sushi</a></li>
-           
-          </ul>
-          
 
-          </nav>
-          
 
+
+
+  <nav class="pane">
+    <h2>次に読む</h2>
+    <ul>
+      
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/living-in-japan/">Living in Japan: A Unique Experience</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/sushi-types/">Types of Sushi</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown の例</a></li>
+      
+        <li><a href="/nagoya-example/posts/programming/csharp/fix/">Fix</a></li>
+      
+    </ul>
+  </nav>
+
+
+          
           <aside class="pane">
   <p>メインカラム上下に広告などのカスタムウィジェットを配置できます。</p>
   <img src="/nagoya-example/ad.png">
@@ -224,44 +287,31 @@
   <p>サイドバー上下に自己紹介などのカスタムウィジェットを配置できます。</p>
 </div>
 
+  
+
   <nav class="pane">
-
-
-  
-
-
-  
-
-
-  
-    <ul class="folders">
+    <ul>
+      <li>
+        <a href="/nagoya-example/">ホーム</a>
+      </li>
       
-        
-        <li class="folder">
-          <a href="/nagoya-example/pages/">
-            固定ページ (2) 
-          </a>
-          
-  
-
+        <li>
+          <a href="/nagoya-example/pages/bio/">自己紹介</a>
         </li>
       
-        
-        <li class="folder">
-          <a href="/nagoya-example/meta/">
-            Meta (1) 
-          </a>
-          
-  
-
+        <li>
+          <a href="/nagoya-example/pages/contact/">連絡先</a>
         </li>
       
-        
-        <li class="folder">
-          <a href="/nagoya-example/posts/">
-            投稿記事 (15) 
-          </a>
-          
+    </ul>
+  </nav>
+
+
+  
+
+<nav class="pane">
+  
+    
   
     <ul class="folders">
       
@@ -370,7 +420,7 @@
         
         <li class="folder">
           <a href="/nagoya-example/posts/meta/">
-            メタ (2) 
+            メタ (5) 
           </a>
           
   
@@ -380,30 +430,10 @@
     </ul>
   
 
-        </li>
-      
-    </ul>
   
-
-
-
-
-  <section>
-    
-    
-  
-    
-  
-    
-  
-
-  <ul>
-    
-  </ul>
-  </section>
 </nav>
 
-<section class="pane">
+  <nav class="pane">
   <ul id="all-taxonomies">
       
           
@@ -583,6 +613,10 @@
                           <li>markdown</li>
                           <ul>
                               
+                                  <li hugo-nav="/nagoya-example/posts/meta/diagrams/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/meta/diagrams/">ダイアグラムの表示</a>
+                                  </li>
+                              
                                   <li hugo-nav="/nagoya-example/posts/meta/markdown/">
                                       <a href="https://curegit.github.io/nagoya-example/posts/meta/markdown/">Markdown の例</a>
                                   </li>
@@ -612,16 +646,75 @@
           
       
   </ul>
-</section>
+</nav>
+
+  
+  
+
+  <nav class="pane">
+    <ul>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/tables/">表の例</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/html/">その他の HTML 要素と埋め込みコンテンツ</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">花園ゆりねの性格</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/miscellaneous/a/">A</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/programming/python/prime/">Prime</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+        </li>
+      
+    </ul>
+  </nav>
+
 
   
 </aside>
 
       </div>
-      <footer id="bottom">
+      
+
+<footer id="bottom">
+  
+    Copyright 2022 -
+
+  
+
+
   
   <p>Nagoya ©curegit</p>
   
+  Designed by
 </footer>
 
     </div>

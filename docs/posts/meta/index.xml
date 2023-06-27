@@ -9,12 +9,39 @@
     <copyright>Nagoya ©curegit</copyright>
     <lastBuildDate>Mon, 19 Jun 2023 02:18:42 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/posts/meta/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GOAT</title>
-      <link>https://curegit.github.io/nagoya-example/posts/meta/diagram/</link>
-      <pubDate>Thu, 22 Jun 2023 23:24:57 +0900</pubDate>
+      <title>表の例</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/tables/</link>
+      <pubDate>Tue, 27 Jun 2023 23:40:11 +0900</pubDate>
       
-      <guid>https://curegit.github.io/nagoya-example/posts/meta/diagram/</guid>
-      <description>&amp;amp; A M S i o i q f b B x u j o e a ( - x d r a &amp;gt; e f R &amp;gt; c o C n u o b ( n r ) ) d n e e J d r o s i n N o R D t o i u a a n g d d l o i t n e D i a g o n a l s C V u e r r v t e i d c a l n o t A N C : o u l d r r i A a / I v n s i n e e h s t d - e - t r l B i h i i s i o n &#39; s r e q n .</description>
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/tables/</guid>
+      <description>架空の吉野家 メニュー名 値段 カロリー 牛丼 500円 550kcal 牛皿 550円 600kcal 豚丼 480円 500kcal カツ丼 580円 650kcal 牛とろ玉丼 650円 700kcal 牛五目玉丼 680円 750kcal 牛焼肉丼</description>
+    </item>
+    
+    <item>
+      <title>ショートコードの例</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
+      <pubDate>Tue, 27 Jun 2023 01:51:47 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
+      <description>Figure GitHub Gist Tweet YouTube Figure An elephant at sunset GitHub Gist Tweet Owl bet you&amp;#39;ll lose this staring contest 🦉 pic.twitter.com/eJh4f2zncC &amp;mdash; San Diego Zoo Wildlife Alliance (@sandiegozoo) October 26, 2021 YouTube</description>
+    </item>
+    
+    <item>
+      <title>その他の HTML 要素と埋め込みコンテンツ</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/html/</link>
+      <pubDate>Mon, 26 Jun 2023 20:48:04 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/html/</guid>
+      <description>a Please press Ctrl + Shift + R to re-render an MDN page.</description>
+    </item>
+    
+    <item>
+      <title>ダイアグラムの表示</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
+      <description></description>
     </item>
     
     <item>

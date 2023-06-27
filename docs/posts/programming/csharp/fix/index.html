@@ -107,15 +107,16 @@
 
 <article class="single">
   <header>
-    <h1>Fix</h1>
+    <h1 class="title">Fix</h1>
     <div class="time">
-    
-    <div><time datetime="2023-05-05"> 2023/05/05</time></div>
-    
-  </div>
-
+      
+        <div>作成: <time datetime="2023-05-05">2023/05/05</time></div>
+        <div>更新: <time datetime="2023-06-27">2023/06/27</time></div>
+      
+    </div>
   </header>
-  <div class="body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lambda</span>
+  <div class="body">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lambda</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Func&lt;TResult&gt; Fix&lt;TResult&gt;(Func&lt;Func&lt;TResult&gt;, Func&lt;TResult&gt;&gt; fix)
 </span></span><span style="display:flex;"><span>    {
@@ -165,12 +166,17 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></div>
+</span></span></code></pre></div><p>このコードは、C#言語で再帰的な関数を定義するためのライブラリです。このライブラリを利用することで、再帰的な関数を定義する際に必要な再帰呼び出しを簡単に行うことができます。</p>
+<p>このライブラリは、Fixメソッドによって構成されています。Fixメソッドは、Func型の引数を受け取り、再帰呼び出しを行うための関数を返します。Fixメソッドは、再帰的に自身を呼び出すことで、無限に再帰呼び出しを行うことができます。</p>
+<p>Fixメソッドは、引数の数に応じて、4つのオーバーロードが用意されています。それぞれ、引数が1つの場合、2つの場合、3つの場合、4つの場合に対応します。これにより、引数の数に応じて、再帰的な関数を定義することができます。</p>
+<p>例えば、次のような再帰的な関数を定義することができます。</p>
+<pre tabindex="0"><code>Func&lt;int, int&gt; fib = Lambda.Fix&lt;int, int&gt;(f =&gt;
+    n =&gt; n &lt; 2 ? 1 : f(n - 1) + f(n - 2));
+</code></pre><p>このコードは、フィボナッチ数列を計算する関数を定義しています。最初に、Fixメソッドを呼び出し、引数には自身を渡しています。次に、引数が1つのFunc型の関数を定義しています。この関数の引数はint型のnで、nが2未満の場合は1を返し、それ以外の場合は再帰的に自身を呼び出した結果を足したものを返します。</p>
+<p>このように、Lambdaライブラリを利用することで、再帰的な関数を簡単に定義することができます。</p>
+  </div>
   <footer>
-    Taxno
-    <nav>
-      Nexy, Prev
-    </nav>
+    フッター
   </footer>
 </article>
 
@@ -179,42 +185,53 @@
           
           
   
+    
+    
+    
+      <nav class="prev-next">
+        
+          <a class="next" href="/nagoya-example/posts/programming/python/prime/">
+            <div>« 次の記事: Prime</div>
+          </a>
+        
+        
+          <a class="prev" href="/nagoya-example/posts/programming/csharp/unit/">
+            <div>» 前の記事: C# で Unit 型を実装する</div>
+          </a>
+        
+      </nav>
+    
   
-  
-    <nav class="pane">
-      
-        <a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
-      
-      
-        <a href="/nagoya-example/posts/programming/python/prime/">Prime</a>
-      
-    </nav>
-  
-
 
           
-          <nav class="pane">
             
-          
-          <h3>See Also</h3>
-          <ul>
-           
-           <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
-           
-           <li><a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a></li>
-           
-           <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
-           
-           <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
-           
-           <li><a href="/nagoya-example/posts/meta/diagram/">GOAT</a></li>
-           
-          </ul>
-          
 
-          </nav>
-          
 
+
+
+  <nav class="pane">
+    <h2>次に読む</h2>
+    <ul>
+      
+        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
+      
+        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムの表示</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
+      
+        <li><a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a></li>
+      
+        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">花園ゆりねの性格</a></li>
+      
+    </ul>
+  </nav>
+
+
+          
           <aside class="pane">
   <p>メインカラム上下に広告などのカスタムウィジェットを配置できます。</p>
   <img src="/nagoya-example/ad.png">
@@ -226,44 +243,31 @@
   <p>サイドバー上下に自己紹介などのカスタムウィジェットを配置できます。</p>
 </div>
 
+  
+
   <nav class="pane">
-
-
-  
-
-
-  
-
-
-  
-    <ul class="folders">
+    <ul>
+      <li>
+        <a href="/nagoya-example/">ホーム</a>
+      </li>
       
-        
-        <li class="folder">
-          <a href="/nagoya-example/pages/">
-            固定ページ (2) 
-          </a>
-          
-  
-
+        <li>
+          <a href="/nagoya-example/pages/bio/">自己紹介</a>
         </li>
       
-        
-        <li class="folder">
-          <a href="/nagoya-example/meta/">
-            Meta (1) 
-          </a>
-          
-  
-
+        <li>
+          <a href="/nagoya-example/pages/contact/">連絡先</a>
         </li>
       
-        
-        <li class="folder">
-          <a href="/nagoya-example/posts/">
-            投稿記事 (15) 
-          </a>
-          
+    </ul>
+  </nav>
+
+
+  
+
+<nav class="pane">
+  
+    
   
     <ul class="folders">
       
@@ -372,7 +376,7 @@
         
         <li class="folder">
           <a href="/nagoya-example/posts/meta/">
-            メタ (2) 
+            メタ (5) 
           </a>
           
   
@@ -382,30 +386,10 @@
     </ul>
   
 
-        </li>
-      
-    </ul>
   
-
-
-
-
-  <section>
-    
-    
-  
-    
-  
-    
-  
-
-  <ul>
-    
-  </ul>
-  </section>
 </nav>
 
-<section class="pane">
+  <nav class="pane">
   <ul id="all-taxonomies">
       
           
@@ -585,6 +569,10 @@
                           <li>markdown</li>
                           <ul>
                               
+                                  <li hugo-nav="/nagoya-example/posts/meta/diagrams/">
+                                      <a href="https://curegit.github.io/nagoya-example/posts/meta/diagrams/">ダイアグラムの表示</a>
+                                  </li>
+                              
                                   <li hugo-nav="/nagoya-example/posts/meta/markdown/">
                                       <a href="https://curegit.github.io/nagoya-example/posts/meta/markdown/">Markdown の例</a>
                                   </li>
@@ -614,16 +602,75 @@
           
       
   </ul>
-</section>
+</nav>
+
+  
+  
+
+  <nav class="pane">
+    <ul>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/tables/">表の例</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/html/">その他の HTML 要素と埋め込みコンテンツ</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">花園ゆりねの性格</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/miscellaneous/a/">A</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/programming/python/prime/">Prime</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+        </li>
+      
+    </ul>
+  </nav>
+
 
   
 </aside>
 
       </div>
-      <footer id="bottom">
+      
+
+<footer id="bottom">
+  
+    Copyright 2022 -
+
+  
+
+
   
   <p>Nagoya ©curegit</p>
   
+  Designed by
 </footer>
 
     </div>
