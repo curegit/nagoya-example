@@ -5,7 +5,6 @@
     <link>https://curegit.github.io/nagoya-example/archives/</link>
     <description>Recent content in Archives on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <copyright>Nagoya ©curegit</copyright><atom:link href="https://curegit.github.io/nagoya-example/archives/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language><atom:link href="https://curegit.github.io/nagoya-example/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

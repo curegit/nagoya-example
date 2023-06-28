@@ -3,18 +3,31 @@ main h1 {
   font-weight: bold;
 }
 
-.single h1.title {
-  font-size: 27px;
-}
-
-.toc {
-  margin: 10px 6px;
-}
-
 .single {
   display: flex;
   flex-flow: column;
   row-gap: 10px;
+}
+
+.single h1.title {
+  font-size: 27px;
+}
+
+.single .time {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.single time {
+  display: inline;
+}
+
+.toc {
+  margin: 10px 6px;
 }
 
 .single h2 {
@@ -27,14 +40,13 @@ main h1 {
 }
 
 .single h3 {
-margin-top: 10px;
-
-    padding-left: 4px;
+  margin-top: 10px;
+  padding-left: 4px;
 }
 
 .single h4, .single h5, .single h6 {
-    margin-top: 4px;
-    padding-left: 4px;
+  margin-top: 4px;
+  padding-left: 4px;
 }
 
 .single h2:first-child {
@@ -42,46 +54,43 @@ margin-top: 10px;
 }
 
 .single p {
-  text-indent: 6px;
+  margin: 12px 0;
   padding-left: 4px;
   padding-right: 4px;
-  margin: 12px 0;
+  text-indent: 6px;
 }
 
-.single pre {
-  border-radius: 6px;
-  overflow-x: auto;
-  padding: 8px 12px;
-}
-
-article.single a {
+.single a {
   text-decoration: underline;
 }
 
-article.single img {
-
+.single img {
   margin: 16px 0;
 }
 
-article.single ul, article.single ol { padding-left: 32px;
-
+.single ul, .single ol {
   margin-top: 14px;
   margin-bottom: 14px;
+  padding-left: 32px;
   padding-right: 4px;
 }
 
 .single ul ul, .single ul ol, .single ol ul, .single ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 18px;
   padding-right: 0;
-    margin-top: 0;
-  margin-bottom: 0;
 }
 
+#content .single li {
+  padding: 1px;
+}
 
-article.single li { padding: 1px;}
-
-article.single pre {
+.single pre {
   margin: 16px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  overflow-x: auto;
 }
 
 .single dl {
@@ -89,32 +98,18 @@ article.single pre {
   padding-right: 4px;
 }
 
-article.single .time {
+.footnote-ref {
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 95%;
+}
 
-  font-size: 14px;
-  display: flex;
-  justify-content: end;
-  line-height: 1.1;
-  gap: 20px;
-  color: #4d4d4d;
-  }
+.footnote-ref::before {
+  display: inline;
+  content: "[";
+}
 
-  article.single time {
-    display: inline;
-  }
-
-
-
-  .footnote-ref {
-    font-size: 95%;
-    padding-left: 1px;
-    padding-right: 1px;
-   }
-   .footnote-ref::before {
-     display: inline;
-     content: "[";
-   }
-   .footnote-ref::after {
-     display: inline;
-     content: "]";
-   }
+.footnote-ref::after {
+  display: inline;
+  content: "]";
+}
