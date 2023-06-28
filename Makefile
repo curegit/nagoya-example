@@ -1,7 +1,7 @@
 .PHONY: build server
 
 build:
-	hugo -d docs --cleanDestinationDir -b https://curegit.github.io/nagoya-example/
+	hugo -d docs --cleanDestinationDir --printUnusedTemplates
 
 server:
-	hugo server --buildDrafts --disableFastRender
+	hugo server --buildDrafts --disableFastRender --printUnusedTemplates
