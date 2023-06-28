@@ -1,0 +1,35 @@
+title = "名古屋サンプルブログ"
+baseURL = "https://curegit.github.io/nagoya-example/"
+theme = "nagoya"
+paginate = 5
+paginatePath = ""
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+enableInlineShortcodes = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+enableGitInfo = true
+cleanDestinationDir = true
+
+[social]
+  twitter = "curegit"
+
+[frontmatter]
+  date = ["date", "publishDate", ":git", ":fileModTime"]
+  lastmod = ["lastmod", ":git", ":fileModTime"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  archive = "archives"
+
+[params]
+  treeRoot = "posts"
+  author = "curegit"
+  description = "Hugo の日本語テーマ「名古屋」のサンプルサイトです"
+  keywords = ["ブログ", "Hugo", "名古屋"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
