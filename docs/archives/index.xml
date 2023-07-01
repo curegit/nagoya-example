@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Archives on 名古屋サンプルブログ</title>
+    <title>全記事アーカイブ on 名古屋サンプルブログ</title>
     <link>https://curegit.github.io/nagoya-example/archives/</link>
-    <description>Recent content in Archives on 名古屋サンプルブログ</description>
+    <description>Recent content in 全記事アーカイブ on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="https://curegit.github.io/nagoya-example/archives/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Sat, 01 Jul 2023 15:02:11 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

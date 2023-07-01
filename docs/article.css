@@ -82,10 +82,6 @@ main h1 {
   padding-right: 0;
 }
 
-#content .single li {
-  padding: 1px;
-}
-
 .single pre {
   margin: 16px 0;
   padding: 8px 12px;
@@ -96,6 +92,10 @@ main h1 {
 .single dl {
   padding-left: 4px;
   padding-right: 4px;
+}
+
+.footnotes {
+  margin-top: 32px;
 }
 
 .footnote-ref {

@@ -46,10 +46,6 @@ main.pane > * {
   width: 100%;
 }
 
-div#content li {
-  padding-left: 2px;
-}
-
 nav#breadcrumb {
   padding: 10px 12px 10px 24px;
 }
@@ -133,6 +129,43 @@ ol.breadcrumb > li:has(a):last-child::after {
   }
 }
 
+.list-title {
+  word-spacing: -1px;
+}
+
+.list-title-taxonomy {
+  color: #555;
+  font-size: 90%;
+}
+
+.term-list {
+  font-size: 18px;
+}
+
+.tag-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 6px 50px;
+}
+
+.archives {
+  display: flex;
+  flex-flow: column;
+  row-gap: 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.archives h2 {
+  padding-bottom: 6px;
+  font-size: 20px;
+}
+
+.archives ul {
+  padding-left: 24px;
+  list-style: square;
+}
+
 .pagenator {
   padding: 14px 16px;
 }
@@ -198,6 +231,7 @@ a.page-link[href]:hover {
 
 .component-title {
   padding-left: 4px;
+  padding-bottom: 3px;
   font-size: 22px;
   font-weight: bold;
 }
