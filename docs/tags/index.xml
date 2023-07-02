@@ -6,16 +6,7 @@
     <description>Recent content in タグ on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 08 May 2023 16:26:09 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>邪神ちゃんドロップキック</title>
-      <link>https://curegit.github.io/nagoya-example/tags/jashin-chan/</link>
-      <pubDate>Tue, 27 Jun 2023 17:32:00 +0900</pubDate>
-      
-      <guid>https://curegit.github.io/nagoya-example/tags/jashin-chan/</guid>
-      <description>邪神ちゃんのコンテンツ</description>
-    </item>
-    
+    <lastBuildDate>Sun, 02 Jul 2023 16:37:46 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>邪神ちゃん</title>
       <link>https://curegit.github.io/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93/</link>
@@ -71,11 +62,38 @@
     </item>
     
     <item>
+      <title>HTML</title>
+      <link>https://curegit.github.io/nagoya-example/tags/html/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://curegit.github.io/nagoya-example/tags/javascript/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Markdown</title>
       <link>https://curegit.github.io/nagoya-example/tags/markdown/</link>
-      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://curegit.github.io/nagoya-example/tags/hugo/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/tags/hugo/</guid>
       <description></description>
     </item>
     

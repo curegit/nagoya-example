@@ -9,10 +9,11 @@
 
 <title>Markdown の例</title>
 
-  <meta name="description" content="Hugo で使用できる Markdown の例を示します。">
+  <meta name="description" content="Hugo で使用できる Markdown の例を示します。
+サムネイル画像は images フロントマターのテストです。">
 
 
-  <meta name="keywords" content="Markdown">
+  <meta name="keywords" content="Markdown, HTML, Hugo">
 
 
   <meta name="author" content="curegit">
@@ -28,6 +29,7 @@
 <link rel="stylesheet" href="/nagoya-example/custom.css">
 
 
+
     <link rel="icon" href="/nagoya-example/icon.png">
 
     
@@ -38,18 +40,20 @@
   <meta property="og:title" content="Markdown の例">
 
 
-  <meta name="og:description" content="Hugo で使用できる Markdown の例を示します。">
+  <meta name="og:description" content="Hugo で使用できる Markdown の例を示します。
+サムネイル画像は images フロントマターのテストです。">
 
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/meta/markdown/">
 
-  <meta property="og:image" content="https://curegit.github.io/nagoya-example/image.png">
+  <meta property="og:image" content="https://curegit.github.io/nagoya-example/ad.png">
 
 
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://curegit.github.io/nagoya-example/image.png"/>
+<meta name="twitter:image" content="https://curegit.github.io/nagoya-example/ad.png"/>
 
 <meta name="twitter:title" content="Markdown の例"/>
-<meta name="twitter:description" content="Hugo で使用できる Markdown の例を示します。"/>
+<meta name="twitter:description" content="Hugo で使用できる Markdown の例を示します。
+サムネイル画像は images フロントマターのテストです。"/>
 <meta name="twitter:site" content="@curegit"/>
 
 
@@ -114,33 +118,66 @@
     <h1 class="title">Markdown の例</h1>
     <div class="time">
       
-        <div>作成: <time datetime="2022-05-05">2022/05/05</time></div>
-        <div>更新: <time datetime="2023-06-25">2023/06/25</time></div>
+        <div>作成: <time datetime="2021-05-06">2021/05/06</time></div>
+        <div>更新: <time datetime="2023-07-02">2023/07/02</time></div>
       
     </div>
   </header>
   <div class="body">
     <p>Hugo で使用できる Markdown の例を示します。</p>
+<p>サムネイル画像は <code>images</code> フロントマターのテストです。</p>
+  
+    <div class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#見出し2">見出し2</a></li>
+    <li><a href="#見出し2-1">見出し2</a>
+      <ul>
+        <li><a href="#見出し3">見出し3</a></li>
+      </ul>
+    </li>
+    <li><a href="#リスト">リスト</a></li>
+    <li><a href="#リンク">リンク</a></li>
+    <li><a href="#コードブロック">コードブロック</a></li>
+    <li><a href="#テーブル">テーブル</a></li>
+    <li><a href="#その他">その他</a>
+      <ul>
+        <li><a href="#引用">引用</a></li>
+        <li><a href="#水平線">水平線</a></li>
+        <li><a href="#説明リスト">説明リスト</a></li>
+        <li><a href="#生のhtml">生のHTML</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+
 <h1 id="見出し1">見出し1</h1>
 <p>最上位の見出し要素はタイトルで使われるので、このレベルの見出しを本文で使うことはないです。</p>
 <h2 id="見出し2">見出し2</h2>
+<p>本文はレベル2の見出しから始めましょう。</p>
+<h2 id="見出し2-1">見出し2</h2>
 <h3 id="見出し3">見出し3</h3>
 <p>これは、段落の文章です。
 <strong>太字</strong>や <em>italic</em> なども使えます。</p>
 <h4 id="見出し4">見出し4</h4>
 <h5 id="見出し5">見出し5</h5>
 <h6 id="見出し6">見出し6</h6>
+<p>小さい見出しを使うことはあまりないかもしれません。</p>
 <h2 id="リスト">リスト</h2>
+<p>通常よく使うリストです。</p>
 <ul>
 <li>リスト1</li>
 <li>リスト2</li>
 <li>リスト3</li>
 </ul>
+<p>番号付きリストです。</p>
 <ol>
 <li>番号付きリスト1</li>
 <li>番号付きリスト2</li>
 <li>番号付きリスト3</li>
 </ol>
+<p>ネストします。</p>
 <ul>
 <li>foo
 <ul>
@@ -152,6 +189,7 @@
 </ul>
 </li>
 </ul>
+<p>異なる要素をリストの中に入れます。</p>
 <ul>
 <li>a
 <blockquote>
@@ -162,17 +200,144 @@
 </ul>
 <h2 id="リンク">リンク</h2>
 <p>これは、段落の文章です。
-脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>です。</p>
-<p><a href="https://curegit.jp/">リンクのテキスト</a></p>
+脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を使うことができます。</p>
+<p>リンクテキストをこのように挿入できます: <a href="https://curegit.jp/">リンクのテキスト</a>。</p>
 <p>Autolinks という仕様も存在します。</p>
 <p><a href="https://curegit.jp/">https://curegit.jp/</a></p>
 <p>これは、段落の文章です。
 画像を挿入します。</p>
 <p>
-  <img src="image.png" alt="画像の代替テキスト" title="aaa">
+  <img src="lisp.png" alt="Lisp Alien" title="Lisp">
 
 </p>
+<p>サムネイルの画像です。</p>
+<p>
+  <img src="/nagoya-example/ad.png" alt="Example image">
+
+</p>
+<h2 id="コードブロック">コードブロック</h2>
+<p><code>インラインコード</code> は <code>バッククォート</code> で囲みます。</p>
+<pre tabindex="0"><code>複数行の
+コードを
+書く場合は
+バッククォート3つで
+囲みます。
+</code></pre><p>インデントコードブロックです。</p>
+<pre><code>a simple
+  indented code block
+</code></pre>
+<p>言語を指定したコードブロックです。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">shifted</span>(list, shift<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> len(list)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(shift <span style="color:#f92672">%</span> n, n):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> list[i]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, shift <span style="color:#f92672">%</span> n):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> list[i]
+</span></span></code></pre></div><h2 id="テーブル">テーブル</h2>
+<p>以下は架空の吉野家のメニュー表です。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">メニュー名</th>
+<th style="text-align:right">値段</th>
+<th style="text-align:right">カロリー</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">牛丼</td>
+<td style="text-align:right">500円</td>
+<td style="text-align:right">550kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛皿</td>
+<td style="text-align:right">550円</td>
+<td style="text-align:right">600kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">豚丼</td>
+<td style="text-align:right">480円</td>
+<td style="text-align:right">500kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">カツ丼</td>
+<td style="text-align:right">580円</td>
+<td style="text-align:right">650kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛とろ玉丼</td>
+<td style="text-align:right">650円</td>
+<td style="text-align:right">700kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛五目玉丼</td>
+<td style="text-align:right">680円</td>
+<td style="text-align:right">750kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛焼肉丼</td>
+<td style="text-align:right">750円</td>
+<td style="text-align:right">800kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛カルビ丼</td>
+<td style="text-align:right">800円</td>
+<td style="text-align:right">850kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛すき焼き丼</td>
+<td style="text-align:right">900円</td>
+<td style="text-align:right">950kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛ユッケ丼</td>
+<td style="text-align:right">950円</td>
+<td style="text-align:right">1000kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛肉ざんまい丼</td>
+<td style="text-align:right">1200円</td>
+<td style="text-align:right">1300kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めしコロッケ定食</td>
+<td style="text-align:right">800円</td>
+<td style="text-align:right">900kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めしハンバーグ定食</td>
+<td style="text-align:right">900円</td>
+<td style="text-align:right">950kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めしカツ定食</td>
+<td style="text-align:right">950円</td>
+<td style="text-align:right">1000kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めし焼肉定食</td>
+<td style="text-align:right">1000円</td>
+<td style="text-align:right">1050kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めしすき焼き定食</td>
+<td style="text-align:right">1200円</td>
+<td style="text-align:right">1250kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めしユッケ定食</td>
+<td style="text-align:right">1300円</td>
+<td style="text-align:right">1350kcal</td>
+</tr>
+<tr>
+<td style="text-align:left">牛めし肉ざんまい定食</td>
+<td style="text-align:right">1500円</td>
+<td style="text-align:right">1550kcal</td>
+</tr>
+</tbody>
+</table>
 <h2 id="その他">その他</h2>
+<h3 id="引用">引用</h3>
 <blockquote>
 <p>引用文です。</p>
 </blockquote>
@@ -186,37 +351,35 @@ baz</p>
 </blockquote>
 </blockquote>
 </blockquote>
-<p>aa</p>
+<p>ブロック引用中で別の要素を使うことができます。</p>
 <blockquote>
 <blockquote>
-<p>bbb</p>
+<p>aaa</p>
 <blockquote>
 <ol>
-<li>222</li>
-<li>aaaa</li>
+<li>xxx</li>
+<li>yyy</li>
 </ol>
 </blockquote>
-<p>aaa</p>
+<p>bbb</p>
 </blockquote>
 </blockquote>
+<h3 id="水平線">水平線</h3>
 <p>水平線を表す場合は、3つ以上のアスタリスク（*）やハイフン（-）を使います。</p>
+<hr>
+<p>水平線を表す場合は、3つ以上のアスタリスク（*）やハイフン（-）を使います。</p>
+<h3 id="説明リスト">説明リスト</h3>
 <dl>
-<dt>用語</dt>
+<dt>用語1</dt>
+<dd>用語の説明</dd>
+<dt>用語2</dt>
+<dd>用語の説明</dd>
+<dt>用語3</dt>
 <dd>用語の説明</dd>
 </dl>
-<hr>
-<p><code>インラインコード</code> は <code>バッククォート</code> で囲みます。</p>
-<pre tabindex="0"><code>複数行の
-コードを
-書く場合は
-バッククォート3つで
-囲みます。
-</code></pre><p>院殿</p>
-<pre><code>a simple
-  indented code block
-</code></pre>
 <p>これは、段落の文章です。</p>
-<hr>
+<h3 id="生のhtml">生のHTML</h3>
+<p>Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -232,6 +395,10 @@ baz</p>
     
       
         Markdown
+      
+        HTML
+      
+        Hugo
       
       </div>
 
@@ -355,6 +522,33 @@ baz</p>
         
         <li>
           
+            <a href="/nagoya-example/tags/html/">HTML</a>
+          
+        </li>
+          <ul>
+
+          </ul>
+        
+        <li>
+          
+            <a href="/nagoya-example/tags/hugo/">Hugo</a>
+          
+        </li>
+          <ul>
+
+          </ul>
+        
+        <li>
+          
+            <a href="/nagoya-example/tags/javascript/">JavaScript</a>
+          
+        </li>
+          <ul>
+
+          </ul>
+        
+        <li>
+          
             <a href="/nagoya-example/tags/markdown/">Markdown</a>
           
         </li>
@@ -402,8 +596,8 @@ baz</p>
     
       <nav class="prev-next">
         
-          <a class="next" href="/nagoya-example/posts/meta/diagrams/">
-            <div>« 次の記事: ダイアグラムの表示</div>
+          <a class="next" href="/nagoya-example/posts/meta/shortcodes/">
+            <div>« 次の記事: ショートコードの例</div>
           </a>
         
         
@@ -431,9 +625,9 @@ baz</p>
       
         <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
       
-        <li><a href="/nagoya-example/posts/english/living-in-japan/">Living in Japan: A Unique Experience</a></li>
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
-        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムの表示</a></li>
+        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a></li>
       
     </ul>
   </nav>
@@ -491,16 +685,6 @@ baz</p>
     
   
     <ul class="folders">
-      
-        
-        <li class="folder">
-          <a href="/nagoya-example/posts/nagoya/">
-            名古屋
-          </a>
-          
-  
-
-        </li>
       
         
         <li class="folder">
@@ -597,7 +781,7 @@ baz</p>
         
         <li class="folder">
           <a href="/nagoya-example/posts/meta/">
-            メタ (5) 
+            メタ (3) 
           </a>
           
   
@@ -641,6 +825,24 @@ baz</p>
         <li class="tag">
           
             <a href="/nagoya-example/tags/hhhh/">hhhh</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/html/">HTML</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/hugo/">Hugo</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/javascript/">JavaScript</a>
           
         </li>
       
@@ -715,18 +917,6 @@ baz</p>
         </li>
       
         <li>
-          <a href="/nagoya-example/posts/meta/tables/">表の例</a>
-        </li>
-      
-        <li>
-          <a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a>
-        </li>
-      
-        <li>
-          <a href="/nagoya-example/posts/meta/html/">その他の HTML 要素と埋め込みコンテンツ</a>
-        </li>
-      
-        <li>
           <a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a>
         </li>
       
@@ -739,15 +929,27 @@ baz</p>
         </li>
       
         <li>
-          <a href="/nagoya-example/posts/miscellaneous/a/">A</a>
-        </li>
-      
-        <li>
           <a href="/nagoya-example/posts/programming/python/prime/">Prime</a>
         </li>
       
         <li>
           <a href="/nagoya-example/posts/programming/csharp/fix/">Fix</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/english/living-in-japan/">Living in Japan: A Unique Experience</a>
         </li>
       
     </ul>
@@ -765,7 +967,7 @@ baz</p>
     
       
       
-        © 2022–2023
+        © 2021–2023
       
       
         <em>curegit</em>

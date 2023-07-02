@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 名古屋サンプルブログ</title>
+    <link>https://curegit.github.io/nagoya-example/tags/hugo/</link>
+    <description>Recent content in Hugo on 名古屋サンプルブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ショートコードの例</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
+      <description>&lt;p&gt;使用できるショートコードを紹介します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown の例</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/markdown/</link>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/markdown/</guid>
+      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;
+&lt;p&gt;サムネイル画像は &lt;code&gt;images&lt;/code&gt; フロントマターのテストです。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

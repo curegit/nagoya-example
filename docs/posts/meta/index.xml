@@ -6,50 +6,33 @@
     <description>Recent content in メタ on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 19 Jun 2023 02:18:42 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/posts/meta/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 16:30:53 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/posts/meta/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>表の例</title>
-      <link>https://curegit.github.io/nagoya-example/posts/meta/tables/</link>
-      <pubDate>Tue, 27 Jun 2023 23:40:11 +0900</pubDate>
-      
-      <guid>https://curegit.github.io/nagoya-example/posts/meta/tables/</guid>
-      <description>架空の吉野家 メニュー名 値段 カロリー 牛丼 500円 550kcal 牛皿 550円 600kcal 豚丼 480円 500kcal カツ丼 580円 650kcal 牛とろ玉丼 650円 700kcal 牛五目玉丼 680円 750kcal 牛焼肉丼</description>
-    </item>
-    
-    <item>
-      <title>ショートコードの例</title>
-      <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
-      <pubDate>Tue, 27 Jun 2023 01:51:47 +0900</pubDate>
-      
-      <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
-      <description>Figure GitHub Gist Tweet YouTube Figure An elephant at sunset GitHub Gist Tweet Owl bet you&amp;#39;ll lose this staring contest 🦉 pic.twitter.com/eJh4f2zncC &amp;mdash; San Diego Zoo Wildlife Alliance (@sandiegozoo) October 26, 2021 YouTube</description>
-    </item>
-    
-    <item>
-      <title>その他の HTML 要素と埋め込みコンテンツ</title>
-      <link>https://curegit.github.io/nagoya-example/posts/meta/html/</link>
-      <pubDate>Mon, 26 Jun 2023 20:48:04 +0900</pubDate>
-      
-      <guid>https://curegit.github.io/nagoya-example/posts/meta/html/</guid>
-      <description>a Please press Ctrl + Shift + R to re-render an MDN page.</description>
-    </item>
-    
-    <item>
-      <title>ダイアグラムの表示</title>
+      <title>ダイアグラムと数式の表示</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
-      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>ショートコードの例</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
+      <description>&lt;p&gt;使用できるショートコードを紹介します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Markdown の例</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/markdown/</link>
-      <pubDate>Thu, 05 May 2022 21:41:33 +0900</pubDate>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/markdown/</guid>
-      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;
+&lt;p&gt;サムネイル画像は &lt;code&gt;images&lt;/code&gt; フロントマターのテストです。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,23 +6,33 @@
     <description>Recent content in Markdown on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ダイアグラムの表示</title>
+      <title>ダイアグラムと数式の表示</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
-      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>ショートコードの例</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
+      <description>&lt;p&gt;使用できるショートコードを紹介します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Markdown の例</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/markdown/</link>
-      <pubDate>Thu, 05 May 2022 21:41:33 +0900</pubDate>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/markdown/</guid>
-      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;
+&lt;p&gt;サムネイル画像は &lt;code&gt;images&lt;/code&gt; フロントマターのテストです。&lt;/p&gt;</description>
     </item>
     
   </channel>
