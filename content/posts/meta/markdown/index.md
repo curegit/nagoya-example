@@ -6,6 +6,7 @@ categories:
 tags:
   - Markdown
   - HTML
+  - Hugo
 images:
   - ad.png
 ---
