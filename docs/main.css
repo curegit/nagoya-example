@@ -323,6 +323,7 @@ footer#bottom {
   border-top-width: 16px;
   border-top-style: solid;
   text-align: center;
+  word-break: keep-all;
   font-size: 0.9rem;
 }
 

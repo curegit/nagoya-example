@@ -9,8 +9,10 @@
 
 <title>ダイアグラムと数式の表示</title>
 
+  <meta name="description" content="テキストで書けるダイアグラムと、$x^2 &#43; 3x &#43; 1$ のような数式表示の例です。">
 
-  <meta name="keywords" content="Markdown, HTML, JavaScript">
+
+  <meta name="keywords" content="Markdown, HTML, JavaScript, Mermaid, KaTeX">
 
 
   <meta name="author" content="curegit">
@@ -37,12 +39,33 @@
   <meta property="og:title" content="ダイアグラムと数式の表示">
 
 
+  <meta name="og:description" content="テキストで書けるダイアグラムと、$x^2 &#43; 3x &#43; 1$ のような数式表示の例です。">
+
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/meta/diagrams/">
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ダイアグラムと数式の表示"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="テキストで書けるダイアグラムと、$x^2 &#43; 3x &#43; 1$ のような数式表示の例です。"/>
 <meta name="twitter:site" content="@curegit"/>
 
 
@@ -108,12 +131,13 @@
     <div class="time">
       
         <div>作成: <time datetime="2022-05-10">2022/05/10</time></div>
-        <div>更新: <time datetime="2023-07-02">2023/07/02</time></div>
+        <div>更新: <time datetime="2023-07-10">2023/07/10</time></div>
       
     </div>
   </header>
   <div class="body">
-    <h2 id="heading"></h2>
+    <p>テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。</p>
+<h2 id="goat">GoAT</h2>
 
 
 
@@ -646,6 +670,23 @@
     </svg>
   
 </div>
+<h2 id="mermaid">Mermaid</h2>
+<pre class="mermaid">
+  sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+</pre>
+<h2 id="katex">KaTeX</h2>
+<p>インライン $a^2 + b^2 = c^2$ するです。</p>
+<p>$$\int_{a}^{b} x^2 dx$$</p>
   </div>
   <footer>
     フッター
@@ -658,6 +699,10 @@
       
         JavaScript
       
+        Mermaid
+      
+        KaTeX
+      
       </div>
 
     <ul>
@@ -667,7 +712,7 @@
 
 
       
-        全記事アーカイブ
+        年別アーカイブ
       
 
 
@@ -684,7 +729,7 @@
 
 
       
-        カテゴリー
+        カテゴリ
       
 
 
@@ -707,23 +752,6 @@
           <ul>
 
           </ul>
-        
-      </ul>
-
-
-
-    </li>
-    
-    <li>
-
-
-
-      
-        Series
-      
-
-
-      <ul>
         
       </ul>
 
@@ -807,7 +835,25 @@
         
         <li>
           
+            <a href="/nagoya-example/tags/katex/">KaTeX</a>
+          
+        </li>
+          <ul>
+
+          </ul>
+        
+        <li>
+          
             <a href="/nagoya-example/tags/markdown/">Markdown</a>
+          
+        </li>
+          <ul>
+
+          </ul>
+        
+        <li>
+          
+            <a href="/nagoya-example/tags/mermaid/">Mermaid</a>
           
         </li>
           <ul>
@@ -887,9 +933,9 @@
       
         <li><a href="/nagoya-example/posts/english/living-in-japan/">Living in Japan: A Unique Experience</a></li>
       
-        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
+        <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a></li>
+        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
       
     </ul>
   </nav>
@@ -924,17 +970,12 @@
     
     
       <li>
-        <a href=/nagoya-example/archives/>全記事アーカイブ</a>
+        <a href="/nagoya-example/archives/">年別アーカイブ</a>
       </li>
     
-
-    <li>
-      <a href=/nagoya-example/sitemap.xml>サイトマップ (XML)</a>
-    </li>
-
     
       <li>
-        <a href=/nagoya-example/index.xml>RSS フィード (XML)</a>
+        <a href="/nagoya-example/index.xml">RSS</a>
       </li>
     
   </ul>
@@ -1110,7 +1151,19 @@
       
         <li class="tag">
           
+            <a href="/nagoya-example/tags/katex/">KaTeX</a>
+          
+        </li>
+      
+        <li class="tag">
+          
             <a href="/nagoya-example/tags/markdown/">Markdown</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/mermaid/">Mermaid</a>
           
         </li>
       
@@ -1138,7 +1191,7 @@
       <nav class="pane">
         
           <header class="component-title">
-            <a href="/nagoya-example/categories/">カテゴリー</a>
+            <a href="/nagoya-example/categories/">カテゴリ</a>
           </header>
         
         <ul>
@@ -1157,10 +1210,6 @@
           
         </ul>
       </nav>
-    
-  
-
-  
     
   
 
@@ -1229,7 +1278,7 @@
     
       
       
-        © 2021–2023
+        ©&nbsp;2021–2023
       
       
         <em>curegit</em>
@@ -1238,7 +1287,9 @@
   </small>
   <br>
   <small>
-    <i>Nagoya</i> Theme by <i>curegit</i>. Built with Hugo.
+    <i>Nagoya</i>&nbsp;Theme by <i>curegit</i>.
+    <wbr>
+    Built with Hugo.
   </small>
 </footer>
 

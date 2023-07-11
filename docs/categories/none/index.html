@@ -38,6 +38,25 @@
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/categories/none/">
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="None"/>
 <meta name="twitter:description" content="Hugo の日本語テーマ「名古屋」のサンプルサイトです"/>
@@ -79,7 +98,7 @@
 
   
   
-    <li><a href="/nagoya-example/categories/">カテゴリー</a></li>
+    <li><a href="/nagoya-example/categories/">カテゴリ</a></li>
   
 
   
@@ -99,7 +118,7 @@
       
         
         
-          <h1 class="list-title"><span class="list-title-taxonomy">カテゴリー:</span> None</h1>
+          <h1 class="list-title"><span class="list-title-taxonomy">カテゴリ:</span> None</h1>
         
       
       
@@ -251,17 +270,12 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
     
     
       <li>
-        <a href=/nagoya-example/archives/>全記事アーカイブ</a>
+        <a href="/nagoya-example/archives/">年別アーカイブ</a>
       </li>
     
-
-    <li>
-      <a href=/nagoya-example/sitemap.xml>サイトマップ (XML)</a>
-    </li>
-
     
       <li>
-        <a href=/nagoya-example/index.xml>RSS フィード (XML)</a>
+        <a href="/nagoya-example/index.xml">RSS</a>
       </li>
     
   </ul>
@@ -437,7 +451,19 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
       
         <li class="tag">
           
+            <a href="/nagoya-example/tags/katex/">KaTeX</a>
+          
+        </li>
+      
+        <li class="tag">
+          
             <a href="/nagoya-example/tags/markdown/">Markdown</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/mermaid/">Mermaid</a>
           
         </li>
       
@@ -465,7 +491,7 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
       <nav class="pane">
         
           <header class="component-title">
-            <a href="/nagoya-example/categories/">カテゴリー</a>
+            <a href="/nagoya-example/categories/">カテゴリ</a>
           </header>
         
         <ul>
@@ -484,10 +510,6 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
           
         </ul>
       </nav>
-    
-  
-
-  
     
   
 
@@ -556,7 +578,7 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
     
       
       
-        © 2021–2023
+        ©&nbsp;2021–2023
       
       
         <em>curegit</em>
@@ -565,7 +587,9 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
   </small>
   <br>
   <small>
-    <i>Nagoya</i> Theme by <i>curegit</i>. Built with Hugo.
+    <i>Nagoya</i>&nbsp;Theme by <i>curegit</i>.
+    <wbr>
+    Built with Hugo.
   </small>
 </footer>
 
