@@ -331,6 +331,10 @@ footer#bottom small {
   font-size: inherit;
 }
 
+footer#bottom div {
+  display: inline-block;
+}
+
 @container (min-width: 840px) {
   div#middle {
     grid-template-columns: minmax(300px, auto) 300px;

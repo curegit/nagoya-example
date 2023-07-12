@@ -30,7 +30,7 @@ main h1 {
   display: inline-flex;
   flex-flow: column;
   min-width: 40%;
-  margin: 12px 2px 28px 30px;
+  margin: 16px 2px 28px 36px;
   padding: 8px 24px 8px 12px;
   border-radius: 16px;
   background-color: aliceblue;
@@ -114,6 +114,14 @@ main h1 {
   padding-right: 0;
 }
 
+.single :not(pre) > code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  background-color: #e5e9ec;
+  font-size: 95%;
+  white-space: break-spaces;
+}
+
 .single pre {
   margin: 16px 0;
   padding: 8px 12px;
@@ -123,6 +131,10 @@ main h1 {
 
 .single blockquote .highlight {
   margin-left: 6px;
+}
+
+.table {
+
 }
 
 .single dl {
