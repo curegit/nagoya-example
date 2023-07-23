@@ -28,10 +28,22 @@ footer#bottom {
   color: #5e78ff;
 }
 
+.toc {
+  background-color: #d7f2fe;
+}
+
 a[href] {
   color: #1010e3;
 }
 
 .single a[href] {
   color: #0076d1;
+}
+
+.single thead tr {
+  background-color: #e5e4f7;
+}
+
+.single tr:nth-child(2n) {
+  background-color: #f5f5f5;
 }
