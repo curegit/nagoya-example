@@ -1,5 +1,3 @@
 ---
-title: Root
+title: "トップページ"
 ---
-
-TOP PAGE
