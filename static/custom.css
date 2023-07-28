@@ -1,0 +1,19 @@
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.profile a {
+  display: contents;
+}
+
+.avatar {
+  justify-self: center;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: bold;
+}
