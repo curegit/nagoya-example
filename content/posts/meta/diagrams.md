@@ -9,6 +9,8 @@ tags:
   - JavaScript
   - Mermaid
   - KaTeX
+  - Hugo
+  - 数学
 ---
 
 テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。
