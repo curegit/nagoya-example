@@ -5,7 +5,7 @@ categories:
   - コンテンツ
   - 技術
 tags:
-  - "C#"
+  - "cs"
   - ".NET"
 ---
 
