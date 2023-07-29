@@ -1,4 +1,4 @@
-**Hugo** の日本語テーマ **Nagoya（名古屋）** のデモサイトソースです。
+**Hugo** の日本語テーマ **Nagoya (名古屋)** のデモサイトソースです。
 
 デモサイト: <https://curegit.github.io/nagoya-example/>
 
