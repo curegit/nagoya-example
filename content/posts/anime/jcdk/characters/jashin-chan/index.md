@@ -1,6 +1,6 @@
 ---
 title: 邪神ちゃんの性格
-date: 2022-10-10
+date: 2023-07-20
 categories:
   - コンテンツ
 tags:
