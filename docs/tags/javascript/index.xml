@@ -6,11 +6,11 @@
     <description>Recent content in JavaScript on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 10 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ダイアグラムと数式の表示</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
       <description>&lt;p&gt;テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。&lt;/p&gt;</description>

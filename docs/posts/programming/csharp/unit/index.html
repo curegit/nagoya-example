@@ -9,14 +9,15 @@
 
 <title>C# で Unit 型を実装する</title>
 
-  <meta name="description" content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
-Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+  <meta name="description" content="今回は、C# で記述されたコード「Unit 構造体」について解説します。
+Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。
+つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
 
 
-  <meta name="keywords" content="a, b, c">
+  <meta name="keywords" content="C#, .NET">
 
 
-  <meta name="author" content="curegit">
+  <meta name="author" content="高橋 元">
 
 <meta name="generator" content="Hugo 0.111.3">
 <link rel="canonical" href="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">
@@ -39,8 +40,9 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
   <meta property="og:title" content="C# で Unit 型を実装する">
 
 
-  <meta name="og:description" content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
-Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+  <meta name="og:description" content="今回は、C# で記述されたコード「Unit 構造体」について解説します。
+Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。
+つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
 
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">
 
@@ -64,13 +66,7 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
 
     <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C# で Unit 型を実装する"/>
-<meta name="twitter:description" content="今回は、C#言語で記述されたコード「Unit構造体」について解説します。
-Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。"/>
-<meta name="twitter:site" content="@curegit"/>
-
-
+    
   </head>
   <body>
     <div id="container">
@@ -137,16 +133,40 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
 <article class="single">
   <header>
     <h1 class="title">C# で Unit 型を実装する</h1>
-    <div class="time">
-      
-        <div>作成: <time datetime="2023-05-05">2023/05/05</time></div>
-        <div>更新: <time datetime="2023-06-23">2023/06/23</time></div>
-      
-    </div>
+    
+      <div class="time">
+        
+          <div>作成: <time datetime="2022-04-20">2022/04/20</time></div>
+          <div>更新: <time datetime="2023-07-28">2023/07/28</time></div>
+        
+      </div>
+    
   </header>
   <div class="body">
-    <p>今回は、C#言語で記述されたコード「Unit構造体」について解説します。</p>
-<p>Unit構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p>
+    <p>今回は、C# で記述されたコード「Unit 構造体」について解説します。</p>
+<p>Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。
+つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p>
+  
+    <div class="toc">
+      <div class="toc-title">目次</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#unit-構造体の実装">Unit 構造体の実装</a>
+      <ul>
+        <li><a href="#iequatablet-インターフェースを実装するために利用する-equals-メソッド"><code>IEquatable&lt;T&gt;</code> インターフェースを実装するために利用する <code>Equals()</code> メソッド</a></li>
+        <li><a href="#icomparable-インターフェースを実装するために利用する-compareto-メソッド"><code>IComparable</code> インターフェースを実装するために利用する <code>CompareTo()</code> メソッド</a></li>
+        <li><a href="#icomparablet-インターフェースを実装するために利用する-compareto-メソッド"><code>IComparable&lt;T&gt;</code> インターフェースを実装するために利用する <code>CompareTo()</code> メソッド</a></li>
+        <li><a href="#その他">その他</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+
+<h2 id="unit-構造体の実装">Unit 構造体の実装</h2>
+<p>Unit 構造体は C# で以下のように実装できます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Diagnostics.CodeAnalysis;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">
@@ -204,17 +224,24 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><code>[Serializable]</code> を使用して、<code>Serializable</code> 属性を付与しています。これは、この構造体をシリアル化できるように設定するために使われます。</p>
-<p>Unit構造体自体は、<code>IEquatable&lt;T&gt;</code>インターフェース、IComparableインターフェース、および<code>IComparable&lt;T&gt;</code>インターフェースを実装しています。それぞれのインターフェースが実装するメソッドについて説明します。</p>
-<h3 id="iequatabletインターフェースを実装するために利用するequalsメソッド"><code>IEquatable&lt;T&gt;</code>インターフェースを実装するために利用する<code>Equals()</code>メソッド</h3>
-<p>Equals()メソッドは、指定されたオブジェクトが、Unit構造体のインスタンスであるかどうかを確認するために使用されます。もし、指定されたオブジェクトがUnit構造体のインスタンスである場合は、trueを返します。</p>
-<p>・IComparableインターフェースを実装するために利用するCompareTo()メソッド</p>
-<p>CompareTo()メソッドは、この構造体のオブジェクトと、別のオブジェクトを比較します。指定されたオブジェクトがUnit構造体のインスタンスである場合は0を返し、そうでない場合はArgumentExceptionをスローします。</p>
-<p>・IComparable<T>インターフェースを実装するために利用するCompareTo()メソッド</p>
-<p>CompareTo()メソッドは、指定されたオブジェクト（ここではUnit構造体）と、この構造体のオブジェクトを比較します。Unit構造体は単一値（シングルトン）であるため、比較に値が必要ないため、常に0を返します。</p>
-<p>また、Equals()メソッドとCompareTo()メソッドで、nullチェックを行っているのもポイントです。指定されたオブジェクトがnullである場合は、CompareTo()メソッドは1、Equals()メソッドはfalseを返します。</p>
-<p>最後に、ToString()メソッド、GetHashCode()メソッド、およびoperator演算子をオーバーロードしていることも確認してください。</p>
-<p>以上が、C#言語で記述されたコード「Unit構造体」についての解説です。</p>
+</span></span></code></pre></div><p><code>[Serializable]</code> を使用して、<code>Serializable</code> 属性を付与しています。
+これは、この構造体をシリアル化できるように設定するために使われます。</p>
+<p>Unit 構造体自体は、<code>IEquatable&lt;T&gt;</code> インターフェース、IComparable インターフェース、および <code>IComparable&lt;T&gt;</code> インターフェースを実装しています。
+それぞれのインターフェースが実装するメソッドについて説明します。</p>
+<h3 id="iequatablet-インターフェースを実装するために利用する-equals-メソッド"><code>IEquatable&lt;T&gt;</code> インターフェースを実装するために利用する <code>Equals()</code> メソッド</h3>
+<p><code>Equals()</code> メソッドは、指定されたオブジェクトが、Unit 構造体のインスタンスであるかどうかを確認するために使用されます。
+もし、指定されたオブジェクトが Unit 構造体のインスタンスである場合は、<code>true</code> を返します。</p>
+<h3 id="icomparable-インターフェースを実装するために利用する-compareto-メソッド"><code>IComparable</code> インターフェースを実装するために利用する <code>CompareTo()</code> メソッド</h3>
+<p><code>CompareTo()</code> メソッドは、この構造体のオブジェクトと、別のオブジェクトを順序比較します。
+指定されたオブジェクトが Unit 構造体のインスタンスである場合は <code>0</code>（等値）を返し、そうでない場合は <code>ArgumentException</code> をスローします。</p>
+<h3 id="icomparablet-インターフェースを実装するために利用する-compareto-メソッド"><code>IComparable&lt;T&gt;</code> インターフェースを実装するために利用する <code>CompareTo()</code> メソッド</h3>
+<p><code>CompareTo()</code> メソッドは、指定されたオブジェクト（ここでは Unit 構造体）と、この構造体のオブジェクトを比較します。
+Unit 構造体は単一値（シングルトン）であるため、常に <code>0</code> を返します。</p>
+<h3 id="その他">その他</h3>
+<p>また、<code>Equals()</code> メソッドと <code>CompareTo()</code> メソッドで、null チェックを行っているのもポイントです。
+指定されたオブジェクトが <code>null</code> である場合は、<code>CompareTo()</code> メソッドは <code>1</code>、<code>Equals()</code> メソッドは <code>false</code> を返します。</p>
+<p>最後に、<code>ToString()</code> メソッド、<code>GetHashCode()</code> メソッド、および比較演算子をオーバーロードしていることも確認してください。</p>
+<p>以上が、C# 言語で記述されたコード「Unit 構造体」についての解説です。</p>
   </div>
   <footer>
     
@@ -223,11 +250,9 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
         <div>タグ:</div>
         <ul class="tags">
           
-            <li class="tag"><a href="/nagoya-example/tags/a/">a</a></li>
+            <li class="tag"><a href="/nagoya-example/tags/cs/">C#</a></li>
           
-            <li class="tag"><a href="/nagoya-example/tags/b/">b</a></li>
-          
-            <li class="tag"><a href="/nagoya-example/tags/c/">c</a></li>
+            <li class="tag"><a href="/nagoya-example/tags/.net/">.NET</a></li>
           
         </ul>
       </div>
@@ -241,7 +266,9 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
             <div>カテゴリ:</div>
             <ul>
               
-                <li><a href="/nagoya-example/categories/none/">None</a></li>
+                <li><a href="/nagoya-example/categories/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84/">コンテンツ</a></li>
+              
+                <li><a href="/nagoya-example/categories/%E6%8A%80%E8%A1%93/">技術</a></li>
               
             </ul>
           </div>
@@ -263,13 +290,13 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
     
       <nav class="prev-next">
         
-          <a class="next" href="/nagoya-example/posts/programming/csharp/fix/">
-            <div>« 次の記事: Fix</div>
+          <a class="next" href="/nagoya-example/posts/anime/jcdk/charms/">
+            <div>« 次の記事: 邪神ちゃんドロップキックの魅力</div>
           </a>
         
         
-          <a class="prev" href="/nagoya-example/posts/anime/mmppp/chara/">
-            <div>» 前の記事: Chara</div>
+          <a class="prev" href="/nagoya-example/posts/english/work-from-home/">
+            <div>» 前の記事: 5 Tips for Staying Productive While Working from Home</div>
           </a>
         
       </nav>
@@ -286,19 +313,17 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
     <header class="component-title">次に読む</header>
     <ul>
       
-        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a></li>
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown の例</a></li>
       
         <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
-        <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
-      
-        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
-      
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">花園ゆりねの性格</a></li>
-      
-        <li><a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a></li>
-      
-        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">Chara</a></li>
+        <li><a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a></li>
       
     </ul>
   </nav>
@@ -313,6 +338,14 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
         </div>
         <aside id="sidebar" class="column">
   <div class="pane">
+  <div class="profile">
+    <a href="/nagoya-example/pages/bio">
+      <img class="avatar" src="/nagoya-example/bio.png">
+    </a>
+    <div class="name">
+      <a href="/nagoya-example/pages/bio">高橋 元</a>
+    </div>
+  </div>
   <p>サイドバー上下に自己紹介などのカスタムウィジェットを配置できます。</p>
 </div>
 
@@ -355,7 +388,7 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
         
         <li class="folder">
           <a href="/nagoya-example/posts/english/">
-            English (3) 
+            English (2) 
           </a>
           
   
@@ -407,6 +440,16 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
       
         
         <li class="folder">
+          <a href="/nagoya-example/posts/anime/mmppp/">
+            ぴちぴちピッチ (1) 
+          </a>
+          
+  
+
+        </li>
+      
+        
+        <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/">
             邪神ちゃんドロップキック (3) 
           </a>
@@ -425,16 +468,6 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
         </li>
       
     </ul>
-  
-
-        </li>
-      
-        
-        <li class="folder">
-          <a href="/nagoya-example/posts/anime/mmppp/">
-            ぴちぴちピッチ (1) 
-          </a>
-          
   
 
         </li>
@@ -472,25 +505,13 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
       
         <li class="tag">
           
-            <a href="/nagoya-example/tags/a/">a</a>
+            <a href="/nagoya-example/tags/.net/">.NET</a>
           
         </li>
       
         <li class="tag">
           
-            <a href="/nagoya-example/tags/b/">b</a>
-          
-        </li>
-      
-        <li class="tag">
-          
-            <a href="/nagoya-example/tags/c/">c</a>
-          
-        </li>
-      
-        <li class="tag">
-          
-            <a href="/nagoya-example/tags/hhhh/">hhhh</a>
+            <a href="/nagoya-example/tags/cs/">C#</a>
           
         </li>
       
@@ -532,13 +553,49 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
       
         <li class="tag">
           
-            <a href="/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93/">邪神ちゃん</a>
+            <a href="/nagoya-example/tags/python/">Python</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/%E3%81%B4%E3%81%A1%E3%81%B4%E3%81%A1%E3%83%94%E3%83%83%E3%83%81/">ぴちぴちピッチ</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/%E4%BB%95%E4%BA%8B/">仕事</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/%E6%9D%B1%E4%BA%AC/">東京</a>
           
         </li>
       
         <li class="tag">
           
             <a href="/nagoya-example/tags/%E9%82%AA%E7%A5%9E%E3%81%A1%E3%82%83%E3%82%93%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%82%AD%E3%83%83%E3%82%AF/">邪神ちゃんドロップキック</a>
+          
+        </li>
+      
+        <li class="tag">
+          
+            <a href="/nagoya-example/tags/%E9%96%A2%E6%95%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">関数型プログラミング</a>
           
         </li>
       
@@ -561,12 +618,6 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
           
             <li>
               
-                <a href="/nagoya-example/categories/none/">None</a>
-              
-            </li>
-          
-            <li>
-              
                 <a href="/nagoya-example/categories/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84/">コンテンツ</a>
               
             </li>
@@ -574,6 +625,12 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
             <li>
               
                 <a href="/nagoya-example/categories/%E3%83%86%E3%82%B9%E3%83%88/">テスト</a>
+              
+            </li>
+          
+            <li>
+              
+                <a href="/nagoya-example/categories/%E6%8A%80%E8%A1%93/">技術</a>
               
             </li>
           
@@ -597,27 +654,11 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
         </li>
       
         <li>
-          <a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a>
+          <a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a>
         </li>
       
         <li>
-          <a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a>
-        </li>
-      
-        <li>
-          <a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">花園ゆりねの性格</a>
-        </li>
-      
-        <li>
-          <a href="/nagoya-example/posts/programming/python/prime/">Prime</a>
-        </li>
-      
-        <li>
-          <a href="/nagoya-example/posts/programming/csharp/fix/">Fix</a>
-        </li>
-      
-        <li>
-          <a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+          <a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a>
         </li>
       
         <li>
@@ -625,11 +666,27 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
         </li>
       
         <li>
-          <a href="/nagoya-example/posts/english/nationalism/">Exploring the Pros and Cons of Nationalism: A Balanced Perspective</a>
+          <a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a>
         </li>
       
         <li>
-          <a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a>
+          <a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキックのキャラクター紹介: 花園ゆりね</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a>
+        </li>
+      
+        <li>
+          <a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a>
         </li>
       
     </ul>
@@ -651,7 +708,7 @@ Unit構造体は、単一値（シングルトン）であることを表現す�
           ©&nbsp;2021–2023
         
         
-          <em>curegit</em>
+          <em>高橋 元</em>
         
       
     </div>

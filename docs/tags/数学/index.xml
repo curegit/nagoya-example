@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on 名古屋サンプルブログ</title>
+    <link>https://curegit.github.io/nagoya-example/tags/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on 名古屋サンプルブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 08 May 2023 16:41:33 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# で無名再帰</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</link>
+      <pubDate>Mon, 08 May 2023 16:41:33 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</guid>
+      <description>&lt;p&gt;このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。
+このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。&lt;/p&gt;
+&lt;p&gt;このライブラリは、&lt;code&gt;Fix&lt;/code&gt; メソッドによって構成されています。
+&lt;code&gt;Fix&lt;/code&gt; メソッドは、&lt;code&gt;Func&lt;/code&gt; 型の引数を受け取り、再帰呼び出しを行うための関数を返します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python で素数列挙</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</link>
+      <pubDate>Fri, 05 May 2023 16:43:41 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</guid>
+      <description>&lt;p&gt;際限なく素数を出力し続ける Python のジェネレータについて説明します。&lt;/p&gt;
+&lt;p&gt;Python の &lt;code&gt;itertools&lt;/code&gt; ライブラリの &lt;code&gt;count&lt;/code&gt; 関数と、シンプルな再帰を利用して非常にコンパクトに実装することができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ダイアグラムと数式の表示</title>
+      <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
+      <description>&lt;p&gt;テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

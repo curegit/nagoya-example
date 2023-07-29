@@ -6,17 +6,109 @@
     <description>Recent content in コンテンツ on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 23 Jul 2023 20:23:34 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/categories/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/categories/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>邪神ちゃんの性格</title>
       <link>https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/jashin-chan/</link>
-      <pubDate>Sun, 23 Jul 2023 20:23:34 +0900</pubDate>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/jashin-chan/</guid>
-      <description>&lt;p&gt;「邪神ちゃん」という魔界から &amp;amp; &amp;lt; &amp;gt; &amp;quot; &amp;rsquo; &lt;b&gt;やってきた&lt;/b&gt;少女は、非常に特異な性格を持っています。&lt;/p&gt;
+      <description>&lt;p&gt;「邪神ちゃん」という魔界からやってきた少女は、非常に特異な性格を持っています。&lt;/p&gt;
 &lt;p&gt;彼女は、自分より弱い者に対して尊大な態度を取り、いじめや嫌がらせ、物品や食料の強奪などを平然と行います。
 また、勝つために卑怯な手段を用いたり、借りた金を自発的に返さず、趣味に課金するなどの行動も見られます。
-口調は清楚風なお嬢様キャラクターですが、興奮するとヤクザ口調になります。&lt;/p&gt;</description>
+口調は清楚風なお嬢様キャラクターですが、興奮するとヤクザ口調になります。&lt;/p&gt;
+&lt;p&gt;
+  &lt;img src=&#34;feature.png&#34;&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C# で無名再帰</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</link>
+      <pubDate>Mon, 08 May 2023 16:41:33 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</guid>
+      <description>&lt;p&gt;このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。
+このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。&lt;/p&gt;
+&lt;p&gt;このライブラリは、&lt;code&gt;Fix&lt;/code&gt; メソッドによって構成されています。
+&lt;code&gt;Fix&lt;/code&gt; メソッドは、&lt;code&gt;Func&lt;/code&gt; 型の引数を受け取り、再帰呼び出しを行うための関数を返します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python で素数列挙</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</link>
+      <pubDate>Fri, 05 May 2023 16:43:41 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</guid>
+      <description>&lt;p&gt;際限なく素数を出力し続ける Python のジェネレータについて説明します。&lt;/p&gt;
+&lt;p&gt;Python の &lt;code&gt;itertools&lt;/code&gt; ライブラリの &lt;code&gt;count&lt;/code&gt; 関数と、シンプルな再帰を利用して非常にコンパクトに実装することができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chara</title>
+      <link>https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/</link>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/anime/mmppp/chara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Working as a Web Developer: A Day in the Life</title>
+      <link>https://curegit.github.io/nagoya-example/posts/english/web-developer-life/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/english/web-developer-life/</guid>
+      <description>&lt;p&gt;Web development is a rapidly growing field that has become increasingly important in today&amp;rsquo;s digital age. As a web developer, you are responsible for creating and maintaining websites and web applications that are user-friendly, visually appealing, and functional. In this blog post, we will take a closer look at what it&amp;rsquo;s like to work as a web developer and the skills required to succeed in this field.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>邪神ちゃんドロップキックのキャラクター紹介: 花園ゆりね</title>
+      <link>https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/yurine/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/anime/jcdk/characters/yurine/</guid>
+      <description>&lt;p&gt;花園ゆりねは、アニメ「邪神ちゃんドロップキック」のもう一人の主人公である女子大生。
+彼女はオカルト趣味が高じて手に入れた魔法書の上巻を使い、邪神ちゃんを召喚したが帰す方法が分からず、家事全般を引き受けることを条件に同居人兼お目付け役となった。
+彼女は神保町のボロアパートで暮らしており、常にゴスロリファッションに眼帯を着用している。&lt;/p&gt;
+&lt;p&gt;
+  &lt;img src=&#34;thumbnail.png&#34;&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>邪神ちゃんドロップキックの魅力</title>
+      <link>https://curegit.github.io/nagoya-example/posts/anime/jcdk/charms/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/anime/jcdk/charms/</guid>
+      <description>&lt;p&gt;
+  &lt;img src=&#34;cover.png&#34;&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C# で Unit 型を実装する</title>
+      <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</link>
+      <pubDate>Wed, 20 Apr 2022 16:31:59 +0900</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</guid>
+      <description>&lt;p&gt;今回は、C# で記述されたコード「Unit 構造体」について解説します。&lt;/p&gt;
+&lt;p&gt;Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。
+つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>5 Tips for Staying Productive While Working from Home</title>
+      <link>https://curegit.github.io/nagoya-example/posts/english/work-from-home/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://curegit.github.io/nagoya-example/posts/english/work-from-home/</guid>
+      <description>&lt;p&gt;Working from home can be a dream come true for many people, but it can also be a challenge to stay productive when you&amp;rsquo;re surrounded by distractions.&lt;/p&gt;
+&lt;p&gt;Here are five tips to help you stay on track and get your work done.&lt;/p&gt;</description>
     </item>
     
   </channel>
