@@ -16,6 +16,7 @@ enableGitInfo = true
   author = "高橋 元"
   description = "Hugo の日本語テーマ「名古屋」のサンプルサイトです"
   keywords = ["ブログ", "Hugo", "名古屋"]
+  images = ["bio.png"]
 
 [frontmatter]
   date = ["date", "publishDate", ":git", ":fileModTime"]
