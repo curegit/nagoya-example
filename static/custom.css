@@ -3,17 +3,22 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   column-gap: 20px;
+  padding-bottom: 6px;
+  color: #424242;
 }
 
 .profile a {
   display: contents;
+  color: unset;
 }
 
 .avatar {
+  width: 90%;
   justify-self: center;
   border-radius: 50%;
 }
 
 .name {
+  font-size: 20px;
   font-weight: bold;
 }
