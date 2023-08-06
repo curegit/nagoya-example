@@ -68,7 +68,7 @@
 
   <meta itemprop="image" content="https://curegit.github.io/nagoya-example/bio.png">
 
-
+<link itemprop="url" href="https://curegit.github.io/nagoya-example/posts/meta/diagrams/">
 
 
 
@@ -124,31 +124,64 @@
             <nav id="breadcrumb" class="pane">
               
 
-<ol class="breadcrumb">
-  
-    
-  
-    
-  
-    
-  
-  
-    <li><a href="/nagoya-example/">ホーム</a></li>
-  
 
   
   
-    <li><a href="/nagoya-example/posts/">投稿記事</a></li>
+  <ol class="breadcrumb" itemscope itemtype=”https://schema.org/BreadcrumbList”>
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+    
+    
+      <li><a href="/nagoya-example/">ホーム</a></li>
+    
   
 
-  
-  
-    <li><a href="/nagoya-example/posts/meta/">メタ</a></li>
+      
+    
+    
+    
+      <li itemprop=”itemListElement” itemscope itemtype=”https://schema.org/ListItem”>
+        <a href="/nagoya-example/posts/" itemprop=”item”>
+          <span itemprop=”name”>投稿記事</span>
+        </a>
+        <meta itemprop="position" content="1">
+      </li>
+    
   
 
+      
+    
+    
+    
+      <li itemprop=”itemListElement” itemscope itemtype=”https://schema.org/ListItem”>
+        <a href="/nagoya-example/posts/meta/" itemprop=”item”>
+          <span itemprop=”name”>メタ</span>
+        </a>
+        <meta itemprop="position" content="2">
+      </li>
+    
   
-  
-</ol>
+
+      
+    
+    
+    <li itemprop=”itemListElement” itemscope itemtype=”https://schema.org/ListItem”>
+      <span itemprop=”name”>ダイアグラムと数式の表示</span>
+      <meta itemprop="position" content="3">
+    </li>
+  </ol>
+
 
             </nav>
           
@@ -719,9 +752,9 @@
       
         <li><a href="/nagoya-example/posts/meta/markdown/">Markdown の例</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
+        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
+        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
       
     </ul>
   </nav>

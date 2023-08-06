@@ -48,7 +48,7 @@
 
   <meta itemprop="image" content="https://curegit.github.io/nagoya-example/bio.png">
 
-
+<link itemprop="url" href="https://curegit.github.io/nagoya-example/categories/%E6%8A%80%E8%A1%93/">
 
 
 
@@ -100,26 +100,47 @@
             <nav id="breadcrumb" class="pane">
               
 
-<ol class="breadcrumb">
-  
-    
-  
-    
-  
-  
-    <li><a href="/nagoya-example/">ホーム</a></li>
-  
 
   
   
-    <li><a href="/nagoya-example/categories/">カテゴリ</a></li>
+  <ol class="breadcrumb" itemscope itemtype=”https://schema.org/BreadcrumbList”>
+    
+      
+  
+  
+    
+      
+  
+  
+    
+    
+    
+      <li><a href="/nagoya-example/">ホーム</a></li>
+    
   
 
+      
+    
+    
+    
+      <li itemprop=”itemListElement” itemscope itemtype=”https://schema.org/ListItem”>
+        <a href="/nagoya-example/categories/" itemprop=”item”>
+          <span itemprop=”name”>カテゴリ</span>
+        </a>
+        <meta itemprop="position" content="1">
+      </li>
+    
   
-  
-    <li>技術</li>
-  
-</ol>
+
+      
+    
+    
+    <li itemprop=”itemListElement” itemscope itemtype=”https://schema.org/ListItem”>
+      <span itemprop=”name”>技術</span>
+      <meta itemprop="position" content="2">
+    </li>
+  </ol>
+
 
             </nav>
           

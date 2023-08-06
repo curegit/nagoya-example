@@ -48,7 +48,7 @@
 
   <meta itemprop="image" content="https://curegit.github.io/nagoya-example/bio.png">
 
-
+<link itemprop="url" href="https://curegit.github.io/nagoya-example/archives/">
 
 
 
@@ -100,19 +100,30 @@
             <nav id="breadcrumb" class="pane">
               
 
-<ol class="breadcrumb">
-  
-    
-  
-  
-    <li><a href="/nagoya-example/">ホーム</a></li>
-  
 
   
   
-    <li>年別アーカイブ</li>
+  <ol class="breadcrumb" itemscope itemtype=”https://schema.org/BreadcrumbList”>
+    
+      
   
-</ol>
+  
+    
+    
+    
+      <li><a href="/nagoya-example/">ホーム</a></li>
+    
+  
+
+      
+    
+    
+    <li itemprop=”itemListElement” itemscope itemtype=”https://schema.org/ListItem”>
+      <span itemprop=”name”>年別アーカイブ</span>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+
 
             </nav>
           
