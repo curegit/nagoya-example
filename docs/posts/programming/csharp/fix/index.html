@@ -221,53 +221,53 @@
 このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。</p>
 <p>このライブラリは、<code>Fix</code> メソッドによって構成されています。
 <code>Fix</code> メソッドは、<code>Func</code> 型の引数を受け取り、再帰呼び出しを行うための関数を返します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lambda</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#b6a0ff">class</span> Lambda
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Func&lt;TResult&gt; Fix&lt;TResult&gt;(Func&lt;Func&lt;TResult&gt;, Func&lt;TResult&gt;&gt; fix)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> Func&lt;TResult&gt; Fix&lt;TResult&gt;(Func&lt;Func&lt;TResult&gt;, Func&lt;TResult&gt;&gt; fix)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (fix != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">if</span> (fix != <span style="color:#b6a0ff">null</span>)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> () =&gt; fix(Fix(fix))();
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">return</span> () =&gt; fix(Fix(fix))();
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">else</span>
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentNullException(nameof(fix));
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">throw</span> <span style="color:#b6a0ff">new</span> ArgumentNullException(nameof(fix));
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Func&lt;T, TResult&gt; Fix&lt;T, TResult&gt;(Func&lt;Func&lt;T, TResult&gt;, Func&lt;T, TResult&gt;&gt; fix)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> Func&lt;T, TResult&gt; Fix&lt;T, TResult&gt;(Func&lt;Func&lt;T, TResult&gt;, Func&lt;T, TResult&gt;&gt; fix)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (fix != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">if</span> (fix != <span style="color:#b6a0ff">null</span>)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> a =&gt; fix(Fix(fix))(a);
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">return</span> a =&gt; fix(Fix(fix))(a);
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">else</span>
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentNullException(nameof(fix));
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">throw</span> <span style="color:#b6a0ff">new</span> ArgumentNullException(nameof(fix));
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Func&lt;T1, T2, TResult&gt; Fix&lt;T1, T2, TResult&gt;(Func&lt;Func&lt;T1, T2, TResult&gt;, Func&lt;T1, T2, TResult&gt;&gt; fix)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> Func&lt;T1, T2, TResult&gt; Fix&lt;T1, T2, TResult&gt;(Func&lt;Func&lt;T1, T2, TResult&gt;, Func&lt;T1, T2, TResult&gt;&gt; fix)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (fix != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">if</span> (fix != <span style="color:#b6a0ff">null</span>)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> (a, b) =&gt; fix(Fix(fix))(a, b);
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">return</span> (a, b) =&gt; fix(Fix(fix))(a, b);
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">else</span>
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentNullException(nameof(fix));
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">throw</span> <span style="color:#b6a0ff">new</span> ArgumentNullException(nameof(fix));
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Func&lt;T1, T2, T3, TResult&gt; Fix&lt;T1, T2, T3, TResult&gt;(Func&lt;Func&lt;T1, T2, T3, TResult&gt;, Func&lt;T1, T2, T3, TResult&gt;&gt; fix)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> Func&lt;T1, T2, T3, TResult&gt; Fix&lt;T1, T2, T3, TResult&gt;(Func&lt;Func&lt;T1, T2, T3, TResult&gt;, Func&lt;T1, T2, T3, TResult&gt;&gt; fix)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (fix != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">if</span> (fix != <span style="color:#b6a0ff">null</span>)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> (a, b, c) =&gt; fix(Fix(fix))(a, b, c);
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">return</span> (a, b, c) =&gt; fix(Fix(fix))(a, b, c);
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">else</span>
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentNullException(nameof(fix));
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">throw</span> <span style="color:#b6a0ff">new</span> ArgumentNullException(nameof(fix));
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
@@ -275,8 +275,8 @@
 それぞれ、引数が 0 つの場合、1 つの場合、2 つの場合、3 つの場合に対応します。
 これにより、引数の数に応じて、再帰的な関数を定義することができます。</p>
 <p>例えば、次のような再帰的な関数を定義することができます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Func&lt;<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>&gt; fib = Lambda.Fix&lt;<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>&gt;(f =&gt;
-</span></span><span style="display:flex;"><span>    n =&gt; n &lt; <span style="color:#ae81ff">2</span> ? <span style="color:#ae81ff">1</span> : f(n - <span style="color:#ae81ff">1</span>) + f(n - <span style="color:#ae81ff">2</span>));
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Func&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt; fib = Lambda.Fix&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt;(f =&gt;
+</span></span><span style="display:flex;"><span>    n =&gt; n &lt; <span style="color:#00bcff">2</span> ? <span style="color:#00bcff">1</span> : f(n - <span style="color:#00bcff">1</span>) + f(n - <span style="color:#00bcff">2</span>));
 </span></span></code></pre></div><p>このように、<code>Lambda</code> クラスを利用することで、再帰的な関数を簡単に定義することができます。</p>
   </div>
   <footer>
@@ -374,9 +374,9 @@
       
         <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキックのキャラクター紹介: 花園ゆりね</a></li>
-      
         <li><a href="/nagoya-example/posts/anime/mmppp/chara/">ぴちぴちピッチのマーメイドプリンセスまとめ</a></li>
+      
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
     </ul>
   </nav>

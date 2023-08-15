@@ -241,61 +241,61 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 
 <h2 id="unit-構造体の実装">Unit 構造体の実装</h2>
 <p>Unit 構造体は C# で以下のように実装できます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Diagnostics.CodeAnalysis;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">[Serializable]</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Unit</span> : IEquatable&lt;Unit&gt;, IComparable, IComparable&lt;Unit&gt;
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#b6a0ff">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">using</span> System.Diagnostics.CodeAnalysis;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Serializable]
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">struct</span> Unit : IEquatable&lt;Unit&gt;, IComparable, IComparable&lt;Unit&gt;
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">bool</span> Equals([NotNullWhen(<span style="color:#66d9ef">true</span>)] <span style="color:#66d9ef">object?</span> obj)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">override</span> <span style="color:#6ae4b9">bool</span> Equals([NotNullWhen(<span style="color:#b6a0ff">true</span>)] <span style="color:#6ae4b9">object?</span> obj)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> obj <span style="color:#66d9ef">is</span> Unit;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> obj <span style="color:#b6a0ff">is</span> Unit;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">bool</span> Equals(Unit other)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#6ae4b9">bool</span> Equals(Unit other)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#b6a0ff">true</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> IComparable.CompareTo(<span style="color:#66d9ef">object?</span> other)
+</span></span><span style="display:flex;"><span>    <span style="color:#6ae4b9">int</span> IComparable.CompareTo(<span style="color:#6ae4b9">object?</span> other)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (other <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">if</span> (other <span style="color:#b6a0ff">is</span> <span style="color:#b6a0ff">null</span>)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">return</span> <span style="color:#00bcff">1</span>;
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (other <span style="color:#66d9ef">is</span> not Unit)
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">else</span> <span style="color:#b6a0ff">if</span> (other <span style="color:#b6a0ff">is</span> not Unit)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentException(<span style="color:#66d9ef">null</span>, nameof(other));
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">throw</span> <span style="color:#b6a0ff">new</span> ArgumentException(<span style="color:#b6a0ff">null</span>, nameof(other));
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">else</span>
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b6a0ff">return</span> <span style="color:#00bcff">0</span>;
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> CompareTo(Unit other)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#6ae4b9">int</span> CompareTo(Unit other)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#00bcff">0</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> GetHashCode()
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">override</span> <span style="color:#6ae4b9">int</span> GetHashCode()
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#00bcff">0</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">string</span> ToString()
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">override</span> <span style="color:#6ae4b9">string</span> ToString()
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;()&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#79a8ff">&#34;()&#34;</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> ==(Unit left, Unit right)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#6ae4b9">bool</span> <span style="color:#b6a0ff">operator</span> ==(Unit left, Unit right)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#b6a0ff">true</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> !=(Unit left, Unit right)
+</span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#6ae4b9">bool</span> <span style="color:#b6a0ff">operator</span> !=(Unit left, Unit right)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#b6a0ff">false</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><code>[Serializable]</code> を使用して、<code>Serializable</code> 属性を付与しています。
@@ -408,7 +408,7 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
       
         <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown の例</a></li>
       
     </ul>
   </nav>
