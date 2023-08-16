@@ -183,7 +183,7 @@ def shifted(list, shift=0):
 
 これは、段落の文章です。
 
-### 生のHTML
+### 生の HTML
 
 Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.
 
