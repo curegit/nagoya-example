@@ -28,6 +28,10 @@ enableGitInfo = true
     [markup.goldmark.renderer]
       unsafe = true
 
+  [markup.highlight]
+    codeFences = true
+    style = 'modus-vivendi'
+
 [taxonomies]
   tag = "tags"
   category = "categories"
