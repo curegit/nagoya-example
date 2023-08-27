@@ -11,7 +11,7 @@ header#top #site-title a {
 }
 
 header#top #description {
-  color: #ffe873;
+  color: #cfbfff;
 }
 
 div#container {
@@ -29,7 +29,7 @@ footer#bottom {
 }
 
 .toc {
-  background-color: #d7f2fe;
+  background-color: #4b8bbe1f;
 }
 
 a[href] {
