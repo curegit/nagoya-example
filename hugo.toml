@@ -30,7 +30,7 @@ enableGitInfo = true
 
   [markup.highlight]
     codeFences = true
-    style = 'modus-vivendi'
+    style = "modus-vivendi"
 
 [taxonomies]
   tag = "tags"
