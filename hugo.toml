@@ -28,6 +28,11 @@ enableGitInfo = true
     [markup.goldmark.renderer]
       unsafe = true
 
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.cjk]
+        enable = true
+        eastAsianLineBreaks = true
+
   [markup.highlight]
     codeFences = true
     style = "modus-vivendi"
