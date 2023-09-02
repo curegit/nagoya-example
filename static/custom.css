@@ -1,5 +1,9 @@
 /* 自己紹介カスタムウィジェット */
 
+.sidebar-top p {
+  text-indent: 8px;
+}
+
 .profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,7 +32,12 @@
 }
 
 
+
 /* 広告カスタムウィジェット */
+
+.content-bottom p {
+  text-indent: 8px;
+}
 
 #bottom-ad {
   padding-left: 20px;
