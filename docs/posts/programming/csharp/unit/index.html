@@ -10,12 +10,12 @@
 <title>C# で Unit 型を実装する</title>
 
   <meta name="description" content="今回は、C# で記述されたコード「Unit 構造体」について解説します。
-Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。 つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
 
 
   <meta name="keywords" content="C#, .NET">
 
-<meta name="generator" content="Hugo 0.116.1">
+<meta name="generator" content="Hugo 0.118.2">
 
   <meta name="author" content="高橋 元">
 
@@ -43,7 +43,7 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 
 
   <meta property="og:description" content="今回は、C# で記述されたコード「Unit 構造体」について解説します。
-Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。 つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
 
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/">
 
@@ -55,7 +55,7 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 
 
   <meta itemprop="description" content="今回は、C# で記述されたコード「Unit 構造体」について解説します。
-Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。 つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
+Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。">
 
 
   <meta itemprop="keywords" content="C#, .NET">
@@ -218,8 +218,7 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
   </header>
   <div class="body">
     <p>今回は、C# で記述されたコード「Unit 構造体」について解説します。</p>
-<p>Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。
-つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p>
+<p>Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p>
   
     <div class="toc">
       <div class="toc-title">目次</div>
@@ -298,22 +297,17 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 </span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">return</span> <span style="color:#b6a0ff">false</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><code>[Serializable]</code> を使用して、<code>Serializable</code> 属性を付与しています。
-これは、この構造体をシリアル化できるように設定するために使われます。</p>
-<p>Unit 構造体自体は、<code>IEquatable&lt;T&gt;</code> インターフェース、IComparable インターフェース、および <code>IComparable&lt;T&gt;</code> インターフェースを実装しています。
-それぞれのインターフェースが実装するメソッドについて説明します。</p>
+</span></span></code></pre></div><p><code>[Serializable]</code> を使用して、<code>Serializable</code> 属性を付与しています。これは、この構造体をシリアル化できるように設定するために使われます。</p>
+<p>Unit 構造体自体は、<code>IEquatable&lt;T&gt;</code> インターフェース、IComparable インターフェース、および <code>IComparable&lt;T&gt;</code> インターフェースを実装しています。それぞれのインターフェースが実装するメソッドについて説明します。</p>
 <h3 id="iequatablet-インターフェースを実装するために利用する-equals-メソッド"><code>IEquatable&lt;T&gt;</code> インターフェースを実装するために利用する <code>Equals()</code> メソッド</h3>
-<p><code>Equals()</code> メソッドは、指定されたオブジェクトが、Unit 構造体のインスタンスであるかどうかを確認するために使用されます。
-もし、指定されたオブジェクトが Unit 構造体のインスタンスである場合は、<code>true</code> を返します。</p>
+<p><code>Equals()</code> メソッドは、指定されたオブジェクトが、Unit 構造体のインスタンスであるかどうかを確認するために使用されます。もし、指定されたオブジェクトが Unit 構造体のインスタンスである場合は、<code>true</code> を返します。</p>
 <h3 id="icomparable-インターフェースを実装するために利用する-compareto-メソッド"><code>IComparable</code> インターフェースを実装するために利用する <code>CompareTo()</code> メソッド</h3>
-<p><code>CompareTo()</code> メソッドは、この構造体のオブジェクトと、別のオブジェクトを順序比較します。
-指定されたオブジェクトが Unit 構造体のインスタンスである場合は <code>0</code>（等値）を返し、そうでない場合は <code>ArgumentException</code> をスローします。</p>
+<p><code>CompareTo()</code> メソッドは、この構造体のオブジェクトと、別のオブジェクトを順序比較します。指定されたオブジェクトが Unit 構造体のインスタンスである場合は <code>0</code>（等値）を返し、そうでない場合は <code>ArgumentException</code> をスローします。</p>
 <h3 id="icomparablet-インターフェースを実装するために利用する-compareto-メソッド"><code>IComparable&lt;T&gt;</code> インターフェースを実装するために利用する <code>CompareTo()</code> メソッド</h3>
 <p><code>CompareTo()</code> メソッドは、指定されたオブジェクト（ここでは Unit 構造体）と、この構造体のオブジェクトを比較します。
 Unit 構造体は単一値（シングルトン）であるため、常に <code>0</code> を返します。</p>
 <h3 id="その他">その他</h3>
-<p>また、<code>Equals()</code> メソッドと <code>CompareTo()</code> メソッドで、null チェックを行っているのもポイントです。
-指定されたオブジェクトが <code>null</code> である場合は、<code>CompareTo()</code> メソッドは <code>1</code>、<code>Equals()</code> メソッドは <code>false</code> を返します。</p>
+<p>また、<code>Equals()</code> メソッドと <code>CompareTo()</code> メソッドで、null チェックを行っているのもポイントです。指定されたオブジェクトが <code>null</code> である場合は、<code>CompareTo()</code> メソッドは <code>1</code>、<code>Equals()</code> メソッドは <code>false</code> を返します。</p>
 <p>最後に、<code>ToString()</code> メソッド、<code>GetHashCode()</code> メソッド、および比較演算子をオーバーロードしていることも確認してください。</p>
 <p>以上が、C# 言語で記述されたコード「Unit 構造体」についての解説です。</p>
   </div>
@@ -446,9 +440,9 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
       
         <li><a href="/nagoya-example/posts/meta/markdown/">Markdown の例</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
+        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキックのキャラクター紹介: 花園ゆりね</a></li>
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
     </ul>
   </nav>
@@ -457,7 +451,7 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
           
           <aside class="pane">
   <p>メインカラム上下に広告などのカスタムウィジェットを配置できます。</p>
-  <img id="bottom-ad" src="/nagoya-example/ad.png" alt="広告の例">
+  <img id="bottom-ad" src="/nagoya-example/ad.png">
 </aside>
 
         </div>
@@ -465,7 +459,7 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
   <div class="pane">
   <div class="profile">
     <a href="/nagoya-example/pages/bio">
-      <img class="avatar" alt="avatar" src="/nagoya-example/bio.png">
+      <img class="avatar" src="/nagoya-example/bio.png">
     </a>
     <div class="name">
       <a href="/nagoya-example/pages/bio">高橋 元</a>

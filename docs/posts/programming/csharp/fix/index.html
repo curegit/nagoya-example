@@ -9,13 +9,13 @@
 
 <title>C# で無名再帰</title>
 
-  <meta name="description" content="このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。 このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。
-このライブラリは、Fix メソッドによって構成されています。 Fix メソッドは、Func 型の引数を受け取り、再帰呼び出しを行うための関数を返します。">
+  <meta name="description" content="このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。
+このライブラリは、Fix メソッドによって構成されています。Fix メソッドは、Func 型の引数を受け取り、再帰呼び出しを行うための関数を返します。">
 
 
   <meta name="keywords" content="C#, .NET, 数学, 関数型プログラミング">
 
-<meta name="generator" content="Hugo 0.116.1">
+<meta name="generator" content="Hugo 0.118.2">
 
   <meta name="author" content="高橋 元">
 
@@ -42,8 +42,8 @@
   <meta property="og:title" content="C# で無名再帰">
 
 
-  <meta property="og:description" content="このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。 このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。
-このライブラリは、Fix メソッドによって構成されています。 Fix メソッドは、Func 型の引数を受け取り、再帰呼び出しを行うための関数を返します。">
+  <meta property="og:description" content="このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。
+このライブラリは、Fix メソッドによって構成されています。Fix メソッドは、Func 型の引数を受け取り、再帰呼び出しを行うための関数を返します。">
 
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/">
 
@@ -54,8 +54,8 @@
   <meta itemprop="name" content="C# で無名再帰">
 
 
-  <meta itemprop="description" content="このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。 このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。
-このライブラリは、Fix メソッドによって構成されています。 Fix メソッドは、Func 型の引数を受け取り、再帰呼び出しを行うための関数を返します。">
+  <meta itemprop="description" content="このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。
+このライブラリは、Fix メソッドによって構成されています。Fix メソッドは、Func 型の引数を受け取り、再帰呼び出しを行うための関数を返します。">
 
 
   <meta itemprop="keywords" content="C#, .NET, 数学, 関数型プログラミング">
@@ -217,10 +217,8 @@
     
   </header>
   <div class="body">
-    <p>このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。
-このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。</p>
-<p>このライブラリは、<code>Fix</code> メソッドによって構成されています。
-<code>Fix</code> メソッドは、<code>Func</code> 型の引数を受け取り、再帰呼び出しを行うための関数を返します。</p>
+    <p>このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。</p>
+<p>このライブラリは、<code>Fix</code> メソッドによって構成されています。<code>Fix</code> メソッドは、<code>Func</code> 型の引数を受け取り、再帰呼び出しを行うための関数を返します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#b6a0ff">class</span> Lambda
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> Func&lt;TResult&gt; Fix&lt;TResult&gt;(Func&lt;Func&lt;TResult&gt;, Func&lt;TResult&gt;&gt; fix)
@@ -271,9 +269,7 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><code>Fix</code> メソッドは、引数の数に応じて、4 つのオーバーロードが用意されています。
-それぞれ、引数が 0 つの場合、1 つの場合、2 つの場合、3 つの場合に対応します。
-これにより、引数の数に応じて、再帰的な関数を定義することができます。</p>
+</span></span></code></pre></div><p><code>Fix</code> メソッドは、引数の数に応じて、4 つのオーバーロードが用意されています。それぞれ、引数が 0 つの場合、1 つの場合、2 つの場合、3 つの場合に対応します。これにより、引数の数に応じて、再帰的な関数を定義することができます。</p>
 <p>例えば、次のような再帰的な関数を定義することができます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Func&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt; fib = Lambda.Fix&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt;(f =&gt;
 </span></span><span style="display:flex;"><span>    n =&gt; n &lt; <span style="color:#00bcff">2</span> ? <span style="color:#00bcff">1</span> : f(n - <span style="color:#00bcff">1</span>) + f(n - <span style="color:#00bcff">2</span>));
@@ -414,9 +410,9 @@
       
         <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
       
-        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown の例</a></li>
       
-        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
+        <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
       
     </ul>
   </nav>
@@ -425,7 +421,7 @@
           
           <aside class="pane">
   <p>メインカラム上下に広告などのカスタムウィジェットを配置できます。</p>
-  <img id="bottom-ad" src="/nagoya-example/ad.png" alt="広告の例">
+  <img id="bottom-ad" src="/nagoya-example/ad.png">
 </aside>
 
         </div>
@@ -433,7 +429,7 @@
   <div class="pane">
   <div class="profile">
     <a href="/nagoya-example/pages/bio">
-      <img class="avatar" alt="avatar" src="/nagoya-example/bio.png">
+      <img class="avatar" src="/nagoya-example/bio.png">
     </a>
     <div class="name">
       <a href="/nagoya-example/pages/bio">高橋 元</a>
