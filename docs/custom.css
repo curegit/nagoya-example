@@ -1,3 +1,10 @@
+/* コードハイライト */
+
+.highlight pre:has(code) {
+  background-color: #161616 !important;
+}
+
+
 /* 自己紹介カスタムウィジェット */
 
 .sidebar-top p {
@@ -30,7 +37,6 @@
   font-size: 20px;
   font-weight: bold;
 }
-
 
 
 /* 広告カスタムウィジェット */
