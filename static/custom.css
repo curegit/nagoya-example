@@ -1,6 +1,6 @@
 /* コードハイライト */
 
-pre:has(code) {
+.highlight pre:has(code) {
   background-color: #161616 !important;
 }
 
