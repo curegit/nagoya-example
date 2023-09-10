@@ -6,7 +6,7 @@ categories:
   - 技術
 tags:
   - "cs"
-  - ".NET"
+  - "dotnet"
   - 数学
   - 関数型プログラミング
 ---

@@ -6,7 +6,7 @@ categories:
   - 技術
 tags:
   - "cs"
-  - ".NET"
+  - "dotnet"
 ---
 
 今回は、C# で記述されたコード「Unit 構造体」について解説します。
