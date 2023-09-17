@@ -1,7 +1,8 @@
 .PHONY: build server
 
 build:
-	hugo -d docs --cleanDestinationDir --printUnusedTemplates
+	rm -rf docs
+	hugo -d docs --printUnusedTemplates
 
 server:
-	hugo server --buildDrafts --disableFastRender --printUnusedTemplates
+	hugo server --buildDrafts --buildFuture --disableFastRender --printUnusedTemplates
