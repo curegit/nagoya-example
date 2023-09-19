@@ -11,6 +11,8 @@ main h1 {
 }
 
 .single h1.title {
+  padding-left: 4px;
+  padding-right: 4px;
   font-size: 27px;
 }
 
@@ -77,6 +79,10 @@ main h1 {
 
 .single p:has(img) {
   text-indent: 0;
+}
+
+.single p:first-child:has(img) {
+  margin-top: 0;
 }
 
 .single a {
