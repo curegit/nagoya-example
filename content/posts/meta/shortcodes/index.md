@@ -21,7 +21,7 @@ tags:
 
 キャプション付きの画像を挿入できます。
 
-{{< figure src="cover.png" caption="邪神ちゃんはお菓子を作ります" >}}
+{{< figure src="cover.png" caption="邪神ちゃんはお菓子を作ります" class="bordered" >}}
 
 キャプション付きの画像を挿入できます。
 
