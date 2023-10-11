@@ -41,3 +41,4 @@ enableGitInfo = true
   tag = "tags"
   category = "categories"
   archive = "archives"
+  search = "search"
