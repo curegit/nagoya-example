@@ -1,0 +1,1 @@
+function contains(e,t){for(let n=0;n<t.length;n++){const s=e.text.indexOf(t[n]);if(s<0)return!1}return!0}onmessage=function(e){const s=e.data.phrases,o=e.data.articleBuffer,t=JSON.parse((new TextDecoder).decode(o)),n=[];for(let e=0;e<t.length;e++){const o=t[e];contains(o,s)&&n.push({link:o.link,title:o.title})}postMessage(n)}
