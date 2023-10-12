@@ -15,7 +15,7 @@ enableGitInfo = true
   treeRoot = "posts"
   author = "高橋 元"
   authorLink = "https://github.com/curegit/nagoya"
-  description = "Hugo の日本語テーマ「名古屋」のサンプルサイトです"
+  description = "Hugo 日本語テーマ「名古屋」のサンプルサイト"
   keywords = ["ブログ", "Hugo", "名古屋"]
   images = ["bio.png"]
 
