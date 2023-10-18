@@ -3,6 +3,7 @@ baseURL = "https://curegit.github.io/nagoya-example/"
 theme = "nagoya"
 paginate = 5
 paginatePath = ""
+timeZone = "Local"
 languageCode = "ja"
 DefaultContentLanguage = "ja"
 hasCJKLanguage = true
