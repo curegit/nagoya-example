@@ -6,11 +6,11 @@
     <description>Recent content in Hugo on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ダイアグラムと数式の表示</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
-      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0900</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
       <description>&lt;p&gt;テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。&lt;/p&gt;</description>
@@ -19,7 +19,7 @@
     <item>
       <title>ショートコードの例</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
-      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0900</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
       <description>&lt;p&gt;使用できるショートコードの一例を紹介します。&lt;/p&gt;</description>
@@ -28,7 +28,7 @@
     <item>
       <title>Markdown の例</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/markdown/</link>
-      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0900</pubDate>
       
       <guid>https://curegit.github.io/nagoya-example/posts/meta/markdown/</guid>
       <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;
