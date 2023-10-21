@@ -11,9 +11,9 @@
 <meta name="generator" content="Hugo 0.118.2">
 
   <meta name="author" content="高橋 元">
-
-
-  <link rel="author" href="https://github.com/curegit/nagoya">
+  
+    <link rel="author" href="https://github.com/curegit/nagoya">
+  
 
 <link rel="canonical" href="https://curegit.github.io/nagoya-example/search/">
 
@@ -33,7 +33,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.3671a38070bc6fd9ac9cad3ff5059c0dda87564a7af68032294cca2afcb11c69.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.bd150bc5615f63739d39cf42a36ec3b6b73069df460821b368bfed982ade8a8b.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -145,9 +145,9 @@
       
       
       <div>
-        スペースで区切ると AND 検索になります。<br>
-        ダブルクオートで囲んだフレーズは完全一致照合になります。<br>
-        大文字・小文字は常に区別されません。
+        スペースで区切ると AND 検索として分解されます。<br>
+        ダブルクオートで囲んだフレーズは分解されません。<br>
+        大文字・小文字は区別されません。
       </div>
       <form class="search-form" method="get" id="search-form">
         <input type="text" name="q" id="query">
@@ -155,22 +155,23 @@
       </form>
       <script>
         (function () {
-          const searcher = "\/nagoya-example\/searcher.min.123ee832749cf4e1f7a9421dbdd56858c9a4159a03b58d16a84b70822cf93747.js";
+          const searcher = "\/nagoya-example\/searcher.min.9d9eb5c2e47978f3e888ce12e0df892365245e5b58ecece9c135c58a2961d319.js";
           const data = "\/nagoya-example\/data.min.be141ed99ed049a7ae5b28e06c0d17ea56c5543721d424506880a59ed2d465f2.json";
           const articleCount =  12 ;
           const maxConcurrency =  16 ;
 
           const prefConcurrency = Math.max(1, Math.min(maxConcurrency, Math.ceil(articleCount / 8)));
 
+          const htmlSpecialCharsTable = {
+            "&": "&amp;",
+            "'": "&apos;",
+            "\"": "&quot;",
+            "<": "&lt;",
+            ">": "&gt;",
+          };
+
           function htmlSpecialChars(text) {
-            const table = {
-              "&": "&amp;",
-              "'": "&apos;",
-              "\"": "&quot;",
-              "<": "&lt;",
-              ">": "&gt;",
-            };
-            return text.replace(/[&'"<>]/g, (match) => table[match]);
+            return text.replace(/[&'"<>]/g, (match) => htmlSpecialCharsTable[match]);
           }
 
           function htmlTemplate(strings, ...values) {
@@ -217,6 +218,8 @@
             return query;
           }
 
+          const whiteSpaces = ["\t", "\n", "\u000b", "\f", "\r", " ", "", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "　"];
+
           function parse(query) {
             query = query.toLowerCase();
             const phrases = [];
@@ -224,7 +227,7 @@
             let quoted = false;
             for (let i = 0; i < query.length; i++) {
               const chara = query[i];
-              if (chara === " " || chara === "　") {
+              if (whiteSpaces.includes(chara)) {
                 if (quoted) {
                   buffer += chara;
                 } else if (buffer) {
