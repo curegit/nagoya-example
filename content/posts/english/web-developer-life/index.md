@@ -7,7 +7,7 @@ tags:
   - 仕事
 ---
 
-Web development is a rapidly growing field that has become increasingly important in today's digital age. As a web developer, you are responsible for creating and maintaining websites and web applications that are user-friendly, visually appealing, and functional. In this blog post, we will take a closer look at what it's like to work as a web developer and the skills required to succeed in this field.
+Web development 👨🏼‍💻 is a rapidly growing field that has become increasingly important in today's digital age. As a web developer, you are responsible for creating and maintaining websites and web applications that are user-friendly, visually appealing, and functional. In this blog post, we will take a closer look at what it's like to work as a web developer and the skills required to succeed in this field.
 
 <!--more-->
 
