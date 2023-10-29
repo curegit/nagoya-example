@@ -8,7 +8,7 @@
 <title>記事検索 | 名古屋サンプルブログ</title>
 
 
-<meta name="generator" content="Hugo 0.118.2">
+<meta name="generator" content="Hugo 0.119.0">
 
   <meta name="author" content="高橋 元">
   
@@ -33,7 +33,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.bd150bc5615f63739d39cf42a36ec3b6b73069df460821b368bfed982ade8a8b.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.9bbb745b89a58a94e4aa3147e86df16e573d3d70d73a41d16089f080296aecc6.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -142,256 +142,29 @@
   </div>
   <div class="search">
     
-      
-      
       <div>
         スペースで区切ると AND 検索として分解されます。<br>
         ダブルクオートで囲んだフレーズは分解されません。<br>
         大文字・小文字は区別されません。
       </div>
       <form class="search-form" method="get" id="search-form">
-        <input type="text" name="q" id="query">
+        <input type="search" name="q" id="query">
         <input type="submit" value="検索">
       </form>
+      
       <script>
-        (function () {
-          const searcher = "\/nagoya-example\/searcher.min.9d9eb5c2e47978f3e888ce12e0df892365245e5b58ecece9c135c58a2961d319.js";
-          const data = "\/nagoya-example\/data.min.be141ed99ed049a7ae5b28e06c0d17ea56c5543721d424506880a59ed2d465f2.json";
-          const articleCount =  12 ;
-          const maxConcurrency =  16 ;
-
-          const prefConcurrency = Math.max(1, Math.min(maxConcurrency, Math.ceil(articleCount / 8)));
-
-          const htmlSpecialCharsTable = {
-            "&": "&amp;",
-            "'": "&apos;",
-            "\"": "&quot;",
-            "<": "&lt;",
-            ">": "&gt;",
-          };
-
-          function htmlSpecialChars(text) {
-            return text.replace(/[&'"<>]/g, (match) => htmlSpecialCharsTable[match]);
-          }
-
-          function htmlTemplate(strings, ...values) {
-            let html = strings[0];
-            values.forEach((val, i) => {
-              html += htmlSpecialChars("" + val) + strings[i + 1];
-            });
-            return html;
-          }
-
-          const searchForm = document.getElementById("search-form");
-          const queryInput = document.getElementById("query");
-
-          const contentLoadedPromise = new Promise((resolve) => {
-            if (document.readyState === "loading") {
-              document.addEventListener("DOMContentLoaded", () => resolve());
-            } else {
-              resolve();
-            }
-          });
-          const resultElementPromise = contentLoadedPromise.then(() =>
-            document.getElementById("search-result")
-          );
-
-          const dataPromise = fetch(data).then((response) => {
-            if (response.ok) {
-              return response.arrayBuffer();
-            } else {
-              throw new Error(response.statusText);
-            }
-          }).catch((error) => {
-            searchForm.outerHTML = htmlTemplate`
-              <p class="error">${"検索用データファイルをダウンロードできません。"}</p>
-            `;
-            throw error;
-          });
-
-          function getQuery(reflectOnForm = true) {
-            const params = new URL(window.location).searchParams;
-            const query = params.getAll("q").join(" ");
-            if (reflectOnForm) {
-              queryInput.value = query;
-            }
-            return query;
-          }
-
-          const whiteSpaces = ["\t", "\n", "\u000b", "\f", "\r", " ", "", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "　"];
-
-          function parse(query) {
-            query = query.toLowerCase();
-            const phrases = [];
-            let buffer = "";
-            let quoted = false;
-            for (let i = 0; i < query.length; i++) {
-              const chara = query[i];
-              if (whiteSpaces.includes(chara)) {
-                if (quoted) {
-                  buffer += chara;
-                } else if (buffer) {
-                  phrases.push(buffer);
-                  buffer = "";
-                }
-              } else if (chara === "\"") {
-                if (query[i + 1] === "\"") {
-                  buffer += "\"";
-                  i++;
-                } else {
-                  quoted = !quoted;
-                  if (buffer) {
-                    phrases.push(buffer);
-                    buffer = "";
-                  }
-                }
-              } else {
-                buffer += chara;
-              }
-            }
-            if (buffer) {
-              phrases.push(buffer);
-            }
-            return phrases;
-          }
-
-          function range(n) {
-            return [...Array(n).keys()];
-          }
-
-          function divideRangesFairly(len, n) {
-            const size = Math.floor(len / n);
-            const extra = len % n;
-            const ranges = [];
-            let start = 0;
-            for (let i = 0; i < n; i++) {
-              const end = start + size + (i < extra ? 1 : 0);
-              ranges.push({start, end});
-              start = end;
-            }
-            return ranges;
-          }
-
-          let cancelFetch = null;
-          let workers = [];
-          let cancelSearchFs = [];
-
-          async function search(phrases) {
-            workers.forEach((w) => w.terminate());
-            if (cancelFetch !== null) {
-              cancelFetch();
-            }
-            cancelSearchFs.forEach((f) => f());
-            cancelSearchFs = [];
-            const concurrency = Math.min(navigator.hardwareConcurrency ?? 1, prefConcurrency);
-            workers = range(concurrency).map(() => new Worker(searcher));
-            const maybeBuffer = await Promise.race([
-              dataPromise.catch(() => false),
-              new Promise((resolve) => {
-                cancelFetch = () => resolve(false);
-              })
-            ]);
-            if (maybeBuffer === false) {
-              return false;
-            }
-            const searchPromises = [];
-            for (let i = 0; i < workers.length; i++) {
-              const search = new Promise((resolve) => {
-                workers[i].onmessage = (e) => {
-                  resolve(e.data);
-                };
-                cancelSearchFs.push(() => {
-                  resolve(false);
-                });
-              });
-              searchPromises.push(search);
-            }
-            const searchPromise = Promise.all(searchPromises).then((xs) => {
-              if (xs.includes(false)) {
-                return false;
-              } else {
-                return xs.flat();
-              }
-            });
-            const ranges = divideRangesFairly(articleCount, workers.length);
-            for (let i = 0; i < workers.length; i++) {
-              const arrayBufferCopy = maybeBuffer.slice(0);
-              const message = {
-                phrases: phrases,
-                start: ranges[i].start,
-                end: ranges[i].end,
-                articleBuffer: arrayBufferCopy,
-              };
-              workers[i].postMessage(message, [arrayBufferCopy]);
-            }
-            return await searchPromise;
-          }
-
-          let prevQuery = "";
-
-          async function main() {
-            if (window.Worker) {
-              const query = getQuery();
-              const phrases = parse(query);
-              if (prevQuery === query) {
-                return;
-              } else if (phrases.length > 0) {
-                const result = await search(phrases);
-                if (result !== false) {
-                  const element = await resultElementPromise;
-                  let html = `<h2>${
-                    phrases.map(x => htmlTemplate`<code>${x}</code>`).join("")
-                  }</h2>`;
-                  if (result.length > 0) {
-                    html += htmlTemplate`
-                      <p class="info">${"を含む記事が"} ${result.length} ${"件見つかりました。"}</p>
-                    `;
-                    html += `<ul>${
-                      result.map(article => htmlTemplate`
-                        <li><a href="${article.link}">${article.title}</a></li>
-                      `).join("")
-                    }</ul>`;
-                  } else {
-                    html += htmlTemplate`
-                      <p class="info">${"を含む記事は見つかりませんでした。"}</p>
-                    `;
-                  }
-                  element.innerHTML = html;
-                  prevQuery = query;
-                }
-              } else {
-                const element = await resultElementPromise;
-                element.innerHTML = "";
-                prevQuery = query;
-              }
-            } else {
-              const element = await resultElementPromise;
-              element.innerHTML = htmlTemplate`
-                <p class="warning">${"Web Worker を有効にしてください。"}</p>
-              `;
-            }
-          }
-
-          searchForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const query = queryInput.value;
-            const params = new URL(window.location).searchParams;
-            if (query) {
-              params.set("q", query);
-            } else {
-              params.delete("q");
-            }
-            const paramStr = params.toString();
-            history.pushState({}, "", paramStr ? "?" + paramStr : ".");
-            main();
-          });
-
-          window.addEventListener("popstate", (e) => {
-            main();
-          });
-
-          main();
-        })();
+        (function(){const _="/nagoya-example/searcher.min.9d9eb5c2e47978f3e888ce12e0df892365245e5b58ecece9c135c58a2961d319.js",E="/nagoya-example/data.min.fe7a166ec18478116c763da5899b12b2b36be30338c69403c8ce0f4a4316afef.json",c=12,C=16,O=Math.max(1,Math.min(C,Math.ceil(c/8))),w=10,d={"&":"&amp;","'":"&apos;",'"':"&quot;","<":"&lt;",">":"&gt;"};function h(e){return e.replace(/[&'"<>]/g,e=>d[e])}function t(e,...n){let t=e[0];return n.forEach((n,s)=>{t+=h(""+n)+e[s+1]}),t}const l=document.getElementById("search-form"),r=document.getElementById("query"),j=new Promise(e=>{document.readyState==="loading"?document.addEventListener("DOMContentLoaded",()=>e()):e()}),a=j.then(()=>document.getElementById("search-result")),m=fetch(E),f=new Promise((e,t)=>setTimeout(t,w*1e3)),p=Promise.race([m,f]).then(e=>{if(e.ok)return e.arrayBuffer();throw new Error(e.statusText)}).catch(e=>{throw l.outerHTML=t`
+      <p class="error">${"検索用データファイルをダウンロードできません。"}</p>
+    `,e});function g(e=!0){const n=new URL(window.location).searchParams,t=n.getAll("q").join(" ");return e&&(r.value=t),t}const v=["	",`
+`,"","",``," ",""," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","　"];function b(e){e=e.toLowerCase();const n=[];let t="",s=!1;for(let o=0;o<e.length;o++){const i=e[o];v.includes(i)?s?t+=i:t&&(n.push(t),t=""):i==='"'?e[o+1]==='"'?(t+='"',o++):(s=!s,t&&(n.push(t),t="")):t+=i}return t&&n.push(t),n}function u(e){return[...Array(e).keys()]}function y(e,t){const o=Math.floor(e/t),i=e%t,s=[];let n=0;for(let e=0;e<t;e++){const a=n+o+(e<i?1:0);s.push({start:n,end:a}),n=a}return s}let i=null,e=[],o=[];async function x(t){e.forEach(e=>e.terminate()),i!==null&&i(),o.forEach(e=>e()),o=[];const r=Math.min(navigator.hardwareConcurrency??1,O);e=u(r).map(()=>new Worker(_));const n=await Promise.race([p.catch(()=>!1),new Promise(e=>{i=()=>e(!1)})]);if(n===!1)return!1;const s=[];for(let t=0;t<e.length;t++){const n=new Promise(n=>{e[t].onmessage=e=>{n(e.data)},o.push(()=>{n(!1)})});s.push(n)}const l=Promise.all(s).then(e=>!e.includes(!1)&&e.flat()),a=y(c,e.length);for(let s=0;s<e.length;s++){const o=n.slice(0),i={phrases:t,start:a[s].start,end:a[s].end,articleBuffer:o};e[s].postMessage(i,[o])}return await l}let s="";async function n(){if(window.Worker){const e=g(),n=b(e);if(s===e)return;if(n.length>0){{const o=await x(n);if(o!==!1){const r=await a;let i=`<h2>${n.map(e=>t`<code>${e}</code>`).join("")}</h2>`;o.length>0?(i+=t`
+              <p class="info">${"を含む記事が"} ${o.length} ${"件見つかりました。"}</p>
+            `,i+=`<ul>${o.map(e=>t`
+                <li><a href="${e.link}">${e.title}</a></li>
+              `).join("")}</ul>`):i+=t`
+              <p class="info">${"を含む記事は見つかりませんでした。"}</p>
+            `,r.innerHTML=i,s=e}}}else{const t=await a;t.innerHTML="",s=e}}else{const e=await a;e.innerHTML=t`
+        <p class="warning">${"Web Worker を有効にしてください。"}</p>
+      `}}l.addEventListener("submit",e=>{e.preventDefault();const s=r.value,t=new URL(window.location).searchParams;s?t.set("q",s):t.delete("q");const o=t.toString();history.pushState({},"",o?"?"+o:"."),n()}),window.addEventListener("popstate",e=>{n()}),n()})()
       </script>
       <noscript>
         <p class="warning">JavaScript を有効にしてください。</p>
