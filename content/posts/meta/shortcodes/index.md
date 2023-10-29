@@ -13,6 +13,8 @@ tags:
 
 <!--more-->
 
+## 目次
+
 {{< toc >}}
 
 この目次もショートコードです。
@@ -21,9 +23,13 @@ tags:
 
 キャプション付きの画像を挿入できます。
 
-{{< figure src="cover.png" caption="邪神ちゃんはお菓子を作ります" class="bordered" >}}
+{{< figure src="fig.png" caption="邪神ちゃんはお菓子を作ります" class="bordered" >}}
 
 キャプション付きの画像を挿入できます。
+
+## リンクカード
+
+{{< card image="cover.jpg" title="GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images" desc="Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images - GitHub" href="https://github.com/curegit/precure-stylegan-ada" >}}
 
 ## 詳細折りたたみ要素
 
