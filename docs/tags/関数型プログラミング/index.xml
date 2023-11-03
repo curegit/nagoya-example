@@ -6,16 +6,15 @@
     <description>Recent content in 関数型プログラミング on 名古屋サンプルブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 08 May 2023 16:41:33 +0900</lastBuildDate><atom:link href="https://curegit.github.io/nagoya-example/tags/%E9%96%A2%E6%95%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 16:41:33 +0900</lastBuildDate>
+    <atom:link href="https://curegit.github.io/nagoya-example/tags/%E9%96%A2%E6%95%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C# で無名再帰</title>
       <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</link>
       <pubDate>Mon, 08 May 2023 16:41:33 +0900</pubDate>
-      
       <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</guid>
       <description>&lt;p&gt;このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。&lt;/p&gt;
 &lt;p&gt;このライブラリは、&lt;code&gt;Fix&lt;/code&gt; メソッドによって構成されています。&lt;code&gt;Fix&lt;/code&gt; メソッドは、&lt;code&gt;Func&lt;/code&gt; 型の引数を受け取り、再帰呼び出しを行うための関数を返します。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
