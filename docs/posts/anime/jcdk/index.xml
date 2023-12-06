@@ -13,10 +13,7 @@
       <link>https://curegit.github.io/nagoya-example/posts/anime/jcdk/charms/</link>
       <pubDate>Mon, 10 Oct 2022 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/anime/jcdk/charms/</guid>
-      <description>&lt;p&gt;
-  &lt;img src=&#34;cover.png&#34;&gt;
-
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&#xA;  &lt;img src=&#34;cover.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

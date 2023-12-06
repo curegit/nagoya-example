@@ -13,24 +13,21 @@
       <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</link>
       <pubDate>Mon, 08 May 2023 16:41:33 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/fix/</guid>
-      <description>&lt;p&gt;このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。&lt;/p&gt;
-&lt;p&gt;このライブラリは、&lt;code&gt;Fix&lt;/code&gt; メソッドによって構成されています。&lt;code&gt;Fix&lt;/code&gt; メソッドは、&lt;code&gt;Func&lt;/code&gt; 型の引数を受け取り、再帰呼び出しを行うための関数を返します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。&lt;/p&gt;&#xA;&lt;p&gt;このライブラリは、&lt;code&gt;Fix&lt;/code&gt; メソッドによって構成されています。&lt;code&gt;Fix&lt;/code&gt; メソッドは、&lt;code&gt;Func&lt;/code&gt; 型の引数を受け取り、再帰呼び出しを行うための関数を返します。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Python で素数列挙</title>
       <link>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</link>
       <pubDate>Fri, 05 May 2023 16:43:41 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</guid>
-      <description>&lt;p&gt;際限なく素数を出力し続ける Python のジェネレータについて説明します。&lt;/p&gt;
-&lt;p&gt;Python の &lt;code&gt;itertools&lt;/code&gt; ライブラリの &lt;code&gt;count&lt;/code&gt; 関数と、シンプルな再帰を利用して非常にコンパクトに実装することができます。&lt;/p&gt;</description>
+      <description>&lt;p&gt;際限なく素数を出力し続ける Python のジェネレータについて説明します。&lt;/p&gt;&#xA;&lt;p&gt;Python の &lt;code&gt;itertools&lt;/code&gt; ライブラリの &lt;code&gt;count&lt;/code&gt; 関数と、シンプルな再帰を利用して非常にコンパクトに実装することができます。&lt;/p&gt;</description>
     </item>
     <item>
       <title>C# で Unit 型を実装する</title>
       <link>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</link>
       <pubDate>Wed, 20 Apr 2022 16:31:59 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/programming/csharp/unit/</guid>
-      <description>&lt;p&gt;今回は、C# で記述されたコード「Unit 構造体」について解説します。&lt;/p&gt;
-&lt;p&gt;Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。&lt;/p&gt;</description>
+      <description>&lt;p&gt;今回は、C# で記述されたコード「Unit 構造体」について解説します。&lt;/p&gt;&#xA;&lt;p&gt;Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -27,8 +27,7 @@
       <link>https://curegit.github.io/nagoya-example/posts/meta/markdown/</link>
       <pubDate>Thu, 06 May 2021 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/meta/markdown/</guid>
-      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;
-&lt;p&gt;サムネイル画像は &lt;code&gt;images&lt;/code&gt; フロントマターのテストです。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hugo で使用できる Markdown の例を示します。&lt;/p&gt;&#xA;&lt;p&gt;サムネイル画像は &lt;code&gt;images&lt;/code&gt; フロントマターのテストです。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
