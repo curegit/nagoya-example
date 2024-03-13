@@ -70,6 +70,21 @@ Hugo で使用できる Markdown の例を示します。
   > b
 * c
 
+### Menu
+
+Preview a longer alphabetical list.
+
+- Egg and bacon
+- Egg, sausage, and bacon
+- Egg and Spam
+- Egg, bacon, and Spam
+- Egg, bacon, sausage, and Spam
+- Spam, bacon, sausage, and Spam
+- Spam, egg, Spam, Spam, bacon, and Spam
+- Spam, Spam, Spam, egg, and Spam
+- Spam, Spam, Spam, Spam, Spam, Spam, baked beans, Spam, Spam, Spam, and Spam
+- Lobster Thermidor aux crevettes with a Mornay sauce, garnished with truffle pâté, brandy, and a fried egg on top, and Spam
+
 ## リンク
 
 これは、段落の文章です。
