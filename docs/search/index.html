@@ -33,7 +33,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.47831d383b6d1d16e7638d2d8e49c9ce71a44296935649489e72cf36160ee1ae.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.5bd5eb249d6a7dcb73714651e22859fa31debd870a337fa4d1de4428cbd7f7b1.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -144,27 +144,29 @@
     
       <div>
         スペースで区切ると AND 検索として分解されます。<br>
-        ダブルクオートで囲んだフレーズは分解されません。<br>
-        大文字・小文字は区別されません。
+        ダブルクオートで囲んだフレーズは分解されません。
       </div>
       <form class="search-form" method="get" id="search-form">
+        <div>
+          <label><input type="checkbox" name="c" value="1" id="case">大/小文字を区別</label>
+        </div>
         <input type="search" name="q" id="query">
         <input type="submit" value="検索">
       </form>
       
       <script>
-        (function(){const _="/nagoya-example/searcher.min.9d9eb5c2e47978f3e888ce12e0df892365245e5b58ecece9c135c58a2961d319.js",E="/nagoya-example/data.min.c566fd2b91a962fa5d4332aaa3ab086422be090d38432c08869da83c94fdd94f.json",c=12,C=16,O=Math.max(1,Math.min(C,Math.ceil(c/8))),w=10,d={"&":"&amp;","'":"&apos;",'"':"&quot;","<":"&lt;",">":"&gt;"};function h(e){return e.replace(/[&'"<>]/g,e=>d[e])}function t(e,...n){let t=e[0];return n.forEach((n,s)=>{t+=h(""+n)+e[s+1]}),t}const l=document.getElementById("search-form"),r=document.getElementById("query"),j=new Promise(e=>{document.readyState==="loading"?document.addEventListener("DOMContentLoaded",()=>e()):e()}),a=j.then(()=>document.getElementById("search-result")),m=fetch(E),f=new Promise((e,t)=>setTimeout(t,w*1e3)),p=Promise.race([m,f]).then(e=>{if(e.ok)return e.arrayBuffer();throw new Error(e.statusText)}).catch(e=>{throw l.outerHTML=t`
+        (function(){const f="/nagoya-example/searcher.min.c9b23f0bd1223fda8d8145579ca8dfb42c5268d79e7d787f53ced114cbd4d9e0.js",A="/nagoya-example/data.min.4b7e0b957e0c3c6a2b2b11411c81efc1b3400fd7fb2e42dde22dc4d6b13f2c71.json",c=12,k=16,E=Math.max(1,Math.min(k,Math.ceil(c/8))),x=10,O={"&":"&amp;","'":"&apos;",'"':"&quot;","<":"&lt;",">":"&gt;"};function w(e){return e.replace(/[&'"<>]/g,e=>O[e])}function t(e,...n){let t=e[0];return n.forEach((n,s)=>{t+=w(""+n)+e[s+1]}),t}const l=document.getElementById("search-form"),d=document.getElementById("query"),u=document.getElementById("case"),_=new Promise(e=>{document.readyState==="loading"?document.addEventListener("DOMContentLoaded",()=>e()):e()}),n=_.then(()=>document.getElementById("search-result")),h=fetch(A),p=new Promise((e,t)=>setTimeout(t,x*1e3)),g=Promise.race([h,p]).then(e=>{if(e.ok)return e.arrayBuffer();throw new Error(e.statusText)}).catch(e=>{throw l.outerHTML=t`
       <p class="error">${"検索用データファイルをダウンロードできません。"}</p>
-    `,e});function g(e=!0){const n=new URL(window.location).searchParams,t=n.getAll("q").join(" ");return e&&(r.value=t),t}const v=["	",`
-`,"","",``," ",""," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","　"];function b(e){e=e.toLowerCase();const n=[];let t="",s=!1;for(let o=0;o<e.length;o++){const i=e[o];v.includes(i)?s?t+=i:t&&(n.push(t),t=""):i==='"'?e[o+1]==='"'?(t+='"',o++):(s=!s,t&&(n.push(t),t="")):t+=i}return t&&n.push(t),n}function u(e){return[...Array(e).keys()]}function y(e,t){const o=Math.floor(e/t),i=e%t,s=[];let n=0;for(let e=0;e<t;e++){const a=n+o+(e<i?1:0);s.push({start:n,end:a}),n=a}return s}let i=null,e=[],o=[];async function x(t){e.forEach(e=>e.terminate()),i!==null&&i(),o.forEach(e=>e()),o=[];const r=Math.min(navigator.hardwareConcurrency??1,O);e=u(r).map(()=>new Worker(_));const n=await Promise.race([p.catch(()=>!1),new Promise(e=>{i=()=>e(!1)})]);if(n===!1)return!1;const s=[];for(let t=0;t<e.length;t++){const n=new Promise(n=>{e[t].onmessage=e=>{n(e.data)},o.push(()=>{n(!1)})});s.push(n)}const l=Promise.all(s).then(e=>!e.includes(!1)&&e.flat()),a=y(c,e.length);for(let s=0;s<e.length;s++){const o=n.slice(0),i={phrases:t,start:a[s].start,end:a[s].end,articleBuffer:o};e[s].postMessage(i,[o])}return await l}let s="";async function n(){if(window.Worker){const e=g(),n=b(e);if(s===e)return;if(n.length>0){{const o=await x(n);if(o!==!1){const r=await a;let i=`<h2>${n.map(e=>t`<code>${e}</code>`).join("")}</h2>`;o.length>0?(i+=t`
-              <p class="info">${"を含む記事が"} ${o.length} ${"件見つかりました。"}</p>
-            `,i+=`<ul>${o.map(e=>t`
+    `,e});function v(e=!0){const t=new URL(window.location).searchParams,n=t.getAll("q").join(" "),s=!!+(t.get("c")??0);return e&&(d.value=n,u.checked=s),[n,s]}const b=["	",`
+`,"","",``," ",""," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","　"];function j(e){const n=[];let t="",s=!1;for(let o=0;o<e.length;o++){const i=e[o];b.includes(i)?s?t+=i:t&&(n.push(t),t=""):i==='"'?e[o+1]==='"'?(t+='"',o++):(s=!s,t&&(n.push(t),t="")):t+=i}return t&&n.push(t),n}function y(e){return[...Array(e).keys()]}function m(e,t){const o=Math.floor(e/t),i=e%t,s=[];let n=0;for(let e=0;e<t;e++){const a=n+o+(e<i?1:0);s.push({start:n,end:a}),n=a}return s}let r=null,e=[],a=[];async function C(t,n){e.forEach(e=>e.terminate()),r!==null&&r(),a.forEach(e=>e()),a=[];const l=Math.min(navigator.hardwareConcurrency??1,E);e=y(l).map(()=>new Worker(f));const s=await Promise.race([g.catch(()=>!1),new Promise(e=>{r=()=>e(!1)})]);if(s===!1)return!1;const o=[];for(let t=0;t<e.length;t++){const n=new Promise(n=>{e[t].onmessage=e=>{n(e.data)},a.push(()=>{n(!1)})});o.push(n)}const d=Promise.all(o).then(e=>!e.includes(!1)&&e.flat()),i=m(c,e.length);for(let o=0;o<e.length;o++){const a=s.slice(0),r={phrases:t,caseSensitive:n,start:i[o].start,end:i[o].end,articleBuffer:a};e[o].postMessage(r,[a])}return await d}let i="",o=void 0;async function s(){if(window.Worker){const[s,e]=v(),a=j(s);if(i===s&&e===o)return;if(a.length>0){{const r=await C(a,e);if(r!==!1){const l=await n;let c=`<h2>${a.map(n=>t`<code>${e?n:n.toLowerCase()}</code>`).join("")}</h2>`;r.length>0?(c+=t`
+              <p class="info">${"を含む記事が"} ${r.length} ${"件見つかりました。"}</p>
+            `,c+=`<ul>${r.map(e=>t`
                 <li><a href="${e.link}">${e.title}</a></li>
-              `).join("")}</ul>`):i+=t`
+              `).join("")}</ul>`):c+=t`
               <p class="info">${"を含む記事は見つかりませんでした。"}</p>
-            `,r.innerHTML=i,s=e}}}else{const t=await a;t.innerHTML="",s=e}}else{const e=await a;e.innerHTML=t`
+            `,l.innerHTML=c,i=s,o=e}}}else{const t=await n;t.innerHTML="",i=s,o=e}}else{const e=await n;e.innerHTML=t`
         <p class="warning">${"Web Worker を有効にしてください。"}</p>
-      `}}l.addEventListener("submit",e=>{e.preventDefault();const s=r.value,t=new URL(window.location).searchParams;s?t.set("q",s):t.delete("q");const o=t.toString();history.pushState({},"",o?"?"+o:"."),n()}),window.addEventListener("popstate",e=>{n()}),n()})()
+      `}}l.addEventListener("submit",e=>{e.preventDefault();const n=d.value,i=u.checked,t=new URL(window.location).searchParams;n?t.set("q",n):t.delete("q"),i?t.set("c","1"):t.delete("c");const o=t.toString();history.pushState({},"",o?"?"+o:"."),s()}),window.addEventListener("popstate",e=>{s()}),s()})()
       </script>
       <noscript>
         <p class="warning">JavaScript を有効にしてください。</p>
