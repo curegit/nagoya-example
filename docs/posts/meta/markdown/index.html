@@ -15,7 +15,7 @@
 
   <meta name="keywords" content="Markdown, HTML, Hugo">
 
-<meta name="generator" content="Hugo 0.125.0-DEV">
+<meta name="generator" content="Hugo 0.126.1">
 
   <meta name="author" content="高橋 元">
   
@@ -38,7 +38,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.bd1511c60aef9279eba7fef1b6479c5a953cc2a8ba940b101d59f373950c537d.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.47831d383b6d1d16e7638d2d8e49c9ce71a44296935649489e72cf36160ee1ae.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -75,7 +75,7 @@
   
   
     
-      <meta itemprop="dateModified" content="2024-04-16T18:23:08+09:00">
+      <meta itemprop="dateModified" content="2024-05-23T18:47:16+09:00">
     
   
 
@@ -204,7 +204,7 @@
       <div class="time">
         
           <div>公開: <time datetime="2021-05-06">2021/05/06</time></div>
-          <div>更新: <time datetime="2024-04-16">2024/04/16</time></div>
+          <div>更新: <time datetime="2024-05-23">2024/05/23</time></div>
         
       </div>
     
@@ -231,11 +231,13 @@
     <li><a href="#リンク">リンク</a></li>
     <li><a href="#コードブロック">コードブロック</a></li>
     <li><a href="#テーブル">テーブル</a></li>
+    <li><a href="#引用">引用</a></li>
     <li><a href="#その他">その他</a>
       <ul>
-        <li><a href="#引用">引用</a></li>
         <li><a href="#水平線">水平線</a></li>
         <li><a href="#説明リスト">説明リスト</a></li>
+        <li><a href="#チェックリスト">チェックリスト</a></li>
+        <li><a href="#extras-goldmark-extensions">Extras Goldmark Extensions</a></li>
         <li><a href="#生の-html">生の HTML</a></li>
       </ul>
     </li>
@@ -441,8 +443,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="その他">その他</h2>
-<h3 id="引用">引用</h3>
+<h2 id="引用">引用</h2>
 <blockquote>
 <p>引用文です。</p>
 </blockquote>
@@ -467,8 +468,20 @@ baz</p>
 </ol>
 </blockquote>
 <p>bbb</p>
+<blockquote>
+<p>DANGER!!!</p>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a8a8a8">#include</span> <span style="color:#a8a8a8">&lt;unistd.h&gt;</span><span style="color:#a8a8a8">
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6ae4b9">int</span> <span style="color:#feacd0">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#b6a0ff">while</span>(<span style="color:#00bcff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#feacd0">fork</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#b6a0ff">return</span> <span style="color:#00bcff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></blockquote>
+<p>ccc</p>
 </blockquote>
 </blockquote>
+<h2 id="その他">その他</h2>
 <h3 id="水平線">水平線</h3>
 <p>水平線を表す場合は、3つ以上のアスタリスク（*）やハイフン（-）を使います。</p>
 <hr>
@@ -483,6 +496,26 @@ baz</p>
 <dd>用語の説明</dd>
 </dl>
 <p>これは、段落の文章です。</p>
+<h3 id="チェックリスト">チェックリスト</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 水温
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 油温</li>
+<li><input checked="" disabled="" type="checkbox"> 油圧</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> A/F</li>
+<li><input disabled="" type="checkbox"> ブースト</li>
+</ul>
+<h3 id="extras-goldmark-extensions">Extras Goldmark Extensions</h3>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>H~2~O
+</span></span><span style="display:flex;"><span>: ==水==は透明で、++無味無臭++、ほぼ無色の化学物質であり、地球の==水==圏とすべての既知の生物の体液の主成分です。
+</span></span><span style="display:flex;"><span>すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。
+</span></span><span style="display:flex;"><span>地球上の==水==の総量は約 1.4&amp;times;10^18^&amp;nbsp;m^3^ です。
+</span></span></code></pre></div><dl>
+<dt>H<sub>2</sub>O</dt>
+<dd><mark>水</mark>は透明で、<ins>無味無臭</ins>、ほぼ無色の化学物質であり、地球の<mark>水</mark>圏とすべての既知の生物の体液の主成分です。すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。地球上の<mark>水</mark>の総量は約 1.4×10<sup>18</sup> m<sup>3</sup> です。</dd>
+</dl>
 <h3 id="生の-html">生の HTML</h3>
 <p>Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.</p>
 <div class="footnotes" role="doc-endnotes">
@@ -625,9 +658,9 @@ baz</p>
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
-        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
+        <li><a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a></li>
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキック キャラクター紹介: 花園ゆりね</a></li>
+        <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
       
     </ul>
   </nav>

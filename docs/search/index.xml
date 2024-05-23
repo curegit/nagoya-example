@@ -4,7 +4,7 @@
     <title>記事検索 on 名古屋サンプルブログ</title>
     <link>https://curegit.github.io/nagoya-example/search/</link>
     <description>Recent content in 記事検索 on 名古屋サンプルブログ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://curegit.github.io/nagoya-example/search/index.xml" rel="self" type="application/rss+xml" />
