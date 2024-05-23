@@ -85,7 +85,7 @@ public struct Unit : IEquatable<Unit>, IComparable, IComparable<Unit>
 `[Serializable]` を使用して、`Serializable` 属性を付与しています。
 これは、この構造体をシリアル化できるように設定するために使われます。
 
-Unit 構造体自体は、`IEquatable<T>` インターフェース、IComparable インターフェース、および `IComparable<T>` インターフェースを実装しています。
+Unit 構造体自体は、`IEquatable<T>` インターフェース、`IComparable` インターフェース、および `IComparable<T>` インターフェースを実装しています。
 それぞれのインターフェースが実装するメソッドについて説明します。
 
 ### `IEquatable<T>` インターフェースを実装するために利用する `Equals()` メソッド

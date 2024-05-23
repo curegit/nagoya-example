@@ -176,6 +176,19 @@ def shifted(list, shift=0):
 >>> 2. yyy
 >>>
 >> bbb
+>>> DANGER!!!
+>>>
+>>> ```c
+>>> #include <unistd.h>
+>>>
+>>> int main() {
+>>>   while(1)
+>>>     fork();
+>>>   return 0;
+>>> }
+>>> ```
+>>>
+>> ccc
 
 ## その他
 
