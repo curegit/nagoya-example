@@ -2,7 +2,7 @@
 
 build:
 	rm -rf docs
-	hugo -d docs --printUnusedTemplates
+	hugo -d docs --printUnusedTemplates --printPathWarnings
 
 server:
-	hugo server --buildDrafts --buildFuture --disableFastRender --printUnusedTemplates
+	hugo server --buildDrafts --buildFuture --disableFastRender --printUnusedTemplates --printPathWarnings
