@@ -1,8 +1,6 @@
 title = "名古屋サンプルブログ"
 baseURL = "https://curegit.github.io/nagoya-example/"
 theme = "nagoya"
-paginate = 5
-paginatePath = ""
 timeZone = "Local"
 languageCode = "ja"
 DefaultContentLanguage = "ja"
@@ -24,6 +22,10 @@ enableGitInfo = true
 [frontmatter]
   date = ["date", "publishDate", ":git", ":fileModTime"]
   lastmod = ["lastmod", ":git", ":fileModTime"]
+
+[pagination]
+  pagerSize = 5
+  path = ""
 
 [markup]
   [markup.goldmark]
