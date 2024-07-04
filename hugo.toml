@@ -17,7 +17,7 @@ enableGitInfo = true
   authorLink = "https://github.com/curegit/nagoya"
   description = "Hugo 日本語テーマ「名古屋」のサンプルサイト"
   keywords = ["ブログ", "Hugo", "名古屋"]
-  images = ["bio.png"]
+  images = ["catch.png", "bio.png"]
 
 [frontmatter]
   date = ["date", "publishDate", ":git", ":fileModTime"]
