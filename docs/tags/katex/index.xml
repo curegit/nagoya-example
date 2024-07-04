@@ -6,14 +6,14 @@
     <description>Recent content in KaTeX on 名古屋サンプルブログ</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 04 Jul 2024 09:29:16 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2024 18:19:26 +0900</lastBuildDate>
     <atom:link href="https://curegit.github.io/nagoya-example/tags/katex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ダイアグラムと数式の表示</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
-      <pubDate>Tue, 01 Feb 2022 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 11 Jun 2024 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
-      <description>&lt;p&gt;テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。&lt;/p&gt;</description>
+      <description>&lt;p&gt;テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。&lt;/p&gt;&#xA;&lt;p&gt;このテーマでは、数式表示に KaTeX を利用しています。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

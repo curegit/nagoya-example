@@ -6,12 +6,12 @@
     <description>Recent content in Python on 名古屋サンプルブログ</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 25 Jul 2023 22:22:30 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2024 18:19:26 +0900</lastBuildDate>
     <atom:link href="https://curegit.github.io/nagoya-example/posts/programming/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python で素数列挙</title>
       <link>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</link>
-      <pubDate>Fri, 05 May 2023 16:43:41 +0900</pubDate>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/programming/python/prime/</guid>
       <description>&lt;p&gt;際限なく素数を出力し続ける Python のジェネレータについて説明します。&lt;/p&gt;&#xA;&lt;p&gt;Python の &lt;code&gt;itertools&lt;/code&gt; ライブラリの &lt;code&gt;count&lt;/code&gt; 関数と、シンプルな再帰を利用して非常にコンパクトに実装することができます。&lt;/p&gt;</description>
     </item>
