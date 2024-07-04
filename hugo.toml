@@ -33,12 +33,16 @@ enableGitInfo = true
       unsafe = true
 
     [markup.goldmark.extensions]
+      strikethrough = false
+
       [markup.goldmark.extensions.cjk]
         enable = true
         eastAsianLineBreaks = true
 
       [markup.goldmark.extensions.extras]
         [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.delete]
           enable = true
         [markup.goldmark.extensions.extras.mark]
           enable = true
