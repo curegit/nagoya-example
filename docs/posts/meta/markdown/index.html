@@ -15,7 +15,7 @@
 
   <meta name="keywords" content="Markdown, HTML, Hugo">
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.128.1">
 
   <meta name="author" content="高橋 元">
   
@@ -43,7 +43,8 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.37cdfa0054d2c35f607a93ba69fe6a1b15d300121e2570dd35850f6b39fd21af.css">
+
+<link rel="stylesheet" href="/nagoya-example/bundle.min.789093e4e023278216f4e6bf99d98d646a91a918a169ad0245d363c9bd129ba1.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -80,7 +81,7 @@
   
   
     
-      <meta itemprop="dateModified" content="2024-06-17T00:27:14+09:00">
+      <meta itemprop="dateModified" content="2024-07-04T09:36:48+09:00">
     
   
 
@@ -209,7 +210,7 @@
       <div class="time">
         
           <div>公開: <time datetime="2021-05-06">2021/05/06</time></div>
-          <div>更新: <time datetime="2024-06-17">2024/06/17</time></div>
+          <div>更新: <time datetime="2024-07-04">2024/07/04</time></div>
         
       </div>
     
@@ -229,6 +230,7 @@
       </ul>
     </li>
     <li><a href="#段落">段落</a></li>
+    <li><a href="#テキスト装飾">テキスト装飾</a></li>
     <li><a href="#リスト">リスト</a>
       <ul>
         <li><a href="#menu">Menu</a></li>
@@ -270,6 +272,12 @@
 <p>吾輩は猫である。名前はまだ無い。</p>
 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+<h2 id="テキスト装飾">テキスト装飾</h2>
+<p><em>Emphasized by single asterisks.</em></p>
+<p><strong>二重アスタリスク強調です。</strong></p>
+<p><del>このテキストは誤りでした。</del></p>
+<p><strong>このテキストは <em>this</em> がとりわけ重要です。</strong></p>
+<p><em><strong>三重アスタリスク強調です。</strong></em></p>
 <h2 id="リスト">リスト</h2>
 <p>通常よく使うリストです。</p>
 <ul>
@@ -463,9 +471,7 @@
 <blockquote>
 <blockquote>
 <blockquote>
-<p>foo
-bar
-baz</p>
+<p>foo bar baz</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -475,13 +481,13 @@ baz</p>
 <p>aaa</p>
 <blockquote>
 <ol>
-<li>xxx</li>
-<li>yyy</li>
+<li><strong>xxx</strong> ppp</li>
+<li>www <code>qqq</code> yyy</li>
 </ol>
 </blockquote>
 <p>bbb</p>
 <blockquote>
-<p>DANGER!!!</p>
+<p><del>DANGER!!!</del></p>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a8a8a8">#include</span> <span style="color:#a8a8a8">&lt;unistd.h&gt;</span><span style="color:#a8a8a8">
 </span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>
 </span></span><span style="display:flex;"><span><span style="color:#6ae4b9">int</span> <span style="color:#feacd0">main</span>() {
@@ -525,7 +531,7 @@ baz</p>
 </span></span><span style="display:flex;"><span>すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。
 </span></span><span style="display:flex;"><span>地球上の==水==の総量は約 1.4&amp;times;10^18^&amp;nbsp;m^3^ です。
 </span></span></code></pre></div><dl>
-<dt>H<del>2</del>O</dt>
+<dt>H<sub>2</sub>O</dt>
 <dd><mark>水</mark>は透明で、<ins>無味無臭</ins>、ほぼ無色の化学物質であり、地球の<mark>水</mark>圏とすべての既知の生物の体液の主成分です。すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。地球上の<mark>水</mark>の総量は約 1.4×10<sup>18</sup> m<sup>3</sup> です。</dd>
 </dl>
 <h3 id="生の-html-の例">生の HTML の例</h3>
@@ -691,7 +697,7 @@ baz</p>
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
-        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
         <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
       
