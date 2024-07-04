@@ -1,6 +1,6 @@
 ---
-title: Markdown の例
-date: 2021-05-06
+title: Hugo Markdown のレンダリング例
+date: 2024-07-03
 categories:
   - テスト
 tags:
@@ -8,10 +8,12 @@ tags:
   - HTML
   - Hugo
 images:
-  - ad.png
+  - catch.png
 ---
 
-Hugo で使用できる Markdown の例を示します。
+Hugo で使用できる基本的な Markdown 記法の、このテーマでの表示例を示します。
+
+Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それらも合わせて紹介します。
 
 サムネイル画像は `images` フロントマターのテストです。
 
@@ -139,7 +141,7 @@ Autolinks という仕様も存在します。
 
 サムネイルの画像です。
 
-![Example image](/nagoya-example/ad.png)
+![Example image](/nagoya-example/catch.png)
 
 ## コードブロック
 
