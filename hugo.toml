@@ -47,6 +47,12 @@ enableGitInfo = true
         [markup.goldmark.extensions.extras.superscript]
           enable = true
 
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\[', '\]']]
+          inline = [['$', '$'], ['\(', '\)']]
+
   [markup.highlight]
     codeFences = true
     style = "modus-vivendi"

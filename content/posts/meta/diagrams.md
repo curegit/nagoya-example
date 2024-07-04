@@ -74,6 +74,6 @@ $$ t = \int_{a}^{b} x^2 dx $$
 
 より複雑な数式です。
 
-\\[
+\[
   \alpha = \frac{m}{m-1} \left(1 - \frac{\displaystyle \sum_{i = 1}^m{{\sigma_i}^2}}{{\sigma_x}^2} \right)
-\\]
+\]
