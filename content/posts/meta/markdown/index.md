@@ -1,5 +1,5 @@
 ---
-title: Hugo Markdown のレンダリング例
+title: Markdown のレンダリング例
 date: 2024-07-03
 categories:
   - テスト
