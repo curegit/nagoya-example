@@ -6,7 +6,7 @@
     <description>Recent content on 名古屋サンプルブログ</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 04 Jul 2024 18:19:56 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2024 14:31:56 +0900</lastBuildDate>
     <atom:link href="https://curegit.github.io/nagoya-example/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自己紹介</title>
@@ -23,7 +23,7 @@
       <description>管理者情報 氏名: 高橋 元 メールアドレス: takahashi.moto@example.com 注意: 上記連絡先はすべて架空のものであり、実際の人物・団体とは一切関係ありません。</description>
     </item>
     <item>
-      <title>Hugo Markdown のレンダリング例</title>
+      <title>Markdown のレンダリング例</title>
       <link>https://curegit.github.io/nagoya-example/posts/meta/markdown/</link>
       <pubDate>Wed, 03 Jul 2024 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/meta/markdown/</guid>
