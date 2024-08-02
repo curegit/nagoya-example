@@ -6,10 +6,12 @@ languageCode = "ja"
 DefaultContentLanguage = "ja"
 hasCJKLanguage = true
 capitalizeListTitles = false
-enableInlineShortcodes = true
 enableRobotsTXT = true
 cleanDestinationDir = true
 enableGitInfo = true
+
+[security]
+  enableInlineShortcodes = true
 
 [params]
   treeRoot = "posts"
