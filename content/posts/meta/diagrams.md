@@ -11,6 +11,8 @@ tags:
   - KaTeX
   - Hugo
   - 数学
+toc: true
+tocAfterSummary: true
 ---
 
 テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。
@@ -18,8 +20,6 @@ tags:
 このテーマでは、数式表示に KaTeX を利用しています。
 
 <!--more-->
-
-{{< toc >}}
 
 ## GoAT
 
