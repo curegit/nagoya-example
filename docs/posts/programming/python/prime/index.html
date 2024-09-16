@@ -15,7 +15,7 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
 
   <meta name="keywords" content="数学, Python">
 
-<meta name="generator" content="Hugo 0.131.0">
+<meta name="generator" content="Hugo 0.134.2">
 
   <meta name="author" content="高橋 元">
   
@@ -44,7 +44,7 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.3e04768e753ddb61a9f254938a97d3477e93a402e9cf2f7820d73e0b6a9e5d29.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.b89969572d7da52ec6f14e08c79a430786abe4d47a3c032e7cbaf00ffb4d2a59.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -220,6 +220,8 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
             
   
 
+
+
 <article class="single">
   <header>
     <h1 class="title" itemprop="headline">Python で素数列挙</h1>
@@ -233,7 +235,8 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
     
   </header>
   <div class="body">
-    <p>際限なく素数を出力し続ける Python のジェネレータについて説明します。</p>
+    
+      <p>際限なく素数を出力し続ける Python のジェネレータについて説明します。</p>
 <p>Python の <code>itertools</code> ライブラリの <code>count</code> 関数と、シンプルな再帰を利用して非常にコンパクトに実装することができます。</p>
 <p>次に示すコードを見てみましょう。</p>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#b6a0ff">from</span> itertools <span style="color:#b6a0ff">import</span> count
@@ -252,6 +255,7 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
 <p>そして、そのジェネレーターを再び <code>sieve</code> 関数に渡すことで、<code>sieve</code> 関数は再帰的に呼び出されることになります。ここで出力されるすべての数は、前のすべての素数で割り切れない素数になります。</p>
 <p>これらすべてを組み合わせると、<code>prime</code> 関数は素数を無限に出力できるイテレータを返します。</p>
 <p>なお、このコードは真の無限シーケンスを生成しますので、利用の際は注意が必要です。例えば、全ての素数を列挙しようとすると、その操作は永遠に終わらないのでプログラムが停止することはありません。</p>
+    
   </div>
   <footer>
     
@@ -388,13 +392,13 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown のレンダリング例</a></li>
+      
         <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
-      
         <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
-      
-        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
     </ul>
   </nav>
@@ -461,7 +465,7 @@ Python の itertools ライブラリの count 関数と、シンプルな再帰�
     
       <nav class="pane">
         <form class="sidebar-search-form" method="get" action="/nagoya-example/search/">
-          <input required type="search" name="q" id="query">
+          <input required type="search" name="q" id="query" aria-label="検索クエリ">
           <input type="submit" value="検索">
         </form>
       </nav>

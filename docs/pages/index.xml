@@ -13,14 +13,14 @@
       <link>https://curegit.github.io/nagoya-example/pages/bio/</link>
       <pubDate>Tue, 25 Jul 2023 22:23:11 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/pages/bio/</guid>
-      <description>高橋 元について 氏名: 高橋 元 職業: ウェブデザイナー おはようございます、ウェブデザイナーの高橋元です。私の役割は、見た目だけではなく、ユーザビリ</description>
+      <description>&lt;h2 id=&#34;高橋-元について&#34;&gt;高橋 元について&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;氏名&lt;/strong&gt;: 高橋 元&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;職業&lt;/strong&gt;: ウェブデザイナー&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;bio.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;おはようございます、ウェブデザイナーの高橋元です。私の役割は、見た目だけではなく、ユーザビリティとアクセシビリティの観点からウェブサイトを設計し、最適なユーザ体験を提供することです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>連絡先</title>
       <link>https://curegit.github.io/nagoya-example/pages/contact/</link>
       <pubDate>Tue, 25 Jul 2023 22:23:11 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/pages/contact/</guid>
-      <description>管理者情報 氏名: 高橋 元 メールアドレス: takahashi.moto@example.com 注意: 上記連絡先はすべて架空のものであり、実際の人物・団体とは一切関係ありません。</description>
+      <description>&lt;h2 id=&#34;管理者情報&#34;&gt;管理者情報&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;氏名&lt;/strong&gt;: 高橋 元&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;メールアドレス&lt;/strong&gt;: &lt;a href=&#34;mailto:takahashi.moto@example.com&#34;&gt;takahashi.moto@example.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;注意: 上記連絡先はすべて架空のものであり、実際の人物・団体とは一切関係ありません。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

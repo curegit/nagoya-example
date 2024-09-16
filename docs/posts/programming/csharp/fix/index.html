@@ -15,7 +15,7 @@
 
   <meta name="keywords" content="C#, .NET, 数学, 関数型プログラミング">
 
-<meta name="generator" content="Hugo 0.131.0">
+<meta name="generator" content="Hugo 0.134.2">
 
   <meta name="author" content="高橋 元">
   
@@ -44,7 +44,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.3e04768e753ddb61a9f254938a97d3477e93a402e9cf2f7820d73e0b6a9e5d29.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.b89969572d7da52ec6f14e08c79a430786abe4d47a3c032e7cbaf00ffb4d2a59.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -220,6 +220,8 @@
             
   
 
+
+
 <article class="single">
   <header>
     <h1 class="title" itemprop="headline">C# で無名再帰</h1>
@@ -233,7 +235,8 @@
     
   </header>
   <div class="body">
-    <p>このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。</p>
+    
+      <p>このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。</p>
 <p>このライブラリは、<code>Fix</code> メソッドによって構成されています。<code>Fix</code> メソッドは、<code>Func</code> 型の引数を受け取り、再帰呼び出しを行うための関数を返します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#b6a0ff">class</span> Lambda
 </span></span><span style="display:flex;"><span>{
@@ -290,6 +293,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Func&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt; fib = Lambda.Fix&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt;(f =&gt;
 </span></span><span style="display:flex;"><span>    n =&gt; n &lt; <span style="color:#00bcff">2</span> ? <span style="color:#00bcff">1</span> : f(n - <span style="color:#00bcff">1</span>) + f(n - <span style="color:#00bcff">2</span>));
 </span></span></code></pre></div><p>このように、<code>Lambda</code> クラスを利用することで、再帰的な関数を簡単に定義することができます。</p>
+    
   </div>
   <footer>
     
@@ -430,15 +434,15 @@
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキック キャラクター紹介: 花園ゆりね</a></li>
+        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
+      
+        <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
       
         <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
+        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキック キャラクター紹介: 花園ゆりね</a></li>
       
         <li><a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a></li>
-      
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a></li>
       
     </ul>
   </nav>
@@ -505,7 +509,7 @@
     
       <nav class="pane">
         <form class="sidebar-search-form" method="get" action="/nagoya-example/search/">
-          <input required type="search" name="q" id="query">
+          <input required type="search" name="q" id="query" aria-label="検索クエリ">
           <input type="submit" value="検索">
         </form>
       </nav>

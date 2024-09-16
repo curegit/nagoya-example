@@ -15,7 +15,7 @@
 
   <meta name="keywords" content="Markdown, HTML, JavaScript, Mermaid, KaTeX, Hugo, 数学">
 
-<meta name="generator" content="Hugo 0.131.0">
+<meta name="generator" content="Hugo 0.134.2">
 
   <meta name="author" content="高橋 元">
   
@@ -44,7 +44,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.3e04768e753ddb61a9f254938a97d3477e93a402e9cf2f7820d73e0b6a9e5d29.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.b89969572d7da52ec6f14e08c79a430786abe4d47a3c032e7cbaf00ffb4d2a59.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -81,7 +81,7 @@
   
   
     
-      <meta itemprop="dateModified" content="2024-07-04T18:19:26+09:00">
+      <meta itemprop="dateModified" content="2024-09-17T00:51:02+09:00">
     
   
 
@@ -109,7 +109,8 @@
 
     
   
-    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+
   
 
 
@@ -205,6 +206,8 @@
             
   
 
+
+
 <article class="single">
   <header>
     <h1 class="title" itemprop="headline">ダイアグラムと数式の表示</h1>
@@ -212,17 +215,23 @@
       <div class="time">
         
           <div>公開: <time datetime="2024-06-11">2024/06/11</time></div>
-          <div>更新: <time datetime="2024-07-04">2024/07/04</time></div>
+          <div>更新: <time datetime="2024-09-17">2024/09/17</time></div>
         
       </div>
     
   </header>
   <div class="body">
-    <p>テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。</p>
+    
+      
+        <p>テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。</p>
 <p>このテーマでは、数式表示に KaTeX を利用しています。</p>
+        
   
     <div class="toc">
-      <div class="toc-title">目次</div>
+      
+      
+        <div class="toc-title">目次</div>
+      
       <nav id="TableOfContents">
   <ul>
     <li><a href="#goat">GoAT</a></li>
@@ -234,7 +243,7 @@
   
 
 
-<h2 id="goat">GoAT</h2>
+        <h2 id="goat">GoAT</h2>
 
 
 
@@ -680,11 +689,12 @@
 <h2 id="katex">KaTeX</h2>
 <p>インラインの数式 $a^2 + b^2 = c^2$ です。</p>
 <p>ブロックの数式です。</p>
-$$ t = \int_{a}^{b} x^2 dx $$
-<p>より複雑な数式です。</p>
+$$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
 \[
   \alpha = \frac{m}{m-1} \left(1 - \frac{\displaystyle \sum_{i = 1}^m{{\sigma_i}^2}}{{\sigma_x}^2} \right)
 \]
+      
+    
   </div>
   <footer>
     
@@ -829,15 +839,15 @@ $$ t = \int_{a}^{b} x^2 dx $$
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
-        <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
-      
-        <li><a href="/nagoya-example/posts/programming/csharp/unit/">C# で Unit 型を実装する</a></li>
-      
-        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
         <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
       
+        <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
+      
         <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown のレンダリング例</a></li>
       
     </ul>
   </nav>
@@ -904,7 +914,7 @@ $$ t = \int_{a}^{b} x^2 dx $$
     
       <nav class="pane">
         <form class="sidebar-search-form" method="get" action="/nagoya-example/search/">
-          <input required type="search" name="q" id="query">
+          <input required type="search" name="q" id="query" aria-label="検索クエリ">
           <input type="submit" value="検索">
         </form>
       </nav>

@@ -15,7 +15,7 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 
   <meta name="keywords" content="C#, .NET">
 
-<meta name="generator" content="Hugo 0.131.0">
+<meta name="generator" content="Hugo 0.134.2">
 
   <meta name="author" content="高橋 元">
   
@@ -44,7 +44,7 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.3e04768e753ddb61a9f254938a97d3477e93a402e9cf2f7820d73e0b6a9e5d29.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.b89969572d7da52ec6f14e08c79a430786abe4d47a3c032e7cbaf00ffb4d2a59.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -220,6 +220,8 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
             
   
 
+
+
 <article class="single">
   <header>
     <h1 class="title" itemprop="headline">C# で Unit 型を実装する</h1>
@@ -233,11 +235,16 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
     
   </header>
   <div class="body">
-    <p>今回は、C# で記述されたコード「Unit 構造体」について解説します。</p>
+    
+      <p>今回は、C# で記述されたコード「Unit 構造体」について解説します。</p>
 <p>Unit 構造体は、単一値（シングルトン）であることを表現するために使用されます。つまり、ただ存在するだけで何の価値もない値であり、値自体を持っていないことを表現するために用いられます。</p>
+
   
     <div class="toc">
-      <div class="toc-title">目次</div>
+      
+      
+        <div class="toc-title">目次</div>
+      
       <nav id="TableOfContents">
   <ul>
     <li><a href="#unit-構造体の実装">Unit 構造体の実装</a>
@@ -252,6 +259,7 @@ Unit 構造体は、単一値（シングルトン）であることを表現す
 </nav>
     </div>
   
+
 
 
 <h2 id="unit-構造体の実装">Unit 構造体の実装</h2>
@@ -326,6 +334,7 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
 <p>また、<code>Equals()</code> メソッドと <code>CompareTo()</code> メソッドで、null チェックを行っているのもポイントです。指定されたオブジェクトが <code>null</code> である場合は、<code>CompareTo()</code> メソッドは <code>1</code>、<code>Equals()</code> メソッドは <code>false</code> を返します。</p>
 <p>最後に、<code>ToString()</code> メソッド、<code>GetHashCode()</code> メソッド、および比較演算子をオーバーロードしていることも確認してください。</p>
 <p>以上が、C# 言語で記述されたコード「Unit 構造体」についての解説です。</p>
+    
   </div>
   <footer>
     
@@ -462,11 +471,11 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
-        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
+        <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
       
         <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
-        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">ぴちぴちピッチのマーメイドプリンセスまとめ</a></li>
+        <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
       
     </ul>
   </nav>
@@ -533,7 +542,7 @@ Unit 構造体は単一値（シングルトン）であるため、常に <code
     
       <nav class="pane">
         <form class="sidebar-search-form" method="get" action="/nagoya-example/search/">
-          <input required type="search" name="q" id="query">
+          <input required type="search" name="q" id="query" aria-label="検索クエリ">
           <input type="submit" value="検索">
         </form>
       </nav>
