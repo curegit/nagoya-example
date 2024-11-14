@@ -38,7 +38,7 @@ body{font-family:hiragino sans,meiryo,sans-serif}pre,code{font-family:osaka-mono
   }
 
   main.pane {
-    padding: 28px 38px 36px;
+    padding: 28px 38px 46px;
   }
 
   #content .pane:not(#breadcrumb, main) {
