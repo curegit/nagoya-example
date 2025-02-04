@@ -61,6 +61,7 @@ enableGitInfo = true
 
   [markup.highlight]
     codeFences = true
+    lineNumbersInTable = false
     style = "modus-vivendi"
 
 [taxonomies]
