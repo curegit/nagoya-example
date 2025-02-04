@@ -5,4 +5,4 @@ build:
 	hugo -d docs --printUnusedTemplates --printPathWarnings
 
 server:
-	hugo server --buildDrafts --buildFuture --disableFastRender --printUnusedTemplates --printPathWarnings
+	hugo server --renderToMemory --buildDrafts --buildFuture --disableFastRender --printUnusedTemplates --printPathWarnings
