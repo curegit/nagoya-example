@@ -171,6 +171,20 @@ def shifted(list, shift=0):
         yield list[i]
 ```
 
+`linenos` オプションで行番号を表示する例です。
+
+```lisp {linenos=true}
+(defun fizzbuzz (n)
+  (loop for i from 1 to n
+   do (cond ((equal (mod i 15) 0) (format t "~%fizzbuzz"))
+            ((equal (mod i 5) 0) (format t "~%buzz"))
+            ((equal (mod i 3) 0) (format t "~%fizz"))
+            (t (print i)))))
+
+(defun fizzbuzz-main ()
+  (fizzbuzz 100))
+```
+
 ## テーブル
 
 以下は架空の吉野家のメニュー表です。
