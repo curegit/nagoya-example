@@ -14,7 +14,7 @@ enableGitInfo = true
   enableInlineShortcodes = true
 
 [params]
-  treeRoot = "posts"
+  treeRoot = "/posts"
   author = "高橋 元"
   authorLink = "https://github.com/curegit/nagoya"
   description = "Hugo 日本語テーマ「名古屋」のサンプルサイト"
