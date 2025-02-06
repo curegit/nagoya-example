@@ -49,6 +49,6 @@ SPAM Menu from Monty Python
 
 {{< card image="cover.jpg" title="GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images" desc="Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images - GitHub" href="https://github.com/curegit/precure-stylegan-ada" >}}
 
-サイト内部用リンクカードは別名のショートコードに分かれており、相対パスで画像の参照までできます。
+サイト内部用リンクカードは別名のショートコードに分かれており、相対パスでサムネイル画像の参照までできます。
 
 {{< cardi ref="./markdown" >}}
