@@ -11,31 +11,24 @@ tags:
 
 このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。
 
-ショートコードの使い方は Markdown ソースおよびテーマ本体のソースを見てください。
+ショートコードの使い方は Markdown ソースおよびテーマ本体のドキュメントを見てください。
 
 <!--more-->
 
-## 目次
+## ショートコード版目次
 
 {{< toc >}}
 
 この目次もショートコードです。
+任意位置に挿入できます。
 
-## Figure
+## Figure（Hugo 組み込み）
 
 キャプション付きの画像を挿入できます。
 
 {{< figure src="fig.png" caption="邪神ちゃんはお菓子を作ります" class="bordered" >}}
 
 キャプション付きの画像を挿入できます。
-
-## リンクカード
-
-{{< card image="cover.jpg" title="GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images" desc="Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images - GitHub" href="https://github.com/curegit/precure-stylegan-ada" >}}
-
-サイト内部用リンクカードは別名のショートコードに分かれており、相対パスで画像の参照までできます。
-
-{{< cardi ref="./markdown" >}}
 
 ## 詳細折りたたみ要素
 
@@ -52,6 +45,10 @@ SPAM Menu from Monty Python
 8. Lobster Thermidor aux crevettes with a Mornay sauce, garnished with truffle pâté, brandy and a fried egg on top, and Spam
 {{% /fold %}}
 
-## GitHub Gist
+## リンクカード
 
-{{< gist curegit 5c10c16651549292a3d146ceba814b6b >}}
+{{< card image="cover.jpg" title="GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images" desc="Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images - GitHub" href="https://github.com/curegit/precure-stylegan-ada" >}}
+
+サイト内部用リンクカードは別名のショートコードに分かれており、相対パスでサムネイル画像の参照までできます。
+
+{{< cardi ref="./markdown" >}}
