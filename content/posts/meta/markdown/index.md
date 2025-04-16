@@ -240,7 +240,7 @@ def shifted(list, shift=0):
 >>>
 >> ccc
 
-## その他
+## その他の記法
 
 ### 水平線
 
@@ -285,9 +285,9 @@ H~2~O
 すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。
 地球上の==水==の総量は約 1.4&times;10^18^&nbsp;m^3^ です。
 
-### 生の HTML の例
+## 生の HTML の例
 
-#### 振り仮名
+### 振り仮名
 
 ```html
 しかもあとで聞くとそれは書生という人間中で一番<ruby>獰悪<rp>(</rp><rt>どうあく</rt><rp>)</rp></ruby>な種族であったそうだ。
@@ -295,7 +295,7 @@ H~2~O
 
 しかもあとで聞くとそれは書生という人間中で一番<ruby>獰悪<rp>(</rp><rt>どうあく</rt><rp>)</rp></ruby>な種族であったそうだ。
 
-#### 回り込み
+### 回り込み
 
 ```html
 <figure style="float: left; width: 30%; margin: 10px 20px;">
@@ -325,7 +325,7 @@ H~2~O
 
 <div style="clear: both;"></div>
 
-#### `<kbd>` 要素
+### `<kbd>` 要素
 
 ```html
 Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.
