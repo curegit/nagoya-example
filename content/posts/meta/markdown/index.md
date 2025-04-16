@@ -124,7 +124,7 @@ Preview a longer alphabetical list.
 ## リンク
 
 これは、段落の文章です。
-脚注[^footnote]を使うことができます。
+脚注[^footnote]を使うことができます[^footnote2]。
 
 リンクテキストをこのように挿入できます: [リンクのテキスト](https://curegit.jp/)。
 
@@ -334,3 +334,5 @@ Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rer
 Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.
 
 [^footnote]: 脚注の内容です
+
+[^footnote2]: 脚注の内容です
