@@ -306,7 +306,7 @@ H~2~O
 <div style="clear: both;"></div>
 ```
 
-<figure style="float: left; width: 30%; margin: 10px 20px;">
+<figure style="float: left; width: 25%; margin: 10px 20px;">
   <img src="towers.avif" style="width: 100%;">
   <figcaption>JRセントラルタワーズ</figcaption>
 </figure>
