@@ -3,7 +3,7 @@
 <html lang="ja" itemscope itemtype="https://schema.org/BlogPosting">
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, viewport-fit=cover">
 
 
   
@@ -11,12 +11,12 @@
 <title>ショートコードの例</title>
 
   <meta name="description" content="このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。
-ショートコードの使い方は Markdown ソースおよびテーマ本体のソースを見てください。">
+ショートコードの使い方は Markdown ソースおよびテーマ本体のドキュメントを見てください。">
 
 
   <meta name="keywords" content="Markdown, HTML, Hugo">
 
-<meta name="generator" content="Hugo 0.145.0">
+<meta name="generator" content="Hugo 0.147.3">
 
   <meta name="author" content="高橋 元">
   
@@ -34,6 +34,7 @@
     
     
     
+    
 
 
 
@@ -46,7 +47,10 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.5ee8f8f2c0473309f3a9f21959c061aee41e347babb5f72d48123648a6992547.css">
+
+
+
+<link rel="stylesheet" href="/nagoya-example/bundle.min.94311f06038a32687519d6df8e9a68c5bb5d08eb7f2e559819204ccd3024dda4.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -59,7 +63,7 @@
 
 
   <meta property="og:description" content="このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。
-ショートコードの使い方は Markdown ソースおよびテーマ本体のソースを見てください。">
+ショートコードの使い方は Markdown ソースおよびテーマ本体のドキュメントを見てください。">
 
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/meta/shortcodes/">
 
@@ -71,7 +75,7 @@
 
 
   <meta itemprop="description" content="このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。
-ショートコードの使い方は Markdown ソースおよびテーマ本体のソースを見てください。">
+ショートコードの使い方は Markdown ソースおよびテーマ本体のドキュメントを見てください。">
 
 
   <meta itemprop="keywords" content="Markdown, HTML, Hugo">
@@ -83,7 +87,7 @@
   
   
     
-      <meta itemprop="dateModified" content="2024-10-28T23:13:19+09:00">
+      <meta itemprop="dateModified" content="2025-02-06T22:31:57+09:00">
     
   
 
@@ -92,22 +96,9 @@
 
 <link itemprop="url" href="https://curegit.github.io/nagoya-example/posts/meta/shortcodes/">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false},
-        {left: "\\(", right: "\\)", display: false},
-        {left: "\\[", right: "\\]", display: true}
-      ],
-      throwOnError: false
-    });
-  });
-</script>
+    
+  
+
 
     
   
@@ -204,22 +195,24 @@
 
 
 <article class="single">
+  
   <header>
     <h1 class="title" itemprop="headline">ショートコードの例</h1>
     
       <div class="time">
         
           <div>公開: <time datetime="2023-12-01">2023/12/01</time></div>
-          <div>更新: <time datetime="2024-10-28">2024/10/28</time></div>
+          <div>更新: <time datetime="2025-02-06">2025/02/06</time></div>
         
       </div>
     
   </header>
+  
   <div class="body">
     
       <p>このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。</p>
-<p>ショートコードの使い方は Markdown ソースおよびテーマ本体のソースを見てください。</p>
-<h2 id="目次">目次</h2>
+<p>ショートコードの使い方は Markdown ソースおよびテーマ本体のドキュメントを見てください。</p>
+<h2 id="ショートコード版目次">ショートコード版目次</h2>
 
   
     <div class="toc">
@@ -229,11 +222,10 @@
       
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#目次">目次</a></li>
-    <li><a href="#figure">Figure</a></li>
-    <li><a href="#リンクカード">リンクカード</a></li>
+    <li><a href="#ショートコード版目次">ショートコード版目次</a></li>
+    <li><a href="#figurehugo-組み込み">Figure（Hugo 組み込み）</a></li>
     <li><a href="#詳細折りたたみ要素">詳細折りたたみ要素</a></li>
-    <li><a href="#github-gist">GitHub Gist</a></li>
+    <li><a href="#リンクカード">リンクカード</a></li>
   </ul>
 </nav>
     </div>
@@ -241,8 +233,8 @@
 
 
 
-<p>この目次もショートコードです。</p>
-<h2 id="figure">Figure</h2>
+<p>この目次もショートコードです。任意位置に挿入できます。</p>
+<h2 id="figurehugo-組み込み">Figure（Hugo 組み込み）</h2>
 <p>キャプション付きの画像を挿入できます。</p>
 <figure class="bordered"><img src="/nagoya-example/posts/meta/shortcodes/fig.png"
     alt="邪神ちゃんはお菓子を作ります"><figcaption>
@@ -251,59 +243,6 @@
 </figure>
 
 <p>キャプション付きの画像を挿入できます。</p>
-<h2 id="リンクカード">リンクカード</h2>
-
-
-
-
-
-
-<a class="link-card" href="https://github.com/curegit/precure-stylegan-ada">
-  
-    <div class="image" style="background-image: url('cover.jpg');"></div>
-  
-  <div class="text">
-    
-      <div class="title">GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images</div>
-    
-    
-      <div class="desc">Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images - GitHub</div>
-    
-  </div>
-</a>
-
-
-<p>サイト内部用リンクカードは別名のショートコードに分かれており、相対パスで画像の参照までできます。</p>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-<a class="link-card" href="/nagoya-example/posts/meta/markdown/">
-  
-    <div class="image" style="background-image: url('/nagoya-example/catch.png');"></div>
-  
-  <div class="text">
-    
-      <div class="title">Markdown のレンダリング例</div>
-    
-    
-      <div class="desc">Hugo で使用できる基本的な Markdown 記法の、このテーマでの表示例を示します。
-Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それらも合わせて紹介します。
-サムネイル画像は images フロントマターのテストです。</div>
-    
-  </div>
-</a>
-
-
 <h2 id="詳細折りたたみ要素">詳細折りたたみ要素</h2>
 <details>
   <summary>折りたたみ</summary>
@@ -319,10 +258,60 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <li>Lobster Thermidor aux crevettes with a Mornay sauce, garnished with truffle pâté, brandy and a fried egg on top, and Spam</li>
 </ol>
 </details>
-<h2 id="github-gist">GitHub Gist</h2>
-<script src="https://gist.github.com/curegit/5c10c16651549292a3d146ceba814b6b.js"></script>
+<h2 id="リンクカード">リンクカード</h2>
+
+
+
+
+
+
+<a class="link-card" href="https://github.com/curegit/precure-stylegan-ada" title="GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images">
+  
+    <div class="image" style="background-image: url('cover.jpg');"></div>
+  
+  <div class="text">
+    
+      <div class="title">GitHub - curegit/precure-stylegan-ada: Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images</div>
+    
+    
+      <div class="desc">Yet another StyleGAN 2.0 implementation using Chainer with Adaptive Discriminator Augmentationto to synthesize specific Precure (Cure Beauty) images - GitHub</div>
     
   </div>
+</a>
+
+
+<p>サイト内部用リンクカードは別名のショートコードに分かれており、相対パスでサムネイル画像の参照までできます。</p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<a class="link-card" href="/nagoya-example/posts/meta/markdown/" title="Markdown のレンダリング例">
+  
+    <div class="image" style="background-image: url('/nagoya-example/catch.png');"></div>
+  
+  <div class="text">
+    
+      <div class="title">Markdown のレンダリング例</div>
+    
+    
+      <div class="desc">Hugo で使用できる基本的な Markdown 記法の、このテーマでの表示例を示します。
+Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それらも合わせて紹介します。
+サムネイル画像は images フロントマターのテストです。</div>
+    
+  </div>
+</a>
+    
+  </div>
+  
   <footer>
     
     
@@ -407,21 +396,22 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
       </table>
     
     
+    
+    
       
       
-      
+    
+    
+      <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
         
-        
-      
-      
-        <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           
             <a rel="author" href="https://github.com/curegit/nagoya" itemprop="url"><span itemprop="name">高橋 元</span></a>
           
-        </div>
-      
+        
+      </div>
     
   </footer>
+  
 </article>
 
 
@@ -448,16 +438,18 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
 
 
-  
+
+
+
 
 
   <nav class="pane">
     <header class="component-title">次に読む</header>
     <ul class="dense">
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/charms/">邪神ちゃんドロップキックの魅力</a></li>
+        <li><a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
+        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
       
     </ul>
   </nav>
@@ -542,6 +534,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
     <ul class="folders">
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/english/">
             English (2) 
@@ -552,6 +547,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/programming/">
             プログラミング (3) 
@@ -560,6 +558,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/programming/python/">
@@ -570,6 +571,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
         </li>
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/programming/csharp/">
@@ -586,6 +590,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/anime/">
             アニメ (4) 
@@ -594,6 +601,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/anime/mmppp/">
@@ -605,6 +615,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/">
             邪神ちゃんドロップキック (3) 
@@ -613,6 +626,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/characters/">
@@ -633,6 +649,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
         </li>
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/meta/">

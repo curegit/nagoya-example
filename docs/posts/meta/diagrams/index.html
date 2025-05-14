@@ -3,20 +3,20 @@
 <html lang="ja" itemscope itemtype="https://schema.org/BlogPosting">
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, viewport-fit=cover">
 
 
   
 
 <title>ダイアグラムと数式の表示</title>
 
-  <meta name="description" content="テキストで書けるダイアグラムと、$x^2 &#43; 3x &#43; 1$ のような数式表示の例です。
-このテーマでは、数式表示に KaTeX を利用しています。">
+  <meta name="description" content="テキストで書けるダイアグラムと数式表示の例です。
+Hugo では、KaTeX (WASM) を利用し、数式を構築時にレンダリングできます。">
 
 
   <meta name="keywords" content="Markdown, HTML, JavaScript, Mermaid, KaTeX, Hugo, 数学">
 
-<meta name="generator" content="Hugo 0.145.0">
+<meta name="generator" content="Hugo 0.147.3">
 
   <meta name="author" content="高橋 元">
   
@@ -34,6 +34,7 @@
     
     
     
+    
 
 
 
@@ -46,7 +47,10 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.5ee8f8f2c0473309f3a9f21959c061aee41e347babb5f72d48123648a6992547.css">
+
+
+
+<link rel="stylesheet" href="/nagoya-example/bundle.min.94311f06038a32687519d6df8e9a68c5bb5d08eb7f2e559819204ccd3024dda4.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -58,8 +62,8 @@
   <meta property="og:title" content="ダイアグラムと数式の表示">
 
 
-  <meta property="og:description" content="テキストで書けるダイアグラムと、$x^2 &#43; 3x &#43; 1$ のような数式表示の例です。
-このテーマでは、数式表示に KaTeX を利用しています。">
+  <meta property="og:description" content="テキストで書けるダイアグラムと数式表示の例です。
+Hugo では、KaTeX (WASM) を利用し、数式を構築時にレンダリングできます。">
 
 <meta property="og:url" content="https://curegit.github.io/nagoya-example/posts/meta/diagrams/">
 
@@ -70,8 +74,8 @@
   <meta itemprop="name" content="ダイアグラムと数式の表示">
 
 
-  <meta itemprop="description" content="テキストで書けるダイアグラムと、$x^2 &#43; 3x &#43; 1$ のような数式表示の例です。
-このテーマでは、数式表示に KaTeX を利用しています。">
+  <meta itemprop="description" content="テキストで書けるダイアグラムと数式表示の例です。
+Hugo では、KaTeX (WASM) を利用し、数式を構築時にレンダリングできます。">
 
 
   <meta itemprop="keywords" content="Markdown, HTML, JavaScript, Mermaid, KaTeX, Hugo, 数学">
@@ -83,7 +87,7 @@
   
   
     
-      <meta itemprop="dateModified" content="2024-09-17T00:51:02+09:00">
+      <meta itemprop="dateModified" content="2025-02-07T00:46:37+09:00">
     
   
 
@@ -92,26 +96,16 @@
 
 <link itemprop="url" href="https://curegit.github.io/nagoya-example/posts/meta/diagrams/">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false},
-        {left: "\\(", right: "\\)", display: false},
-        {left: "\\[", right: "\\]", display: true}
-      ],
-      throwOnError: false
-    });
-  });
-</script>
+    
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css">
+
+  
+
 
     
   
-    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.6/dist/mermaid.min.js"></script>
 
   
 
@@ -207,22 +201,24 @@
 
 
 <article class="single">
+  
   <header>
     <h1 class="title" itemprop="headline">ダイアグラムと数式の表示</h1>
     
       <div class="time">
         
           <div>公開: <time datetime="2024-06-11">2024/06/11</time></div>
-          <div>更新: <time datetime="2024-09-17">2024/09/17</time></div>
+          <div>更新: <time datetime="2025-02-07">2025/02/07</time></div>
         
       </div>
     
   </header>
+  
   <div class="body">
     
       
-        <p>テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。</p>
-<p>このテーマでは、数式表示に KaTeX を利用しています。</p>
+        <p>テキストで書けるダイアグラムと数式表示の例です。</p>
+<p>Hugo では、KaTeX (WASM) を利用し、数式を構築時にレンダリングできます。</p>
         
   
     <div class="toc">
@@ -685,15 +681,38 @@
 </pre>
 
 <h2 id="katex">KaTeX</h2>
-<p>インラインの数式 $a^2 + b^2 = c^2$ です。</p>
+<p>インラインの数式 
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>
+
+ です。</p>
 <p>ブロックの数式です。</p>
-$$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
-\[
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mo>=</mo><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><msup><mi>x</mi><mn>2</mn></msup><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex"> t = \int_{a}^{b} x^2 dx </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.511em;vertical-align:-0.9119em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.599em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span>
+
+<p>より複雑な数式です。</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mi>m</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msup><msub><mi>σ</mi><mi>i</mi></msub><mn>2</mn></msup></mstyle><msup><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></msup></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">
   \alpha = \frac{m}{m-1} \left(1 - \frac{\displaystyle \sum_{i = 1}^m{{\sigma_i}^2}}{{\sigma_x}^2} \right)
-\]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:6.0691em;vertical-align:-2.75em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.25em;"><span style="top:-5.25em;"><span class="pstrut" style="height:8em;"></span><span style="width:0.875em;height:6.000em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="6.000em" viewBox="0 0 875 6000"><path d="M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
+c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
+-36,557 l0,2484c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
+949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
+c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
+-544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
+l0,-2492c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
+-210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.75em;"><span></span></span></span></span></span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.3191em;"><span style="top:-2.9654em;"><span class="pstrut" style="height:3.6514em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.8814em;"><span class="pstrut" style="height:3.6514em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-5.3191em;"><span class="pstrut" style="height:3.6514em;"></span><span class="mord"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.25em;"><span style="top:-5.25em;"><span class="pstrut" style="height:8em;"></span><span style="width:0.875em;height:6.000em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="6.000em" viewBox="0 0 875 6000"><path d="M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
+63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
+c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,2409
+c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
+c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
+c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
+c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
+l0,-2544c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
+-470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.75em;"><span></span></span></span></span></span></span></span></span></span></span></span>
       
     
   </div>
+  
   <footer>
     
     
@@ -786,21 +805,22 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
       </table>
     
     
+    
+    
       
       
-      
+    
+    
+      <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
         
-        
-      
-      
-        <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           
             <a rel="author" href="https://github.com/curegit/nagoya" itemprop="url"><span itemprop="name">高橋 元</span></a>
           
-        </div>
-      
+        
+      </div>
     
   </footer>
+  
 </article>
 
 
@@ -827,7 +847,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
 
 
 
-  
+
+
+
 
 
   <nav class="pane">
@@ -836,13 +858,13 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
       
         <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
       
-        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
-      
         <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
       
         <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
       
-        <li><a href="/nagoya-example/posts/english/web-developer-life/">Working as a Web Developer: A Day in the Life</a></li>
+        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">ぴちぴちピッチのマーメイドプリンセスまとめ</a></li>
+      
+        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown のレンダリング例</a></li>
       
     </ul>
   </nav>
@@ -927,6 +949,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
     <ul class="folders">
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/english/">
             English (2) 
@@ -937,6 +962,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/programming/">
             プログラミング (3) 
@@ -945,6 +973,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/programming/python/">
@@ -955,6 +986,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
 
         </li>
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/programming/csharp/">
@@ -971,6 +1005,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/anime/">
             アニメ (4) 
@@ -979,6 +1016,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/anime/mmppp/">
@@ -990,6 +1030,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/">
             邪神ちゃんドロップキック (3) 
@@ -998,6 +1041,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/characters/">
@@ -1018,6 +1064,9 @@ $$ t = \int_{a}^{b} x^2 dx $$<p>より複雑な数式です。</p>
 
         </li>
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/meta/">

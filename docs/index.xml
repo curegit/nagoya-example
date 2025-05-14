@@ -6,7 +6,7 @@
     <description>Recent content on 名古屋サンプルブログ</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 28 Oct 2024 23:13:19 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Apr 2025 15:40:55 +0900</lastBuildDate>
     <atom:link href="https://curegit.github.io/nagoya-example/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自己紹介</title>
@@ -34,7 +34,7 @@
       <link>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</link>
       <pubDate>Tue, 11 Jun 2024 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/meta/diagrams/</guid>
-      <description>&lt;p&gt;テキストで書けるダイアグラムと、$x^2 + 3x + 1$ のような数式表示の例です。&lt;/p&gt;&#xA;&lt;p&gt;このテーマでは、数式表示に KaTeX を利用しています。&lt;/p&gt;</description>
+      <description>&lt;p&gt;テキストで書けるダイアグラムと数式表示の例です。&lt;/p&gt;&#xA;&lt;p&gt;Hugo では、KaTeX (WASM) を利用し、数式を構築時にレンダリングできます。&lt;/p&gt;</description>
     </item>
     <item>
       <title>邪神ちゃんの性格</title>
@@ -48,7 +48,7 @@
       <link>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0900</pubDate>
       <guid>https://curegit.github.io/nagoya-example/posts/meta/shortcodes/</guid>
-      <description>&lt;p&gt;このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。&lt;/p&gt;&#xA;&lt;p&gt;ショートコードの使い方は Markdown ソースおよびテーマ本体のソースを見てください。&lt;/p&gt;</description>
+      <description>&lt;p&gt;このテーマおよび Hugo 組み込みで使用できるショートコードの一例を紹介します。&lt;/p&gt;&#xA;&lt;p&gt;ショートコードの使い方は Markdown ソースおよびテーマ本体のドキュメントを見てください。&lt;/p&gt;</description>
     </item>
     <item>
       <title>C# で無名再帰</title>

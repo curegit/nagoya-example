@@ -3,7 +3,7 @@
 <html lang="ja" itemscope itemtype="https://schema.org/BlogPosting">
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, viewport-fit=cover">
 
 
   
@@ -17,7 +17,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
   <meta name="keywords" content="Markdown, HTML, Hugo">
 
-<meta name="generator" content="Hugo 0.145.0">
+<meta name="generator" content="Hugo 0.147.3">
 
   <meta name="author" content="高橋 元">
   
@@ -35,6 +35,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
     
     
     
+    
 
 
 
@@ -47,7 +48,10 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.5ee8f8f2c0473309f3a9f21959c061aee41e347babb5f72d48123648a6992547.css">
+
+
+
+<link rel="stylesheet" href="/nagoya-example/bundle.min.94311f06038a32687519d6df8e9a68c5bb5d08eb7f2e559819204ccd3024dda4.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -86,7 +90,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
   
     
-      <meta itemprop="dateModified" content="2024-07-05T14:31:56+09:00">
+      <meta itemprop="dateModified" content="2025-04-16T15:40:55+09:00">
     
   
 
@@ -95,22 +99,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
 <link itemprop="url" href="https://curegit.github.io/nagoya-example/posts/meta/markdown/">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false},
-        {left: "\\(", right: "\\)", display: false},
-        {left: "\\[", right: "\\]", display: true}
-      ],
-      throwOnError: false
-    });
-  });
-</script>
+    
+  
+
 
     
   
@@ -207,17 +198,19 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
 
 <article class="single">
+  
   <header>
     <h1 class="title" itemprop="headline">Markdown のレンダリング例</h1>
     
       <div class="time">
         
           <div>公開: <time datetime="2024-07-03">2024/07/03</time></div>
-          <div>更新: <time datetime="2024-07-05">2024/07/05</time></div>
+          <div>更新: <time datetime="2025-04-16">2025/04/16</time></div>
         
       </div>
     
   </header>
+  
   <div class="body">
     
       <p>Hugo で使用できる基本的な Markdown 記法の、このテーマでの表示例を示します。</p>
@@ -250,13 +243,19 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
     <li><a href="#コードブロック">コードブロック</a></li>
     <li><a href="#テーブル">テーブル</a></li>
     <li><a href="#引用">引用</a></li>
-    <li><a href="#その他">その他</a>
+    <li><a href="#その他の記法">その他の記法</a>
       <ul>
         <li><a href="#水平線">水平線</a></li>
         <li><a href="#説明リスト">説明リスト</a></li>
         <li><a href="#チェックリスト">チェックリスト</a></li>
         <li><a href="#extras-goldmark-extensions">Extras Goldmark Extensions</a></li>
-        <li><a href="#生の-html-の例">生の HTML の例</a></li>
+      </ul>
+    </li>
+    <li><a href="#生の-html-の例">生の HTML の例</a>
+      <ul>
+        <li><a href="#振り仮名">振り仮名</a></li>
+        <li><a href="#回り込み">回り込み</a></li>
+        <li><a href="#kbd-要素"><code>&lt;kbd&gt;</code> 要素</a></li>
       </ul>
     </li>
   </ul>
@@ -336,7 +335,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <li>Lobster Thermidor aux crevettes with a Mornay sauce, garnished with truffle pâté, brandy, and a fried egg on top, and Spam</li>
 </ul>
 <h2 id="リンク">リンク</h2>
-<p>これは、段落の文章です。脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を使うことができます。</p>
+<p>これは、段落の文章です。脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を使うことができます<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。</p>
 <p>リンクテキストをこのように挿入できます: <a href="https://curegit.jp/">リンクのテキスト</a>。</p>
 <p>Autolinks という仕様も存在します。</p>
 <p><a href="https://curegit.jp/">https://curegit.jp/</a></p>
@@ -369,6 +368,16 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 </span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">yield</span> <span style="color:#f78fe7">list</span>[i]
 </span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">for</span> i <span style="color:#00d3d0">in</span> <span style="color:#f78fe7">range</span>(<span style="color:#00bcff">0</span>, shift <span style="color:#00d3d0">%</span> n):
 </span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">yield</span> <span style="color:#f78fe7">list</span>[i]
+</span></span></code></pre></div><p><code>linenos</code> オプションで行番号を表示する例です。</p>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>(<span style="color:#f78fe7">defun</span> <span style="color:#00d3d0">fizzbuzz</span> (<span style="color:#00d3d0">n</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  (<span style="color:#f78fe7">loop</span> <span style="color:#00d3d0">for</span> <span style="color:#00d3d0">i</span> <span style="color:#00d3d0">from</span> <span style="color:#00bcff">1</span> <span style="color:#00d3d0">to</span> <span style="color:#00d3d0">n</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>   <span style="color:#f78fe7">do</span> (<span style="color:#f78fe7">cond</span> ((<span style="color:#feacd0">equal</span> (<span style="color:#feacd0">mod</span> <span style="color:#00d3d0">i</span> <span style="color:#00bcff">15</span>) <span style="color:#00bcff">0</span>) (<span style="color:#feacd0">format</span> t <span style="color:#79a8ff">&#34;~%fizzbuzz&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>            ((<span style="color:#feacd0">equal</span> (<span style="color:#feacd0">mod</span> <span style="color:#00d3d0">i</span> <span style="color:#00bcff">5</span>) <span style="color:#00bcff">0</span>) (<span style="color:#feacd0">format</span> t <span style="color:#79a8ff">&#34;~%buzz&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>            ((<span style="color:#feacd0">equal</span> (<span style="color:#feacd0">mod</span> <span style="color:#00d3d0">i</span> <span style="color:#00bcff">3</span>) <span style="color:#00bcff">0</span>) (<span style="color:#feacd0">format</span> t <span style="color:#79a8ff">&#34;~%fizz&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>            (t (<span style="color:#feacd0">print</span> <span style="color:#00d3d0">i</span>)))))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>(<span style="color:#f78fe7">defun</span> <span style="color:#00d3d0">fizzbuzz-main</span> ()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>  (<span style="color:#00d3d0">fizzbuzz</span> <span style="color:#00bcff">100</span>))
 </span></span></code></pre></div><h2 id="テーブル">テーブル</h2>
 <p>以下は架空の吉野家のメニュー表です。</p>
 <table>
@@ -501,7 +510,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></blockquote>
 <p>ccc</p></blockquote></blockquote>
-<h2 id="その他">その他</h2>
+<h2 id="その他の記法">その他の記法</h2>
 <h3 id="水平線">水平線</h3>
 <p>水平線を表す場合は、3つ以上のアスタリスク（*）やハイフン（-）を使います。</p>
 <hr>
@@ -536,18 +545,18 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <dt>H<sub>2</sub>O</dt>
 <dd><mark>水</mark>は透明で、<ins>無味無臭</ins>、ほぼ無色の化学物質であり、地球の<mark>水</mark>圏とすべての既知の生物の体液の主成分です。すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。地球上の<mark>水</mark>の総量は約 1.4×10<sup>18</sup> m<sup>3</sup> です。</dd>
 </dl>
-<h3 id="生の-html-の例">生の HTML の例</h3>
-<h4 id="振り仮名">振り仮名</h4>
+<h2 id="生の-html-の例">生の HTML の例</h2>
+<h3 id="振り仮名">振り仮名</h3>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>しかもあとで聞くとそれは書生という人間中で一番&lt;ruby&gt;獰悪&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;どうあく&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;な種族であったそうだ。
 </span></span></code></pre></div><p>しかもあとで聞くとそれは書生という人間中で一番<ruby>獰悪<rp>(</rp><rt>どうあく</rt><rp>)</rp></ruby>な種族であったそうだ。</p>
-<h4 id="回り込み">回り込み</h4>
+<h3 id="回り込み">回り込み</h3>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;figure style<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;float: left; width: 30%; margin: 10px 20px;&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;img src<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;towers.avif&#34;</span> style<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;width: 100%;&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;figcaption&gt;JRセントラルタワーズ&lt;/figcaption&gt;
 </span></span><span style="display:flex;"><span>&lt;/figure&gt;
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>&lt;div style<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;clear: both;&#34;</span>&gt;&lt;/div&gt;
-</span></span></code></pre></div><figure style="float: left; width: 30%; margin: 10px 20px;">
+</span></span></code></pre></div><figure style="float: left; width: 25%; margin: 10px 20px;">
   <img src="towers.avif" style="width: 100%;">
   <figcaption>JRセントラルタワーズ</figcaption>
 </figure>
@@ -556,7 +565,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <p>タワーズ内には、JRセントラルタワーズオフィス、<strong>名古屋マリオットアソシアホテル</strong>、そして多くのショッピングフロアやレストランがあります。オフィスフロアは最新の設備を備え、快適なビジネス環境を提供しています。ホテルは高級感あふれる内装とサービスで、国内外からの宿泊客に高い評価を受けています。</p>
 <p>多彩なショップやレストランが揃っており、ショッピングや食事を楽しむことができます。特に、地元の名物料理を提供するレストランや、最新のファッションアイテムを取り扱う店舗が人気です。さらに、展望台からは名古屋市内の美しい景色を一望でき、観光スポットとしても魅力的です。</p>
 <div style="clear: both;"></div>
-<h4 id="kbd-要素"><code>&lt;kbd&gt;</code> 要素</h4>
+<h3 id="kbd-要素"><code>&lt;kbd&gt;</code> 要素</h3>
 <div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Please press &lt;kbd&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;&lt;/kbd&gt; to rerender the page.
 </span></span></code></pre></div><p>Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.</p>
 <div class="footnotes" role="doc-endnotes">
@@ -565,10 +574,14 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <li id="fn:1">
 <p>脚注の内容です&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
+<li id="fn:2">
+<p>脚注の内容です&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
 </div>
     
   </div>
+  
   <footer>
     
     
@@ -653,21 +666,22 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
       </table>
     
     
+    
+    
       
       
-      
+    
+    
+      <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
         
-        
-      
-      
-        <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           
             <a rel="author" href="https://github.com/curegit/nagoya" itemprop="url"><span itemprop="name">高橋 元</span></a>
           
-        </div>
-      
+        
+      </div>
     
   </footer>
+  
 </article>
 
 
@@ -692,7 +706,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
 
 
-  
+
+
+
 
 
   <nav class="pane">
@@ -701,11 +717,11 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
       
         <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
       
-        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
-      
         <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
       
-        <li><a href="/nagoya-example/posts/meta/markdown/">Markdown のレンダリング例</a></li>
+        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">ぴちぴちピッチのマーメイドプリンセスまとめ</a></li>
+      
+        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキック キャラクター紹介: 花園ゆりね</a></li>
       
     </ul>
   </nav>
@@ -790,6 +806,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
     <ul class="folders">
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/english/">
             English (2) 
@@ -800,6 +819,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/programming/">
             プログラミング (3) 
@@ -808,6 +830,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/programming/python/">
@@ -818,6 +843,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
         </li>
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/programming/csharp/">
@@ -834,6 +862,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/anime/">
             アニメ (4) 
@@ -842,6 +873,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/anime/mmppp/">
@@ -853,6 +887,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
         </li>
       
         
+        
+          
+        
         <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/">
             邪神ちゃんドロップキック (3) 
@@ -861,6 +898,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   
     <ul class="folders">
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/anime/jcdk/characters/">
@@ -881,6 +921,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
         </li>
       
+        
+        
+          
         
         <li class="folder">
           <a href="/nagoya-example/posts/meta/">
