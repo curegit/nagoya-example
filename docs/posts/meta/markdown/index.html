@@ -17,7 +17,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
   <meta name="keywords" content="Markdown, HTML, Hugo">
 
-<meta name="generator" content="Hugo 0.152.2">
+<meta name="generator" content="Hugo 0.157.0">
 
   <meta name="author" content="高橋 元">
   
@@ -51,7 +51,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.861f52ee9fd5364b0f9b9318b7fbc7adb4eca4c294584dccb11afe5f4a5caebf.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.6694eee42dc44a63e0b84108fdc6166ce95ca272513ddcf6f82e6d92bf8a8d3e.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -366,14 +366,14 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
   indented code block
 </code></pre>
 <p>言語を指定したコードブロックです。</p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#b6a0ff">def</span> <span style="color:#feacd0">shifted</span>(<span style="color:#f78fe7">list</span>, shift<span style="color:#00d3d0">=</span><span style="color:#00bcff">0</span>):
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#b6a0ff">def</span> <span style="color:#feacd0">shifted</span>(<span style="color:#f78fe7">list</span>, shift<span style="color:#00d3d0">=</span><span style="color:#00bcff">0</span>):
 </span></span><span style="display:flex;"><span>    n <span style="color:#00d3d0">=</span> <span style="color:#f78fe7">len</span>(<span style="color:#f78fe7">list</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">for</span> i <span style="color:#00d3d0">in</span> <span style="color:#f78fe7">range</span>(shift <span style="color:#00d3d0">%</span> n, n):
 </span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">yield</span> <span style="color:#f78fe7">list</span>[i]
 </span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">for</span> i <span style="color:#00d3d0">in</span> <span style="color:#f78fe7">range</span>(<span style="color:#00bcff">0</span>, shift <span style="color:#00d3d0">%</span> n):
 </span></span><span style="display:flex;"><span>        <span style="color:#b6a0ff">yield</span> <span style="color:#f78fe7">list</span>[i]
 </span></span></code></pre></div><p><code>linenos</code> オプションで行番号を表示する例です。</p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>(<span style="color:#f78fe7">defun</span> <span style="color:#00d3d0">fizzbuzz</span> (<span style="color:#00d3d0">n</span>)
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>(<span style="color:#f78fe7">defun</span> <span style="color:#00d3d0">fizzbuzz</span> (<span style="color:#00d3d0">n</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  (<span style="color:#f78fe7">loop</span> <span style="color:#00d3d0">for</span> <span style="color:#00d3d0">i</span> <span style="color:#00d3d0">from</span> <span style="color:#00bcff">1</span> <span style="color:#00d3d0">to</span> <span style="color:#00d3d0">n</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>   <span style="color:#f78fe7">do</span> (<span style="color:#f78fe7">cond</span> ((<span style="color:#feacd0">equal</span> (<span style="color:#feacd0">mod</span> <span style="color:#00d3d0">i</span> <span style="color:#00bcff">15</span>) <span style="color:#00bcff">0</span>) (<span style="color:#feacd0">format</span> t <span style="color:#79a8ff">&#34;~%fizzbuzz&#34;</span>))
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>            ((<span style="color:#feacd0">equal</span> (<span style="color:#feacd0">mod</span> <span style="color:#00d3d0">i</span> <span style="color:#00bcff">5</span>) <span style="color:#00bcff">0</span>) (<span style="color:#feacd0">format</span> t <span style="color:#79a8ff">&#34;~%buzz&#34;</span>))
@@ -510,8 +510,8 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <p>bbb</p>
 <blockquote>
 <p><del>DANGER!!!</del></p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a8a8a8">#include</span> <span style="color:#a8a8a8">&lt;unistd.h&gt;</span><span style="color:#a8a8a8">
-</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a8a8a8">#include</span> <span style="color:#a8a8a8">&lt;unistd.h&gt;</span><span style="color:#a8a8a8">
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6ae4b9">int</span> <span style="color:#feacd0">main</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#b6a0ff">while</span>(<span style="color:#00bcff">1</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#feacd0">fork</span>();
@@ -548,7 +548,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <li><input disabled="" type="checkbox"> ブースト</li>
 </ul>
 <h3 id="extras-goldmark-extensions">Extras Goldmark Extensions</h3>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>H~2~O
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>H~2~O
 </span></span><span style="display:flex;"><span>: ==水==は透明で、++無味無臭++、ほぼ無色の化学物質であり、地球の==水==圏とすべての既知の生物の体液の主成分です。
 </span></span><span style="display:flex;"><span>すべての生態にとって重要であり、カロリーや有機栄養素を提供しないにもかかわらず、その存在は重要です。
 </span></span><span style="display:flex;"><span>地球上の==水==の総量は約 1.4&amp;times;10^18^&amp;nbsp;m^3^ です。
@@ -558,10 +558,10 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 </dl>
 <h2 id="生の-html-の例">生の HTML の例</h2>
 <h3 id="振り仮名">振り仮名</h3>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>しかもあとで聞くとそれは書生という人間中で一番&lt;ruby&gt;獰悪&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;どうあく&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;な種族であったそうだ。
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>しかもあとで聞くとそれは書生という人間中で一番&lt;ruby&gt;獰悪&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;どうあく&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;な種族であったそうだ。
 </span></span></code></pre></div><p>しかもあとで聞くとそれは書生という人間中で一番<ruby>獰悪<rp>(</rp><rt>どうあく</rt><rp>)</rp></ruby>な種族であったそうだ。</p>
 <h3 id="回り込み">回り込み</h3>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;figure style<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;float: left; width: 30%; margin: 10px 20px;&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;figure style<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;float: left; width: 30%; margin: 10px 20px;&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;img src<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;towers.avif&#34;</span> style<span style="color:#00d3d0">=</span><span style="color:#79a8ff">&#34;width: 100%;&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;figcaption&gt;JRセントラルタワーズ&lt;/figcaption&gt;
 </span></span><span style="display:flex;"><span>&lt;/figure&gt;
@@ -577,7 +577,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
 <p>多彩なショップやレストランが揃っており、ショッピングや食事を楽しむことができます。特に、地元の名物料理を提供するレストランや、最新のファッションアイテムを取り扱う店舗が人気です。さらに、展望台からは名古屋市内の美しい景色を一望でき、観光スポットとしても魅力的です。</p>
 <div style="clear: both;"></div>
 <h3 id="kbd-要素"><code>&lt;kbd&gt;</code> 要素</h3>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Please press &lt;kbd&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;&lt;/kbd&gt; to rerender the page.
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Please press &lt;kbd&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;&lt;/kbd&gt; to rerender the page.
 </span></span></code></pre></div><p>Please press <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd></kbd> to rerender the page.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -728,9 +728,9 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
       
         <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/csharp/fix/">C# で無名再帰</a></li>
+        <li><a href="/nagoya-example/posts/anime/jcdk/characters/yurine/">邪神ちゃんドロップキック キャラクター紹介: 花園ゆりね</a></li>
       
-        <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
+        <li><a href="/nagoya-example/posts/english/work-from-home/">5 Tips for Staying Productive While Working from Home</a></li>
       
     </ul>
   </nav>
@@ -1141,7 +1141,7 @@ Hugo (Goldmark) は多くの Markdown 拡張に対応しているので、それ
       
         
         
-          ©&nbsp;2022–2025
+          ©&nbsp;2022–2026
         
         
           

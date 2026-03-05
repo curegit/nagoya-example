@@ -16,7 +16,7 @@
 
   <meta name="keywords" content="C#, .NET, 数学, 関数型プログラミング">
 
-<meta name="generator" content="Hugo 0.152.2">
+<meta name="generator" content="Hugo 0.157.0">
 
   <meta name="author" content="高橋 元">
   
@@ -50,7 +50,7 @@
 
 
 
-<link rel="stylesheet" href="/nagoya-example/bundle.min.861f52ee9fd5364b0f9b9318b7fbc7adb4eca4c294584dccb11afe5f4a5caebf.css">
+<link rel="stylesheet" href="/nagoya-example/bundle.min.6694eee42dc44a63e0b84108fdc6166ce95ca272513ddcf6f82e6d92bf8a8d3e.css">
 
     <link rel="icon" href="/nagoya-example/icon.png">
 
@@ -230,7 +230,7 @@
     
       <p>このコードは、C# 言語で再帰的な関数を無名で作成するためのライブラリです。このライブラリを利用することで、再帰的な関数を使う際に必要な再帰呼び出しを簡単に行うことができます。</p>
 <p>このライブラリは、<code>Fix</code> メソッドによって構成されています。<code>Fix</code> メソッドは、<code>Func</code> 型の引数を受け取り、再帰呼び出しを行うための関数を返します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#b6a0ff">class</span> Lambda
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> <span style="color:#b6a0ff">class</span> Lambda
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#b6a0ff">public</span> <span style="color:#b6a0ff">static</span> Func&lt;TResult&gt; Fix&lt;TResult&gt;(Func&lt;Func&lt;TResult&gt;, Func&lt;TResult&gt;&gt; fix)
 </span></span><span style="display:flex;"><span>    {
@@ -282,7 +282,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><code>Fix</code> メソッドは、引数の数に応じて、4 つのオーバーロードが用意されています。それぞれ、引数が 0 つの場合、1 つの場合、2 つの場合、3 つの場合に対応します。これにより、引数の数に応じて、再帰的な関数を定義することができます。</p>
 <p>例えば、次のような再帰的な関数を定義することができます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Func&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt; fib = Lambda.Fix&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt;(f =&gt;
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Func&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt; fib = Lambda.Fix&lt;<span style="color:#6ae4b9">int</span>, <span style="color:#6ae4b9">int</span>&gt;(f =&gt;
 </span></span><span style="display:flex;"><span>    n =&gt; n &lt; <span style="color:#00bcff">2</span> ? <span style="color:#00bcff">1</span> : f(n - <span style="color:#00bcff">1</span>) + f(n - <span style="color:#00bcff">2</span>));
 </span></span></code></pre></div><p>このように、<code>Lambda</code> クラスを利用することで、再帰的な関数を簡単に定義することができます。</p>
     
@@ -429,9 +429,9 @@
       
         <li><a href="/nagoya-example/posts/programming/python/prime/">Python で素数列挙</a></li>
       
-        <li><a href="/nagoya-example/posts/meta/shortcodes/">ショートコードの例</a></li>
+        <li><a href="/nagoya-example/posts/anime/mmppp/chara/">ぴちぴちピッチのマーメイドプリンセスまとめ</a></li>
       
-        <li><a href="/nagoya-example/posts/anime/jcdk/characters/jashin-chan/">邪神ちゃんの性格</a></li>
+        <li><a href="/nagoya-example/posts/meta/diagrams/">ダイアグラムと数式の表示</a></li>
       
     </ul>
   </nav>
@@ -842,7 +842,7 @@
       
         
         
-          ©&nbsp;2022–2025
+          ©&nbsp;2022–2026
         
         
           
