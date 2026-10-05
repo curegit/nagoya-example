@@ -7,7 +7,6 @@ defaultContentLanguage = "ja"
 hasCJKLanguage = true
 capitalizeListTitles = false
 enableRobotsTXT = true
-cleanDestinationDir = true
 enableGitInfo = true
 
 [security]
